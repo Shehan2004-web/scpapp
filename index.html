@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="images/jpg" href="images\LOGO.jpg">
+    <title>SCP_APPS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/headinglogo.png" alt="SCPTOOLS Logo">
+        </div>
+        <div class="menu-icon">
+            <img src="images\menu.png" alt="Menu Icon">
+        </div>
+
+     
+        <div class="nav-links">
+            <ul>
+                
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#tools-section" class="dropbtn">Tools</a>
+                    <div class="dropdown-content">
+                        <a href="#converters">Converters</a>
+                        <a href="#productivity">Productivity Tools</a>
+                        <a href="#health">Health Tools</a>
+                        <a href="#ai">AI Tools</a>
+                        <a href="#utility">Utility Tools</a>
+                        <a href="#calculators">Calculators</a>
+                        <a href="#development">Development Tools</a>
+                        <a href="#media">Media Tools</a>
+                        <a href="#social-media">Social Media Tools</a>
+                        
+                    </div>
+                </li>
+                <li><a href="#About">About</a></li>
+                <li><a href="contact\contact.html">Contact</a></li>
+                <li><a href="#User">comment</a></li>
+                
+            </ul>
+        </div>
+
+        
+    </nav>
+    
+    <section class="hero">
+        <div class="content">
+            <h1>The Ultimate Solution for Streamlined Processes</h1> <br>
+            <p>Welcome to SCP_APPS – offering 100% free web tools to solve your everyday tasks effortlessly. Explore our wide range of utilities designed for productivity and convenience.</p>
+            <br><br>
+            <a href="#tools-section" class="btn">Get started</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/heroimg.png" alt="File Management Tools">
+        </div>
+
+    </section>
+
+    <section class="free-tools-section">
+        <div class="section-content">
+          <h2>Free Tools, No Signup Needed!</h2>
+          <p>Get started with our free tools instantly. No hassle, no signups. Just click and go!</p>
+          <a href="#tools-section" class="cta-button">Get started</a>
+        </div>
+      </section>
+      
+
+    <section class="features-section">
+        <div class="features-content">
+            <h2>Simplify Your File Management</h2>
+            <h3>Smart Tools for Quick Solutions</h3>
+            <p>Managing your files has never been easier. With SCP_APPS, you can convert, compress, and organize files in just a few clicks. Our user-friendly tools will handle the rest, delivering optimized files in no time.</p>
+        </div>
+        <div class="features">
+            <div class="feature-item">
+                <img src="images/upload.png" alt="Upload Icon" class="feature-icon">
+                <h4>Upload Your Files</h4>
+                <p>Choose files from your device. We support all major formats to make things easy for you.</p>
+            </div>
+            <div class="feature-item">
+                <img src="images/automation.png" alt="Compute Icon" class="feature-icon">
+                <h4>Automated Processing</h4>
+                <p>Our advanced servers handle everything with speed and accuracy. Most files are processed in under a minute.</p>
+            </div>
+            <div class="feature-item">
+                <img src="images/download.png" alt="Download Icon" class="feature-icon">
+                <h4>Download Instantly</h4>
+                <p>Once processed, your files are available for instant download. We ensure privacy by deleting files after one minute.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-section" id="tools-section">
+        <div class="smoke-container">
+            <div class="smoke smoke1"></div>
+            <div class="smoke smoke2"></div>
+            <div class="smoke smoke3"></div>
+        </div>
+    
+        <div class="search-container">
+            <div class="search-wrapper">
+                <input type="text" id="search" placeholder="Search tools...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </div>
+    
+        <div class="category-bar">
+            <button class="category-btn active" onclick="filterTools('all')">All Tools</button>
+            <button class="category-btn" onclick="filterTools('converters')" id="Converters">Converters</button>
+            <button class="category-btn" onclick="filterTools('productivity')" id="Productivity Tools">Productivity Tools</button>
+            <button class="category-btn" onclick="filterTools('health')" id="Health Tools">Health Tools</button>
+            <button class="category-btn" onclick="filterTools('ai')" id="AI Tools">AI Tools</button>
+            <button class="category-btn" onclick="filterTools('utility')" id="Utility Tools">Utility Tools</button>
+            <button class="category-btn" onclick="filterTools('calculators')" id="Calculators">Calculators</button>
+            <button class="category-btn" onclick="filterTools('development')" id="Development Tools">Development Tools</button>
+            <button class="category-btn" onclick="filterTools('media')" id="Media Tools">Media Tools</button>
+            <button class="category-btn" onclick="filterTools('social-media')" id="Social Media Tools">Social Media Tools</button>
+        </div>
+    
+        
+            <div class="tools-grid" id="toolsGrid">
+            <a href="tools\Temperature Converter\index.html" class="link">
+                <div class="tool-card converters">
+                  
+                <i class="fas fa-temperature-high tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Temperature Converter</h3>
+                    <p>Convert temperature units easily.</p>
+                </div> 
+            </div>
+        </a>
+
+            <a href="tools\QR Code Generator\index.html" class="link">
+                <div class="tool-card converters" id="converters">
+                    
+                    <i class="fas fa-qrcode tool-icon"></i>
+                    <div class="tool-details">
+                        <h3>QR Code Generator</h3>
+                        <p>Create QR codes instantly.</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="tools\BarCode Generator\index.html" class="link">
+            <div class="tool-card converters">
+                <i class="fas fa-barcode tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Barcode Generator</h3>
+                    <p>Create barcodes quickly and easily.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\image convertor\index.html" class="link">
+            <div class="tool-card converters">
+                <i class="fas fa-image tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Image Converter</h3>
+                    <p>Convert images to different formats.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\ENGINEERING UNIT CONVERTER\index.html" class="link">
+            <div class="tool-card converters">
+                <i class="fas fa-ruler-combined tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Engineering Unit Converter</h3>
+                    <p>Convert engineering units with ease.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\resum\index.html" class="link">
+            <div class="tool-card productivity" id="productivity">
+                <i class="fas fa-file-alt tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Resume Maker</h3>
+                    <p>Build professional resumes easily.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\text-editor\index.html" class="link">
+            <div class="tool-card productivity">
+                <i class="fas fa-edit tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Text Editor</h3>
+                    <p>Simple and easy-to-use text editor.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\WordCount Tool\index.html" class="link">
+            <div class="tool-card productivity">
+                <i class="fas fa-calculator tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Word Count Tool</h3>
+                    <p>Count the words in your text efficiently.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\typing speed test\index.html" class="link">
+            <div class="tool-card productivity">
+                <i class="fas fa-keyboard tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Typing Speed Test</h3>
+                    <p>Test and improve your typing speed.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\time zone converter\index.html" class="link">
+            <div class="tool-card productivity">
+                <i class="fas fa-clock tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Time Zone Converter</h3>
+                    <p>Convert time between different time zones.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="tools/Translator/index.html" class="link">
+            <div class="tool-card productivity">
+                <i class="fas fa-language tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Translator</h3>
+                    <p>Translate text between multiple languages.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Text to speech\index.html" class="link">
+            <div class="tool-card ai" id="ai">
+                <i class="fas fa-volume-up tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Text to Speech</h3>
+                    <p>Convert written text to spoken words.</p>
+                </div>
+            </div>
+        </a>
+        
+        <a href="tools\speech to text\index.html" class="link">
+            <div class="tool-card ai">
+                <i class="fas fa-microphone tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Speech to Text</h3>
+                    <p>Convert spoken words to written text.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\text repeater\index.html" class="link">
+            <div class="tool-card productivity">
+                <i class="fas fa-copy tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Text Repeater</h3>
+                    <p>Repeat text a specified number of times.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\BMI Calculator\index.html" class="link">
+            <div class="tool-card health" id="health">
+                <i class="fas fa-weight tool-icon"></i>
+                <div class="tool-details">
+                    <h3>BMI Calculator</h3>
+                    <p>Calculate your Body Mass Index.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Calorie Calculator\index.html" class="link">
+            <div class="tool-card health">
+                <i class="fas fa-utensils tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Calorie Calculator</h3>
+                    <p>Calculate your daily calorie needs.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Water Intake Calculator\index.html" class="link">
+            <div class="tool-card health">
+                <i class="fas fa-tint tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Water Intake Calculator</h3>
+                    <p>Calculate your daily water intake needs.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Age Calculator\index.html" class="link">
+            <div class="tool-card health">
+                <i class="fas fa-birthday-cake tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Age Calculator</h3>
+                    <p>Calculate your age accurately.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\chat boot\index.html" class="link">
+            <div class="tool-card ai">
+                <i class="fas fa-robot tool-icon"></i>
+                <div class="tool-details">
+                    <h3>SCP AI</h3>
+                    <p>Advanced AI tools for tasks.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\search engine\index.html" class="link">
+            <div class="tool-card ai">
+                <i class="fas fa-search tool-icon"></i>
+                <div class="tool-details">
+                    <h3>AI Image Search</h3>
+                    <p>Search images using AI technology.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\internet-speed-tester\index.html" class="link">
+            <div class="tool-card utility" id="utility">
+                <i class="fas fa-tachometer-alt tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Internet Speed Tester</h3>
+                    <p>Check your internet speed.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\ip address lookup\index.html" class="link">
+            <div class="tool-card utility">
+                <i class="fas fa-network-wired tool-icon"></i>
+                <div class="tool-details">
+                    <h3>IP Address Lookup</h3>
+                    <p>Find details about any IP address.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\url-shortener\index.html" class="link">
+            <div class="tool-card utility">
+                <i class="fas fa-link tool-icon"></i>
+                <div class="tool-details">
+                    <h3>URL Shortener</h3>
+                    <p>Shorten long URLs easily.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Password Generator\index.html" class="link">
+            <div class="tool-card utility">
+                <i class="fas fa-key tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Password Generator</h3>
+                    <p>Create strong and secure passwords.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\pasword cheker\index.html" class="link">
+            <div class="tool-card utility">
+                <i class="fas fa-shield-alt tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Password Strength Tester</h3>
+                    <p>Test the strength of your password.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Weather-App\index.html" class="link">
+            <div class="tool-card utility">
+                <i class="fas fa-cloud-sun tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Weather Tool</h3>
+                    <p>Check the current weather forecast.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Percentage Calculator\index.html" class="link">
+            <div class="tool-card calculators" id="calculators">
+                <i class="fas fa-percent tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Percentage Calculator</h3>
+                    <p>Calculate percentages easily.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Sri Lanka Loan Calculator\index.html" class="link">
+            <div class="tool-card calculators">
+                <i class="fas fa-coins tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Sri Lanka Loan Calculator</h3>
+                    <p>Calculate loan repayments in Sri Lanka.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Scientific Calculator\index.html" class="link">
+            <div class="tool-card calculators">
+                <i class="fas fa-square-root-alt tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Scientific Calculator</h3>
+                    <p>Perform advanced calculations easily.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\python IDLE\index.html" class="link">
+            <div class="tool-card development" id="development">
+                <i class="fab fa-python tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Python IDE</h3>
+                    <p>Write and test Python code online.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\HTMl compiler\index.html" class="link">
+            <div class="tool-card development">
+                <i class="fas fa-code tool-icon"></i>
+                <div class="tool-details">
+                    <h3>HTML Compiler</h3>
+                    <p>Compile HTML code quickly and efficiently.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\HTML to Markdown Converter\index.html" class="link">
+            <div class="tool-card development">
+                <i class="fas fa-file-code tool-icon"></i>
+                <div class="tool-details">
+                    <h3>HTML to Markdown Converter</h3>
+                    <p>Convert HTML to Markdown with ease.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\HTML, CSS & JavaScript MinifierMaxifier\index.html" class="link">
+            <div class="tool-card development">
+                <i class="fas fa-compress-alt tool-icon"></i>
+                <div class="tool-details">
+                    <h3>HTML, CSS & JS Minifier/Maxifier</h3>
+                    <p>Minify or maximize your web code.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Base64 EncoderDecoder\index.html" class="link">
+            <div class="tool-card development">
+                <i class="fas fa-exchange-alt tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Base64 Encoder/Decoder</h3>
+                    <p>Encode and decode Base64 strings easily.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Robots.txt Generator\index.html" class="link">
+            <div class="tool-card development">
+                <i class="fas fa-robot tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Robots.txt Generator</h3>
+                    <p>Create robots.txt files for your website.</p>
+                </div>
+            </div>
+        </a>
+        
+        <a href="tools\Sitemap Generator\index.html" class="link">
+            <div class="tool-card development">
+                <i class="fas fa-sitemap tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Sitemap Generator</h3>
+                    <p>Generate XML sitemaps for your website.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\All In One Video Downloader\index.html" class="link">
+            <div class="tool-card media" id="media">
+                <i class="fas fa-download tool-icon"></i>
+                <div class="tool-details">
+                    <h3>All In One Video Downloader</h3>
+                    <p>Download videos from various platforms.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\YouTube Thumbnail Downloader\index.html" class="link">
+            <div class="tool-card media">
+                <i class="fab fa-youtube tool-icon"></i>
+                <div class="tool-details">
+                    <h3>YouTube Thumbnail Downloader</h3>
+                    <p>Download high-quality YouTube thumbnails.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Image Editting Tool\index.html" class="link">
+            <div class="tool-card media">
+                <i class="fas fa-paint-brush tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Image Editing Tool</h3>
+                    <p>Edit and enhance your images online.</p>
+                </div>
+            </div>
+        </a>
+        
+        <a href="tools/Image-Resizer/index.html" class="link">
+            <div class="tool-card media">
+                <i class="fas fa-compress-arrows-alt tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Image Resizer</h3>
+                    <p>Resize images to your desired dimensions.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Instagram Hashtag Generator\index.html" class="link">
+            <div class="tool-card social-media" id="social-media">
+                <i class="fas fa-hashtag tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Social Media Hashtag Generator</h3>
+                    <p>Generate the best hashtags for your posts.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Keyword Density Checker\index.html" class="link">
+            <div class="tool-card social-media">
+                <i class="fas fa-chart-bar tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Keyword Density Checker</h3>
+                    <p>Check keyword density in your content.</p>
+                </div>
+            </div>
+        </a>
+        
+        <a href="tools\Gradient Color Generator\index.html" class="link">
+            <div class="tool-card design">
+                <i class="fas fa-palette tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Gradient Color Generator</h3>
+                    <p>Create beautiful color gradients.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\Color Picker and palatte genaratero\index.html" class="link">
+            <div class="tool-card design">
+                <i class="fas fa-eye-dropper tool-icon"></i>
+                <div class="tool-details">
+                    <h3>Color Picker and Palette Generator</h3>
+                    <p>Pick and create color palettes easily.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\ColorBlend Pro\index.html" class="link">
+            <div class="tool-card design">
+                <i class="fas fa-paint-brush tool-icon"></i>
+                <div class="tool-details">
+                    <h3>ColorBlend Pro</h3>
+                    <p>Blend and match colors like a pro.</p>
+                </div>
+            </div>
+        </a>
+        </div>
+    
+    </section>
+
+    <section class="ai-image-search-section">
+        <div class="containerimg">
+          <!-- Content on the Left Side -->
+          <div class="content-left">
+            <h2>AI Image Search Tool</h2>
+            <p>
+              Looking for specific images online? Our AI Image Search Tool makes it easy! Simply type in a keyword, and our advanced AI will quickly search the web to find images that match your query. Perfect for designers, marketers, and anyone needing visual inspiration. It's fast, intuitive, and completely free—no sign-up required. Just enter your keyword and let our tool do the rest!
+            </p>
+            <a href="tools\search engine\index.html">Learn More</a>
+          </div>
+          
+          <!-- Image on the Right Side -->
+          <div class="content-right">
+            <img src="images\ai-srech .png" alt="AI Image Search Tool">
+          </div>
+        </div>
+      </section>
+
+      <section class="scp-ai-section">
+        <div class="containerai">
+          <!-- Image on the Left Side -->
+          <div class="content-left">
+            <div class="image-wrapper">
+              <img src="images\chat-boot.png" alt="SCP AI Chatbot">
+            </div>
+          </div>
+          
+          <!-- Content on the Right Side -->
+          <div class="content-right">
+            <h2>SCP AI Chatbot</h2>
+            <p>
+              Meet SCP AI, your intelligent chatbot companion designed to enhance your online interactions. SCP AI is equipped with advanced natural language processing to assist you in answering questions, providing recommendations, and engaging in meaningful conversations. It’s perfect for businesses looking to improve customer support or anyone interested in exploring cutting-edge AI technology. Best of all, SCP AI is completely free to use with no sign-up required. Start interacting with your new virtual assistant today!
+            </p>
+            <a href="tools\chat boot\index.html">Learn More</a>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      
+      
+
+  <!-- Combined Section -->
+<section class="combined-section" id="combined-section">
+    <!-- Thx Section -->
+    <div class="thx-content">
+      <div class="loading-animation">
+        <div class="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <h2>Thank You for Visiting!</h2>
+      <p>We appreciate your interest in our tools. Stay tuned as we load the best experience for you!</p>
+    </div>
+  
+    <!-- Related Apps Section -->
+    <div class="related-apps">
+      <h2>useful Tools</h2>
+      <div class="app-cards">
+        <!-- App Card 1 -->
+        <div class="app-card">
+            <i class="fas fa-file-alt tool-icon" style="color: rgb(255, 213, 0);"></i>
+          <h3>Resume Maker</h3>
+          <p>Build professional resumes easily.</p>
+          <a href="tools\resum\index.html">Learn More</a>
+        </div>
+        <!-- App Card 2 -->
+        <div class="app-card">
+            <i class="fas fa-language tool-icon"></i>
+          <h3>Translator</h3>
+          <p>Translate text between multiple languages.</p>
+          <a href="tools/Translator/index.html">Learn More</a>
+        </div>
+        <!-- App Card 3 -->
+        <div class="app-card">
+            <i class="fas fa-key tool-icon" style="color: brown;"></i>
+          <h3>Password Generator</h3>
+          <p>Create strong and secure passwords.</p>
+          <a href="tools\Password Generator\index.html">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="User">
+    <div class="container">
+      <h2>What Our Users Say</h2>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <!-- Testimonial 1 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"This is the best tool I’ve ever used. It’s user-friendly and incredibly useful!"</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images\sp.png" alt="User 1">
+                <div class="author-info">
+                  <h3>Suranga priyadarshana</h3>
+                  <p>Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"A game-changer for my daily tasks. Highly recommend to everyone!"</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images\ls.png" alt="User 2">
+                <div class="author-info">
+                  <h3>Lahiru basnayake</h3>
+                  <p>Teachings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"Absolutely amazing! The best support and features you could ask for."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images\sppp.png" alt="User 3">
+                <div class="author-info">
+                  <h3>Sineth priyashan</h3>
+                  <p>Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 4 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"Incredibly helpful and easy to use. Makes my life so much easier!"</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images\sk.png" alt="User 4">
+                <div class="author-info">
+                  <h3>Sakuntha chamith</h3>
+                  <p>Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 5 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"A fantastic tool with excellent features. Highly recommended for anyone!"</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images\dip sir.png" alt="User 5">
+                <div class="author-info">
+                  <h3>Dinith</h3>
+                  <p>Teachings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+
+    <section class="about" id="About">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/aboutlogo.png" alt="About Us Image">
+                </div>
+                <div class="about-text">
+                    <p>Welcome to SCP_APPS! We specialize in providing innovative solutions for file management and productivity tools. Our mission is to simplify your digital life with our cutting-edge tools and technologies.</p> <br>
+                    <p>At SCP_APPS, we are dedicated to revolutionizing the way you manage and streamline your processes. Our cutting-edge suite of tools is designed to enhance productivity, optimize workflows, and simplify complex tasks, making your daily operations smoother and more efficient.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info" id="Contact">
+                <h4>Contact Information</h4>
+                <p>
+                    <a href="tel:+94703245075">
+                        <img src="images/phone.png" alt="Phone Icon" class="contact-icon"> Phone: +9470 324 5075
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:chamikascp@gmail.com">
+                        <img src="images/email.png" alt="Email Icon" class="contact-icon"> Email: chamikascp@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="https://maps.app.goo.gl/3HpYgXj9bcLLBENG9" target="_blank">
+                        <img src="images/map.png" alt="Address Icon" class="contact-icon"> Monaragala, Ethimale
+                    </a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-images">
+                    <a href="https://www.facebook.com/shehan.chamika.33671?mibextid=ZbWKwL"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="http://Wa.me//+94703245075"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="https://www.instagram.com/shehanscp?igsh=MThqejkzaDV3MTd5Zg=="><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/tik-tok.png" alt="TikTok"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Company Info</h4>
+                <p><a href="#About">About Us</a></p>
+                <p><a href="contact\contact.html">Go To Contact Us</a></p>
+                <p><a href="t&c\FAQ.html">FAQ page</a></p>
+                <p><a href="t&c\ppindex.html">Privacy Policy</a></p>
+                <p><a href="t&c\tcindex.html">Terms & Conditions</a></p>
+                <p><a href="t&c\diciml.html">Disclaimer</a></p>
+                
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="#">Home</a></p>
+                <p><a href="#tools-section">Tools</a></p>
+                <p><a href="#User">Users Say</a></p>
+                <p><a href="#combined-section">Thank You for Visiting!</a></p>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+// Filter Tools by Category
+function filterTools(category) {
+    var tools = document.getElementsByClassName('tool-card');
+    for (var i = 0; i < tools.length; i++) {
+        if (category === 'all' || tools[i].classList.contains(category)) {
+            tools[i].style.display = 'flex';  // Keep 'flex' for card layout
+        } else {
+            tools[i].style.display = 'none';
+        }
+    }
+
+    var buttons = document.getElementsByClassName('category-btn');
+    for (var j = 0; j < buttons.length; j++) {
+        buttons[j].classList.remove('active');
+    }
+    event.target.classList.add('active');
+}
+
+
+// Search functionality
+document.getElementById('search').addEventListener('input', function(e) {
+    var searchTerm = e.target.value.toLowerCase();
+    var tools = document.getElementsByClassName('tool-card');
+    
+    for (var i = 0; i < tools.length; i++) {
+        var toolName = tools[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+        var toolDescription = tools[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+        
+        if (toolName.includes(searchTerm) || toolDescription.includes(searchTerm)) {
+            tools[i].style.display = 'flex';
+        } else {
+            tools[i].style.display = 'none';
+        }
+    }
+});
+
+// Initialize all tools visible
+window.onload = function() {
+    filterTools('all');
+};
+
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const carouselInner = document.querySelector('.carousel-inner');
+const items = document.querySelectorAll('.carousel-item');
+let currentIndex = 0;
+
+function showSlide(index) {
+  if (index >= items.length) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = items.length - 1;
+  } else {
+    currentIndex = index;
+  }
+  carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+prevButton.addEventListener('click', () => {
+  showSlide(currentIndex - 1);
+});
+
+nextButton.addEventListener('click', () => {
+  showSlide(currentIndex + 1);
+});
+
+// Auto-slide every 5 seconds
+setInterval(() => {
+  showSlide(currentIndex + 1);
+}, 5000);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Search in navigation
+  const navSearchInput = document.getElementById('nav-search');
+  const toolSearchInput = document.getElementById('search');
+  
+  const searchTools = (searchTerm) => {
+    const tools = document.getElementsByClassName('tool-card');
+    
+    Array.from(tools).forEach(card => {
+      const toolName = card.getElementsByTagName('h3')[0].innerText.toLowerCase();
+      const toolDescription = card.getElementsByTagName('p')[0].innerText.toLowerCase();
+      
+      if (toolName.includes(searchTerm) || toolDescription.includes(searchTerm)) {
+        card.style.display = 'flex'; // Show matching tools
+      } else {
+        card.style.display = 'none'; // Hide non-matching tools
+      }
+    });
+  };
+
+  // Event listener for navigation search
+  navSearchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    searchTools(searchTerm);
+  });
+
+  // Event listener for tools section search
+  toolSearchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    searchTools(searchTerm);
+  });
+});
+
+
+
+    </script>
+   <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyALB7U-dxzYfyk6FKXzx3FQMY1fcGSYGLQ",
+      authDomain: "scptools-2a891.firebaseapp.com",
+      projectId: "scptools-2a891",
+      storageBucket: "scptools-2a891.appspot.com",
+      messagingSenderId: "1056684322006",
+      appId: "1:1056684322006:web:52193770572ef3a3b8ad77",
+      measurementId: "G-54LKRYY810"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    async function sendMessage(name, email, message) {
+      try {
+        await addDoc(collection(db, "messages"), {
+          name: name,
+          email: email,
+          message: message,
+          timestamp: new Date()
+        });
+        alert('Message sent successfully!');
+      } catch (error) {
+        console.error('Error adding document: ', error);
+        alert('Failed to send message. Please try again.');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('contactForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const message = event.target.message.value;
+        sendMessage(name, email, message);
+      });
+    });
+  </script>
+  
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+</html>

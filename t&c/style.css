@@ -1,0 +1,206 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #e6e6e6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #e85c0d;
+  }
+  
+  a:hover {
+    color: #c7253e;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #2a2a2a;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav .logo {
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #e6e6e6;
+    font-size: 18px;
+  }
+  
+  nav ul li a:hover {
+    color: #c7253e;
+  }
+  
+  /* Disclaimer Section */
+  .disclaimer {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .disclaimer h1 {
+    font-size: 36px;
+    color: #e85c0d;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .disclaimer h3 {
+    color: #c7253e;
+    margin-top: 30px;
+  }
+  
+  .disclaimer p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .disclaimer ul {
+    margin-left: 20px;
+  }
+  
+  .disclaimer ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+  }
+  
+  /* Back to Home Button */
+  .back-home-btn {
+    display: inline-block;
+    background-color: #e85c0d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-home-btn:hover {
+    background-color: #c7253e;
+    color: #e6e6e6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .disclaimer {
+      padding: 20px;
+    }
+  }
+  
+  /* Smoke effect styles */
+.smoke-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.smoke {
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000"><filter id="n" x="0" y="0"><feTurbulence type="fractalNoise" baseFrequency="0.65" stitchTiles="stitch"/><feColorMatrix values="0 0 0 7 -4 0 0 0 7 -4 0 0 0 7 -4 0 0 0 0 1"/></filter><rect width="1000" height="1000" fill="%23FF0000" filter="url(%23n)" opacity="0.3"/></svg>');
+
+  background-size: auto;
+  opacity: 0.1;
+  animation: drift 60s linear infinite;
+}
+
+.smoke1 {
+  background-color: #e85c0d;
+  top: -50%;
+  left: -50%;
+  animation-duration: 73s;
+}
+
+.smoke2 {
+  background-color: #c7253e;
+  top: -50%;
+  left: -50%;
+  animation-duration: 67s;
+  animation-delay: -23s;
+}
+
+.smoke3 {
+  background-color: #4caf50;
+  top: -50%;
+  left: -50%;
+  animation-duration: 81s;
+  animation-delay: -47s;
+}
+
+@keyframes drift {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure the smoke effect covers the entire site on mobile */
+@media (max-width: 768px) {
+  .smoke-container {
+    display: none;
+  }
+
+  .smoke {
+    width: 300vw; /* Increase the width to ensure full coverage on mobile */
+    height: 300vh; /* Increase the height for full mobile coverage */
+  }
+
+  .smoke1, .smoke2, .smoke3 {
+    top: -75%;
+    left: -75%;
+    animation-duration: 100s; /* Slow down the animation for a smoother effect */
+  }
+}
+
+/* Adjust existing styles to work with the new background */
+.search-container,
+.category-bar,
+.tools-section {
+position: relative;
+z-index: 1;
+}
+
+.tool-card {
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+/* ... rest of the existing styles ... */
+}
+
+/* ... rest of your existing styles ... */
+

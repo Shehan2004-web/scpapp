@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/tools/smoke.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">URL Shortener</a></li>
+        <li><a href="/index.html#About">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+    <!-- Header Section -->
+    <header>
+        <div class="container00">
+            <h1>URL Shortener</h1>
+            <p>A URL shortener tool simplifies long web addresses into short, manageable links. It's perfect for sharing on social media or in emails, making your URLs look clean and professional.</p>
+        </div>
+    </header>
+    <div class="container-wrapper">
+    <div class="main">
+        
+        <div id="container">
+            <h1>URL Shortener</h1>
+            <p>Your go-to solution for instantly shortening long, cumbersome URLs into sleek and shareable links!</p>
+
+            <div class="url-input">
+                <input type="url" id="urlInput" placeholder="Enter URL">
+                <button onclick="shortenURL()" id="shortenBtn">Shorten</button>
+            </div>
+
+            <div id="result" style="display: none;">
+                <p>Shortened URL:</p>
+                <a href="" target="_blank" id="shortenedURL"></a>
+                <button onclick="copyToClipboard()">Copy</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Main Content Section -->
+<main1>
+    <div class="container00">
+        
+
+        <section id="apps-description">
+            <h2 style="color: aliceblue;">Related Apps</h2>
+            <div class="app-list">
+              <a href="/tools/YouTube Thumbnail Downloader/index.html" class="abc">
+                <div class="app-item">
+                    <h3>YouTube Thumbnail
+                      Downloader</h3>
+                    <p style="color: black;">Download high-quality
+                      YouTube thumbnails.</p>
+                </div>
+              </a>
+              <a href="/tools/Image Editting Tool/index.html" class="abc">
+                <div class="app-item">
+                    <h3>Image Editing Tool</h3>
+                    <p style="color: black;"> Edit and enhance your images
+                      online.</p>
+                </div>
+              </a>
+                <!-- Add more apps as needed -->
+            </div>
+          </section>
+          <br><br><br>
+          <!-- Button to Navigate to Home Page -->
+          <section id="home-button">
+            <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+          </section>
+          </div>
+          </main>
+          
+          <!-- Footer Section -->
+          <footer>
+          <div class="container00">
+          <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+          </div>
+          </footer>
+
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>

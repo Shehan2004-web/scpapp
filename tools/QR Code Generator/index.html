@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <!-- QR Code CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/tools/smoke.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">QR Code Generator</a></li>
+        <li><a href="/index.html#About">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+
+    <header>
+        <div class="container1">
+            <h1>QR Code Generator</h1>
+            <p>Generate personalized QR codes instantly with our free QR Code Generator. No login is required—simply enter your information and download your QR code in various formats.</p>
+        </div>
+    </header>
+
+    <section class="tool">
+        <div class="wrapper">
+            <h2>Generate Your QR Code</h2>
+            <input type="text" id="userInput" placeholder="Enter some text or URL" />
+            <div id="qrcode"></div>
+            <div class="buttons">
+                <div class="options">
+                    <select class="sizeOptions">
+                        <option value="100" selected>100 x 100</option>
+                        <option value="200">200 x 200</option>
+                        <option value="300">300 x 300</option>
+                    </select>
+                    <input type="color" id="BGColor" class="color-inp" value="#FFFFFF"/>
+                    <input type="color" id="FGColor" class="color-inp" />
+                </div>
+                <button id="submit" disabled>Generate</button>
+                <a href="#" id="download" class="hide">Download</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <section id="apps-description">
+                <h2 style="color: aliceblue;">Related Apps</h2>
+                <div class="app-list">
+                  <a href="/tools/YouTube Thumbnail Downloader/index.html" class="abc">
+                    <div class="app-item">
+                        <h3>YouTube Thumbnail
+                          Downloader</h3>
+                        <p style="color: black;">Download high-quality
+                          YouTube thumbnails.</p>
+                    </div>
+                  </a>
+                  <a href="/tools/Image Editting Tool/index.html" class="abc">
+                    <div class="app-item">
+                        <h3>Image Editing Tool</h3>
+                        <p style="color: black;"> Edit and enhance your images
+                          online.</p>
+                    </div>
+                  </a>
+                    <!-- Add more apps as needed -->
+                </div>
+              </section>
+              <br><br><br>
+              <!-- Button to Navigate to Home Page -->
+              <section id="home-button">
+                <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+              </section>
+              </div>
+              </main>
+              <br><br>
+              <!-- Footer Section -->
+              <footer>
+              <div class="container00">
+              <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+              </div>
+              </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

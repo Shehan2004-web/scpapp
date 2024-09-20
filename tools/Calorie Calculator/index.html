@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="CodeHim">
+      <title>Calorie Calculator </title>
+    
+      <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="./css/demo.css">
+      <link rel="stylesheet" href="./css/nav.css">
+      <link rel="stylesheet" href="/tools/smoke.css">
+      
+   </head>
+   <body>
+
+    <nav class="navbar">
+      <div class="logo">SCP_APPS.</div>
+      
+      
+      <ul class="nav-links">
+          <li><a href="#home" class="active">Calorie Calculator</a></li>
+          <li><a href="/index.html#About">About</a></li>
+          
+          <li><a href="/index.html#tools-section">ToolS</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle">
+          &#9776; <!-- Unicode character for hamburger icon -->
+      </button>
+  </nav>
+  <div class="smoke-container">
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
+    <div class="smoke smoke3"></div>
+  </div>
+  <!-- Header Section -->
+  <header>
+    <div class="container00">
+        <h1 style="color: #ff5e00;">Calorie Calculator</h1>
+        <p>Calculate your daily calorie needs effortlessly with our free Calorie Calculator. No registration needed—enter your details and get personalized calorie recommendations.</p>
+    </div>
+</header>
+  <br><br>
+     <h1 style="color:chocolate;  text-align: center; ">Calorie Calculator App</h1>
+    <br><br>
+      <main class="cd__main">
+        
+         <div class="calc-outer-wrap">
+<div id="form-error" style="display:none;"></div>
+<form class="calc-form" id="calc-form">
+  <div class="form-fields">
+
+    <div class="field-outer">
+      <label for="distance" class="top-label">Age:</label>
+      <div class="field-items">
+        <div class="field field-large">         
+          <input type="text" name="age" id="age" inputmode="numeric" pattern="[0-9]*">
+        </div><!--  /.field-large -->
+        
+        <div class="field field-medium">
+          <select name="gender">
+            <option value="Male">Male</option>
+			<option value="Female">Female</option>
+                   
+          </select>
+          
+        </div><!--  /.field-small -->
+      </div><!--  /.field-items -->
+    </div><!--  /.field-outer -->
+
+    <div class="field-outer">
+      <label for="height" class="top-label">Height:</label>
+      <div class="field-items">
+        <div class="field">
+          <input type="text" name="height_ft" id="height-ft" inputmode="numeric" pattern="[0-9]*">
+          <label for="height-ft">feet</label>
+        </div><!--  /.field -->
+        <div class="field">
+          <input type="text" name="height_in" id="height-in" inputmode="numeric" pattern="[0-9]*">
+          <label for="height-in">inches</label>
+        </div><!--  /.field -->
+       <div class="field">
+          <input type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*">
+          <label for="height-cm">or centimeters</label>
+        </div><!--  /.field -->        
+      </div><!--  /.field-items -->
+    </div><!--  /.field-outer -->
+
+    <div class="field-outer">
+      <label for="weight" class="top-label">Your weight:</label>
+      <div class="field-items">
+        <div class="field field-large">
+          <input type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*">
+        </div><!--  /.field-large -->
+        <div class="field field-small">
+          <select name="weight_unit">
+            <option value="lb">lb</option>
+            <option value="kg">kg</option>
+          </select>
+        </div><!--  /.field-small -->
+      </div><!--  /.field-items -->
+    </div><!--  /.field-outer -->
+   <div class="btn-wrap field-outer">
+    <button class="form-submit">Calculate</button>
+  </div>
+  </div><!--  /.form fields -->
+
+
+</form>
+<div id="results" style="display:none;"></div>
+</div><!--  /.calc-outer-wrap -->
+   
+      </main>
+      <!-- Section for Describing Multiple Apps -->
+      <section id="apps-description">
+        <h2 style="color: aliceblue;">Related Apps</h2>
+        <div class="app-list">
+          <a href="/tools/QR Code Generator/index.html" class="abc">
+            <div class="app-item">
+                <h3>QR Code Generator
+                  </h3>
+                <p style="color: black;">Create QR codes instantly.</p>
+            </div>
+          </a>
+          <a href="/tools/image convertor/index.html" class="abc">
+            <div class="app-item">
+                <h3>Image Converter
+                  </h3>
+                <p style="color: black;"> Convert images to different
+                  formats.</p>
+            </div>
+          </a>
+            <!-- Add more apps as needed -->
+        </div>
+    </section>
+<br><br><br>
+    <!-- Button to Navigate to Home Page -->
+    <section id="home-button">
+      <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+    </section>
+</div>
+</main>
+
+<!-- Footer Section -->
+<footer>
+<div class="container00">
+    <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+</div>
+</footer>
+     
+      
+      <!-- Script JS -->
+      <script src="./js/script.js"></script>
+
+   </body>
+</html>

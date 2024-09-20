@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="CodeHim">
+      <title> Engineers Unit Converter  </title>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="./css/style.css">
+      <!-- Demo CSS (No need to include it into your project) -->
+      <link rel="stylesheet" href="./css/demo.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Poppins:700" rel="stylesheet">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="/tools/smoke.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">UNIT CONVERTER</a></li>
+        <li><a href="/index.html#About">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+  <!-- Header Section -->
+  <header>
+    <div class="container00">
+        <h1>ENGINEERING UNIT CONVERTER</h1>
+        <p>Convert engineering units such as length, mass, and pressure with ease using our 100% free Engineering Unit Converter. No need for an account—input your units and get immediate conversions.</p>
+    </div>
+</header>
+<br><br><br>
+      
+      <!--$%adsense%$-->
+      <main class="cd__main">
+         <!-- Start DEMO HTML (Use the following code into your project)-->
+         <div class="converter-wrapper">
+  <h1>ENGINEERING <br>UNIT CONVERTER</h1>
+
+  <form name="property_form">
+    <span>
+      <select class="select-property" name="the_menu" size=1 onChange="UpdateUnitMenu(this, document.form_A.unit_menu); UpdateUnitMenu(this, document.form_B.unit_menu)">
+      </select>
+    </span>
+  </form>
+
+  <div class="converter-side-a">
+    <form name="form_A" onSubmit="return false">
+      <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0" onKeyUp="CalculateUnit(document.form_A, document.form_B)">
+      <span>
+        <select name="unit_menu" onChange="CalculateUnit(document.form_B, document.form_A)">
+        </select>
+      </span>
+    </form>
+  </div> <!-- /converter-side-a -->
+  
+ <div class="converter-equals">
+   <p>=</p>
+ </div> <!-- /converter-side-a -->
+
+  <div class="converter-side-b">
+    <form name="form_B" onSubmit="return false">
+      <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0" onkeyup="CalculateUnit(document.form_B, document.form_A)">
+      <span>
+        <select name="unit_menu" onChange="CalculateUnit(document.form_A, document.form_B)">
+        </select>
+      </span>
+    </form>
+  </div> <!-- /converter-side-b -->
+</div><!-- /converter-wrapper -->
+         <!-- END EDMO HTML (Happy Coding!)-->
+      </main>
+
+      <!-- Main Content Section -->
+    <main1>
+      <div class="container00">
+          
+
+          <!-- Section for Describing Multiple Apps -->
+          <section id="apps-description">
+            <h2 style="color: aliceblue;">Related Apps</h2>
+            <div class="app-list">
+              <a href="/tools/YouTube Thumbnail Downloader/index.html" class="abc">
+                <div class="app-item">
+                    <h3>YouTube Thumbnail
+                      Downloader</h3>
+                    <p style="color: black;">Download high-quality
+                      YouTube thumbnails.</p>
+                </div>
+              </a>
+              <a href="/tools/Image Editting Tool/index.html" class="abc">
+                <div class="app-item">
+                    <h3>Image Editing Tool</h3>
+                    <p style="color: black;"> Edit and enhance your images
+                      online.</p>
+                </div>
+              </a>
+                <!-- Add more apps as needed -->
+            </div>
+          </section>
+          <br><br><br>
+          <!-- Button to Navigate to Home Page -->
+          <section id="home-button">
+            <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+          </section>
+          </div>
+          </main>
+          
+          <!-- Footer Section -->
+          <footer>
+          <div class="container00">
+          <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+          </div>
+          </footer>
+      
+      <script src="./js/script.js"></script>
+      <!--$%analytics%$-->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+  });
+});
+      </script>
+   </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap Generator Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/tools/smoke.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">SCP_APPS.</div>
+      
+      
+      <ul class="nav-links">
+          <li><a href="#home" class="active">Sitemap Generator</a></li>
+          <li><a href="/index.html#About">About</a></li>
+          
+          <li><a href="/index.html#tools-section">ToolS</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle">
+          &#9776; <!-- Unicode character for hamburger icon -->
+      </button>
+  </nav>
+  <div class="smoke-container">
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
+    <div class="smoke smoke3"></div>
+  </div>
+    <!-- Header Section -->
+    <header>
+      <div class="container00">
+          <h1>Sitemap Generator</h1>
+          <p>Boost your website's SEO and improve user navigation with our powerful Sitemap Generator. Sitemaps are crucial for helping search engines understand your website structure and efficiently crawl your pages. Our tool automatically scans your website, creating a comprehensive XML sitemap that includes all your important pages, posts, and media files. Whether you're running a small blog or managing a large e-commerce site, our Sitemap Generator adapts to your needs, supporting websites of all sizes and complexities. Customize your sitemap with advanced options like priority settings, change frequency, and last modification dates to give search engines even more valuable information. Compatible with major search engines like Google, Bing, and Yahoo, our generator ensures your content gets the visibility it deserves. With an easy-to-use interface and quick processing times, you can have your sitemap ready in minutes. Take control of your website's discoverability and climb the search engine rankings with our Sitemap Generator today!</p>
+      </div>
+    </header> <br><br>
+    <div class="warp">
+    <div class="container">
+        <h1>Sitemap Generator</h1>
+        <div class="input-container">
+            <label for="urlInput">Enter the website URL:</label>
+            <input type="text" id="urlInput" placeholder="https://example.com">
+            <button onclick="generateSitemap()">Generate Sitemap</button>
+        </div>
+        <div class="output-container">
+            <h2>Sitemap Output</h2>
+            <textarea id="sitemapOutput" placeholder="Sitemap will be generated here..." readonly></textarea>
+            <button onclick="copyToClipboard()">Copy</button>
+            <button onclick="clearOutput()">Clear</button>
+        </div>
+    </div>
+</div>
+    <!-- Section for Describing Multiple Apps -->
+    <section id="apps-description">
+      <h2>Related Apps</h2>
+      <div class="app-list">
+        <a href="/tools/BMI Calculator/index.html" class="abc">
+          <div class="app-item">
+              <h3>BMI Calculator</h3>
+              <p style="color: black;">alculate your Body Mass
+                Index.</p>
+          </div>
+        </a>
+        <a href="/tools/Calorie Calculator/index.html" class="abc">
+          <div class="app-item">
+              <h3>Calorie Calculator</h3>
+              <p style="color: black;"> Calculate your daily calorie
+                needs.</p>
+          </div>
+        </a>
+          <!-- Add more apps as needed -->
+      </div>
+    </section>
+    <br><br><br>
+    <!-- Button to Navigate to Home Page -->
+    <section id="home-button">
+      <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+    </section>
+    </div>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+    <div class="container00">
+    <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+    </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

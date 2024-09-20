@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Age Calculator Tool</title>
+<link rel="stylesheet" href="/tools/smoke.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ddd;
+  }
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #ff6a00;
+  }
+  input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  #result {
+    margin-top: 10px;
+    color: chocolate;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Age Calculator</a></li>
+        <li><a href="/index.html#About">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<!-- Header Section -->
+<header>
+  <div class="container00">
+      <h1>Age Calculator</h1>
+      <p>Calculate your exact age in years, months, and days with our free Age Calculator. No need to log in—enter your birthdate and get your age instantly.</p> </div>
+</header> 
+<br>
+
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+
+  <div class="container">
+    <h1 style="color: #ff6a00;">Age Calculator</h1>
+    <label for="startDate">Select start date:</label>
+    <input type="date" id="startDate">
+    <label for="endDate">Select end date:</label>
+    <input type="date" id="endDate">
+    <button id="calculateBtn">Calculate Duration</button>
+    <div id="result">
+      <table id="resultTable">
+        <tr style="color: #007bff;">
+          <th>Duration Type</th>
+          <th>Duration</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Main Content Section -->
+  <main1>
+    <div class="container00">
+        
+
+        <!-- Section for Describing Multiple Apps -->
+        <section id="apps-description">
+            <h2>Related Apps</h2>
+            <div class="app-list">
+              <a href="/tools/BMI Calculator/index.html" class="abc">
+                <div class="app-item">
+                    <h3>BMI Calculator</h3>
+                    <p style="color: black;">alculate your Body Mass
+                      Index.</p>
+                </div>
+              </a>
+              <a href="/tools/Calorie Calculator/index.html" class="abc">
+                <div class="app-item">
+                    <h3>Calorie Calculator</h3>
+                    <p style="color: black;"> Calculate your daily calorie
+                      needs.</p>
+                </div>
+              </a>
+                <!-- Add more apps as needed -->
+            </div>
+        </section>
+    <br><br><br>
+        <!-- Button to Navigate to Home Page -->
+        <section id="home-button">
+            <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+        </section>
+    </div>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container00">
+        <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script>
+    const calculateBtn = document.getElementById("calculateBtn");
+    const resultTable = document.getElementById("resultTable");
+
+    calculateBtn.addEventListener("click", calculateDuration);
+
+    function calculateDuration() {
+      const startDateInput = document.getElementById("startDate");
+      const endDateInput = document.getElementById("endDate");
+
+      const startDate = new Date(startDateInput.value);
+      const endDate = new Date(endDateInput.value);
+
+      if (startDate > endDate) {
+        showErrorMessage("Start date cannot be later than end date.");
+        return;
+      }
+
+      const diffInMilliseconds = endDate - startDate;
+      const diffInSeconds = diffInMilliseconds / 1000;
+      const diffInMinutes = diffInSeconds / 60;
+      const diffInHours = diffInMinutes / 60;
+      const diffInDays = diffInHours / 24;
+      const diffInDaysIncludingLast = diffInDays + 1;
+
+      const years = Math.floor(diffInDays / 365);
+      const months = Math.floor((diffInDays % 365) / 30);
+      const days = Math.floor(diffInDays % 30);
+
+      const hours = Math.floor(diffInHours % 24);
+      const minutes = Math.floor(diffInMinutes % 60);
+      const seconds = Math.floor(diffInSeconds % 60);
+
+      displayResult([
+        ["Start Date", startDate.toDateString()],
+        ["End Date", endDate.toDateString()],
+        ["Duration", `${years} years, ${months} months, ${days} days`],
+        ["Duration (days)", diffInDays.toFixed(2)],
+        ["Including End Date", diffInDaysIncludingLast.toFixed(2)],
+        ["Total Hours", `${Math.floor(diffInHours)} hours`],
+        ["Total Minutes", `${Math.floor(diffInMinutes)} minutes`],
+        ["Total Seconds", `${Math.floor(diffInSeconds)} seconds`]
+      ]);
+    }
+
+    function showErrorMessage(message) {
+      resultTable.innerHTML = `
+        <tr>
+          <td colspan="2" style="color: red;">${message}</td>
+        </tr>
+      `;
+    }
+
+    function displayResult(data) {
+      resultTable.innerHTML = "";
+      for (const item of data) {
+        resultTable.innerHTML += `
+          <tr>
+            <td>${item[0]}</td>
+            <td>${item[1]}</td>
+          </tr>
+        `;
+      }
+    }
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    });
+  </script>
+</body>
+</html>

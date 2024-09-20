@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Tester</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/tools/smoke.css">
+</head>
+<body style="background-color: black;">
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Password Strength Tester</a></li>
+        <li><a href="/index.html#About">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container00">
+            <h1>Password Strength Tester</h1>
+            <p>This tool helps you evaluate the strength of your passwords by checking their complexity. It provides real-time feedback to improve the security of your passwords, ensuring they are harder to crack.</p>
+        </div>
+    </header>
+
+    <div class="main" style="background-color: rgba(0, 0, 0, 0);">
+
+        <div class="container">
+            <h1>Password Strength Tester</h1>
+             
+            <div class="password-container">
+                <input type="password" id="inputPassword" placeholder="Enter your password here..." oninput="testPassword()">
+                <div class="show-password">
+                    <input type="checkbox" id="showPasswordCheckbox" onchange="showPassword()">&nbsp;
+                    <small>Show Password</small>
+                </div>
+                <p id="passwordStrength">No Password</p>
+            </div>
+
+            <div class="result-container">
+                <p>It would take</p>
+                <h2 id="crackTime">0hr 0m 0sec</h2>
+                <p>to crack your password.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Main Content Section -->
+    <main1>
+        <div class="container00">
+            
+
+            <!-- Section for Describing Multiple Apps -->
+            <section id="apps-description">
+                <h2>Related Apps</h2>
+                <div class="app-list">
+                  <a href="/tools/BMI Calculator/index.html" class="abc">
+                    <div class="app-item">
+                        <h3>BMI Calculator</h3>
+                        <p style="color: black;">alculate your Body Mass
+                          Index.</p>
+                    </div>
+                  </a>
+                  <a href="/tools/Calorie Calculator/index.html" class="abc">
+                    <div class="app-item">
+                        <h3>Calorie Calculator</h3>
+                        <p style="color: black;"> Calculate your daily calorie
+                          needs.</p>
+                    </div>
+                  </a>
+                    <!-- Add more apps as needed -->
+                </div>
+              </section>
+              <br><br><br>
+              <!-- Button to Navigate to Home Page -->
+              <section id="home-button">
+                <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+              </section>
+              </div>
+              </main>
+              
+              <!-- Footer Section -->
+              <footer>
+              <div class="container00">
+              <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+              </div>
+              </footer>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html> 

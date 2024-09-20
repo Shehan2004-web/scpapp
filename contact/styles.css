@@ -1,0 +1,244 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000;
+  color: #333;
+}
+
+header {
+  background: #423f3e37;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e85c0d;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+section {
+  background: #3333333a;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+section h2 {
+  margin-bottom: 1.5rem;
+  color: #ff2600;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  color:#e85c0d;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background: #e85c0d;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #d74c0a;
+}
+
+#social-media {
+  background: #33333349;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #e85c0d;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.5rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  background: #d74c0a;
+  transform: scale(1.1);
+}
+
+footer {
+  background: #33333333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #e85c0d;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Smoke effect styles */
+.smoke-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.smoke {
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000"><filter id="n" x="0" y="0"><feTurbulence type="fractalNoise" baseFrequency="0.65" stitchTiles="stitch"/><feColorMatrix values="0 0 0 7 -4 0 0 0 7 -4 0 0 0 7 -4 0 0 0 0 1"/></filter><rect width="1000" height="1000" fill="%23FF0000" filter="url(%23n)" opacity="0.3"/></svg>');
+
+  background-size: auto;
+  opacity: 0.1;
+  animation: drift 60s linear infinite;
+}
+
+.smoke1 {
+  background-color: #e85c0d;
+  top: -50%;
+  left: -50%;
+  animation-duration: 73s;
+}
+
+.smoke2 {
+  background-color: #c7253e;
+  top: -50%;
+  left: -50%;
+  animation-duration: 67s;
+  animation-delay: -23s;
+}
+
+.smoke3 {
+  background-color: #4caf50;
+  top: -50%;
+  left: -50%;
+  animation-duration: 81s;
+  animation-delay: -47s;
+}
+
+@keyframes drift {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure the smoke effect covers the entire site on mobile */
+@media (max-width: 768px) {
+  .smoke-container {
+    display: none;
+  }
+
+  .smoke {
+    width: 300vw; /* Increase the width to ensure full coverage on mobile */
+    height: 300vh; /* Increase the height for full mobile coverage */
+  }
+
+  .smoke1, .smoke2, .smoke3 {
+    top: -75%;
+    left: -75%;
+    animation-duration: 100s; /* Slow down the animation for a smoother effect */
+  }
+}
+
+/* Adjust existing styles to work with the new background */
+.search-container,
+.category-bar,
+.tools-section {
+position: relative;
+z-index: 1;
+}
+
+.tool-card {
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+/* ... rest of the existing styles ... */
+}
+
+/* ... rest of your existing styles ... */
+

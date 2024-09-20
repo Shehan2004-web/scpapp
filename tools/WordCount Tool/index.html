@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Word Counter</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: aliceblue;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .table-container {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s;
+  }
+  textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+</style>
+<link rel="stylesheet" href="/tools/smoke.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Word Counter</a></li>
+        <li><a href="/index.html#About">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+
+<!-- Header Section -->
+<header>
+  <div class="container00">
+      <h1>Word Counter</h1>
+      <p>The Word Count Tool helps you quickly calculate the number of words, characters, and paragraphs in your text. It's essential for meeting word limits and keeping track of your writing progress, whether for essays, reports, or blog posts.</p>
+  </div>
+</header>
+  <div class="container">
+    <h1 style="color: chocolate;">Word Counter</h1>
+    <p>Enter your text below:</p>
+    <textarea id="inputText" placeholder="Type your text here..."></textarea>
+    <div class="table-container">
+      <table>
+        <tr style="color: #000000;">
+          <th>Statistic</th>
+          <th>Count</th>
+        </tr>
+        <tr>
+          <td>Total words</td>
+          <td id="totalWords">0</td>
+        </tr>
+        <tr>
+          <td>Total characters (with spaces)</td>
+          <td id="totalCharsWithSpaces">0</td>
+        </tr>
+        <tr>
+          <td>Total characters (without spaces)</td>
+          <td id="totalCharsWithoutSpaces">0</td>
+        </tr>
+        <tr>
+          <td>Total sentences</td>
+          <td id="totalSentences">0</td>
+        </tr>
+        <tr>
+          <td>Total paragraphs</td>
+          <td id="totalParagraphs">0</td>
+        </tr>
+        <tr>
+          <td>Avg. words per sentence</td>
+          <td id="wordDensity">0</td>
+        </tr>
+        <tr>
+          <td>Top 5 Word Density</td>
+          <td id="topWordDensity"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+   <!-- Main Content Section -->
+   <main1>
+    <div class="container00">
+        
+
+        <!-- Section for Describing Multiple Apps -->
+        <section id="apps-description">
+          <h2 style="color: aliceblue;">Related Apps</h2>
+          <div class="app-list">
+            <a href="/tools/YouTube Thumbnail Downloader/index.html" class="abc">
+              <div class="app-item">
+                  <h3>YouTube Thumbnail
+                    Downloader</h3>
+                  <p style="color: black;">Download high-quality
+                    YouTube thumbnails.</p>
+              </div>
+            </a>
+            <a href="/tools/Image Editting Tool/index.html" class="abc">
+              <div class="app-item">
+                  <h3>Image Editing Tool</h3>
+                  <p style="color: black;"> Edit and enhance your images
+                    online.</p>
+              </div>
+            </a>
+              <!-- Add more apps as needed -->
+          </div>
+        </section>
+        <br><br><br>
+        <!-- Button to Navigate to Home Page -->
+        <section id="home-button">
+          <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+        </section>
+        </div>
+        </main>
+        
+        <!-- Footer Section -->
+        <footer>
+        <div class="container00">
+        <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+        </div>
+        </footer>
+
+  <script>
+    const inputText = document.getElementById("inputText");
+    const totalWords = document.getElementById("totalWords");
+    const totalCharsWithSpaces = document.getElementById("totalCharsWithSpaces");
+    const totalCharsWithoutSpaces = document.getElementById("totalCharsWithoutSpaces");
+    const totalSentences = document.getElementById("totalSentences");
+    const totalParagraphs = document.getElementById("totalParagraphs");
+    const wordDensity = document.getElementById("wordDensity");
+    const topWordDensity = document.getElementById("topWordDensity");
+
+    inputText.addEventListener("input", updateCounts);
+
+    function updateCounts() {
+      const text = inputText.value;
+      const words = text.trim().split(/\s+/);
+      const charsWithSpaces = text.length;
+      const charsWithoutSpaces = text.replace(/\s/g, "").length;
+      const sentences = text.split(/[.!?]/).filter(sentence => sentence.trim() !== "").length;
+      const paragraphs = text.split('\n\n').filter(paragraph => paragraph.trim() !== "").length;
+      const averageWordsPerSentence = words.length / sentences;
+
+      totalWords.textContent = words.length;
+      totalCharsWithSpaces.textContent = charsWithSpaces;
+      totalCharsWithoutSpaces.textContent = charsWithoutSpaces;
+      totalSentences.textContent = sentences;
+      totalParagraphs.textContent = paragraphs;
+      wordDensity.textContent = averageWordsPerSentence.toFixed(2);
+
+      const wordFrequency = calculateWordFrequency(words);
+      const topWords = getTopWords(wordFrequency, 5);
+      topWordDensity.textContent = topWords.map(word => `${word[0]} (${word[1]} times)`).join(', ');
+    }
+
+    function calculateWordFrequency(words) {
+      const wordFrequency = {};
+      for (const word of words) {
+        if (word in wordFrequency) {
+          wordFrequency[word]++;
+        } else {
+          wordFrequency[word] = 1;
+        }
+      }
+      return wordFrequency;
+    }
+
+    function getTopWords(wordFrequency, count) {
+      const sortedWords = Object.entries(wordFrequency).sort((a, b) => b[1] - a[1]);
+      return sortedWords.slice(0, count);
+    }
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    });
+  </script>
+</body>
+</html>

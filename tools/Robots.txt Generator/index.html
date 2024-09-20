@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robots.txt Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/tools/smoke.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">SCP_APPS.</div>
+      
+      
+      <ul class="nav-links">
+          <li><a href="#home" class="active">Robots.txt Generator</a></li>
+          <li><a href="/index.html#About">About</a></li>
+          
+          <li><a href="/index.html#tools-section">ToolS</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle">
+          &#9776; <!-- Unicode character for hamburger icon -->
+      </button>
+  </nav>
+  <div class="smoke-container">
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
+    <div class="smoke smoke3"></div>
+  </div>
+<!-- Header Section -->
+<header>
+  <div class="container00">
+      <h1>Robots.txt Generator</h1>
+      <p>Take control of your website's crawlability with our user-friendly Robots.txt Generator. A well-crafted robots.txt file is crucial for guiding search engine bots and optimizing your site's SEO performance. Our tool simplifies the process of creating this essential file, allowing you to effortlessly manage which parts of your site should be crawled and indexed. Whether you want to block sensitive areas, prevent duplicate content issues, or optimize crawl efficiency, our generator provides an intuitive interface for setting up custom rules. Specify directives for different user agents, disallow specific URLs or directories, and set crawl delays with ease. Perfect for webmasters, SEO professionals, and site owners of all technical levels, our Robots.txt Generator ensures your instructions are clear and correctly formatted. Get real-time previews of your robots.txt file, test it against major search engines, and implement it with confidence. Enhance your site's search engine interactions and maintain control over your digital presence with our powerful Robots.txt Generator today!</p>
+  </div>
+</header> <br><br>
+    <div class="warp">
+    <div class="container">
+        <h1> Robots.txt Generator</h1>
+        <div class="form-group">
+            <label for="user-agent">User-agent:</label>
+            <input type="text" id="user-agent" placeholder="*">
+        </div>
+        <div class="form-group">
+            <label for="disallow">Disallow:</label>
+            <input type="text" id="disallow" placeholder="/private">
+        </div>
+        <div class="form-group">
+            <label for="allow">Allow:</label>
+            <input type="text" id="allow" placeholder="/public">
+        </div>
+        <button onclick="generateRobots()">Generate Robots.txt</button>
+        <button onclick="clearFields()">Clear</button>
+        <pre id="robots-output"></pre>
+        <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+    </div>
+</div>
+
+<!-- Section for Describing Multiple Apps -->
+<section id="apps-description">
+  <h2 style="color: aliceblue;">Related Apps</h2>
+  <div class="app-list">
+    <a href="/tools/YouTube Thumbnail Downloader/index.html" class="abc">
+      <div class="app-item">
+          <h3>YouTube Thumbnail
+            Downloader</h3>
+          <p style="color: black;">Download high-quality
+            YouTube thumbnails.</p>
+      </div>
+    </a>
+    <a href="/tools/Image Editting Tool/index.html" class="abc">
+      <div class="app-item">
+          <h3>Image Editing Tool</h3>
+          <p style="color: black;"> Edit and enhance your images
+            online.</p>
+      </div>
+    </a>
+      <!-- Add more apps as needed -->
+  </div>
+</section>
+<br><br><br>
+<!-- Button to Navigate to Home Page -->
+<section id="home-button">
+  <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+</section>
+</div>
+</main>
+
+<!-- Footer Section -->
+<footer>
+<div class="container00">
+<p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+</div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

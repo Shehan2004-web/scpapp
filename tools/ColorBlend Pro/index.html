@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColorBlend Pro</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/tools/smoke.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">ColorBlend Pro</a></li>
+        <li><a href="/index.html#About">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+<!-- Header Section -->
+<header>
+  <div class="container00">
+      <h1>ColorBlend Pro</h1>
+      <p>Unleash your creativity with ColorBlend Pro, the ultimate tool for generating stunning color gradients and combinations. Perfect for designers, developers, and artists, this tool helps you blend and create custom color palettes that enhance the aesthetic of your projects. Achieve perfect color harmony effortlessly, whether for web design, branding, or digital art.</p>
+  </div>
+</header> <br><br>
+
+<div class="warp">
+  <main role="main" v-cloak>
+    <div class="tools">
+      <div>
+        <label>Pick Color 1:</label>
+        <input type="color" v-model="color1">
+        <input type="text" v-model="color1">
+      </div>
+      <div>
+        <label>Pick Color 2:</label>
+        <input type="color" v-model="color2">
+        <input type="text" v-model="color2">
+      </div>
+      <div>
+        <label>Steps:</label>
+        <input type="range" v-model="steps" :min="min" :max="max" :step="delta">
+      </div>
+      <div class="steps">
+        {{ visualSteps }} {{ visualStepsLabel }}
+      </div>
+    </div>
+    <div class="colors">
+      <div class="color" v-for="color in colors" :style="setStyles(color)" @click="copyColor(color)">
+        {{ colorName(color) }}
+      </div>
+    </div>
+  </main>
+</div>
+  <!-- Section for Describing Multiple Apps -->
+  <section id="apps-description">
+    <h2 style="color: aliceblue;">Related Apps</h2>
+    <div class="app-list">
+      <a href="/tools/YouTube Thumbnail Downloader/index.html" class="abc">
+        <div class="app-item">
+            <h3>YouTube Thumbnail
+              Downloader</h3>
+            <p style="color: black;">Download high-quality
+              YouTube thumbnails.</p>
+        </div>
+      </a>
+      <a href="/tools/Image Editting Tool/index.html" class="abc">
+        <div class="app-item">
+            <h3>Image Editing Tool</h3>
+            <p style="color: black;"> Edit and enhance your images
+              online.</p>
+        </div>
+      </a>
+        <!-- Add more apps as needed -->
+    </div>
+  </section>
+  <br><br><br>
+  <!-- Button to Navigate to Home Page -->
+  <section id="home-button">
+    <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+  </section>
+  </div>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer>
+  <div class="container00">
+  <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+  </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

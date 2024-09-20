@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Editting Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="/tools/smoke.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Image Editting</a></li>
+        <li><a href="/index.html#About">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+
+
+        <!-- Header Section -->
+    <header>
+        <div class="container00">
+            <h1 style="color: chocolate;">Image Editting Tool</h1>
+            <p>Edit and enhance your images online for free with our Image Editing Tool. No sign-up required—upload your images, apply adjustments, and save them without any hassle.</p>
+        </div>
+    </header>
+    <div class="container-wrapper">
+        <div class="container disable">
+            <center><h2>Image Editting Tool</h2></center>
+            <div class="wrapper">
+                <div class="editor-panel">
+                    <div class="filter">
+                        <label class="title">Filters</label>
+                        <div class="options">
+                            <button id="brightness" class="active">Brightness</button>
+                            <button id="saturation">Saturation</button>
+                            <button id="inversion">Inversion</button>
+                            <button id="grayscale">Grayscale</button>
+                        </div>
+                        <div class="slider">
+                            <div class="filter-info">
+                                <p class="name">Brightness</p>
+                                <p class="value">100%</p>
+                            </div>
+                            <input type="range" value="100" min="0" max="200">
+                        </div>
+                    </div>
+                    <div class="rotate">
+                        <label class="title">Rotate & Flip</label>
+                        <div class="options">
+                            <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                            <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                            <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                            <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-img">
+                    <img src="image-placeholder.svg" alt="preview-img">
+                </div>
+            </div>
+            <div class="controls">
+                <button class="reset-filter">Reset to default</button>
+                <div class="row">
+                    <input type="file" class="file-input" accept="image/*" hidden>
+                    <button class="choose-img">Choose Image</button>
+                    <button class="save-img">Save Image</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Main Content Section -->
+     <main1>
+        <div class="container00">
+            
+
+            <!-- Section for Describing Multiple Apps -->
+            <section id="apps-description">
+                <h2 style="color: aliceblue;">Related Apps</h2>
+                <div class="app-list">
+                  <a href="/tools/BMI Calculator/index.html" class="abc">
+                    <div class="app-item">
+                        <h3>BMI Calculator</h3>
+                        <p style="color: black;">alculate your Body Mass
+                          Index.</p>
+                    </div>
+                  </a>
+                  <a href="/tools/Calorie Calculator/index.html" class="abc">
+                    <div class="app-item">
+                        <h3>Calorie Calculator</h3>
+                        <p style="color: black;"> Calculate your daily calorie
+                          needs.</p>
+                    </div>
+                  </a>
+                    <!-- Add more apps as needed -->
+                </div>
+              </section>
+              <br><br><br>
+              <!-- Button to Navigate to Home Page -->
+              <section id="home-button">
+                <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+              </section>
+              </div>
+              </main>
+              
+              <!-- Footer Section -->
+              <footer>
+              <div class="container00">
+              <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+              </div>
+              </footer>
+    
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>

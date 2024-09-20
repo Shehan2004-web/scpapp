@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Zone Converter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/tools/smoke.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Time Zone Converter</a></li>
+        <li><a href="/index.html#About">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+
+<!-- Header Section -->
+<header>
+    <div class="container00">
+        <h1>Time Zone Converter</h1>
+        <p>Simplify your global scheduling with our intuitive Time Zone Converter. Whether you're coordinating international business calls, planning virtual meetups with friends abroad, or just curious about the local time in different parts of the world, our tool has you covered. Easily convert times between multiple cities, countries, and time zones with just a few clicks. Our converter takes into account daylight saving time changes, ensuring accuracy year-round. Say goodbye to confusion and missed appointments due to time zone mix-ups. From New York to Tokyo, London to Sydney, navigate the world's time zones effortlessly with our user-friendly converter. Make global time management a breeze!</p>
+    </div>
+</header>
+<div class="warp">
+  <div class="container">
+    <h1>Time Zone Converter</h1>
+    <div class="converter">
+      <div class="time-input">
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" />
+      </div>
+      <div class="time-zone">
+        <label for="fromTimeZone">From Time Zone:</label>
+        <select id="fromTimeZone"></select>
+      </div>
+      <div class="time-zone">
+        <label for="toTimeZone">To Time Zone:</label>
+        <select id="toTimeZone"></select>
+      </div>
+      <div class="output">
+        <button onclick="convertTime()">Convert Time</button>
+        <h2>Converted Time: <span id="convertedTime"></span></h2>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Section for Describing Multiple Apps -->
+  <section id="apps-description">
+    <h2 style="color: aliceblue;">Related Apps</h2>
+    <div class="app-list">
+      <a href="/tools/YouTube Thumbnail Downloader/index.html" class="abc">
+        <div class="app-item">
+            <h3>YouTube Thumbnail
+              Downloader</h3>
+            <p style="color: black;">Download high-quality
+              YouTube thumbnails.</p>
+        </div>
+      </a>
+      <a href="/tools/Image Editting Tool/index.html" class="abc">
+        <div class="app-item">
+            <h3>Image Editing Tool</h3>
+            <p style="color: black;"> Edit and enhance your images
+              online.</p>
+        </div>
+      </a>
+        <!-- Add more apps as needed -->
+    </div>
+  </section>
+  <br><br><br>
+  <!-- Button to Navigate to Home Page -->
+  <section id="home-button">
+    <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+  </section>
+  </div>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer>
+  <div class="container00">
+  <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+  </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

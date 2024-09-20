@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Python IDE</title>
+    <link href="data/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="data/js/ace-builds/src-noconflict/ace.js" type="text/javascript"></script>
+    <script src="data/js/ace-builds/src-noconflict/ext-language_tools.js" type="text/javascript"></script>
+    <script src="data/js/skulpt/skulpt.js" type="text/javascript"></script>
+    <script src="data/js/skulpt/skulpt-stdlib.js" type="text/javascript"></script>
+    <link href="data/css/style.css" rel="stylesheet">
+    <link href="data/fonts/fontawesome-free-6.1.1-web/css/fontawesome.min.css" rel="stylesheet">
+    <link href="data/fonts/fontawesome-free-6.1.1-web/css/solid.min.css" rel="stylesheet">
+    <link href="data/fonts/fontawesome-free-6.1.1-web/css/brands.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/tools/smoke.css">
+</head>
+
+<body class="dark-theme"> <!-- Default to dark theme -->
+    <div id="wrapper">
+        <div class="hed">
+            <h1>Python Online IDE</h1>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a onclick="main()" ><i class="fa-solid fa-play" style="color: chartreuse;"></i></a>
+            <a onclick="document.querySelector('input[type=file]').click()"><i class="fa-solid fa-folder-open"></i></a>
+            <a onclick="toggleConsole()"><i class="fa-solid fa-terminal"></i></a>
+            <a onclick="saveCode()"><i class="fa-solid fa-floppy-disk"></i></a>
+            <a onclick="downloadCode()"><i class="fa-solid fa-download"></i></a>
+            <a onclick="shareCode()"><i class="fa-solid fa-share-nodes"></i></a>
+            <a onclick="kbShortcuts()"><i class="fa-solid fa-keyboard"></i></a>
+            <a onclick="aceSettings()"><i class="fa-solid fa-gear"></i></a>
+            <!-- Theme Toggle Icon -->
+            <a onclick="toggleTheme()" id="themeToggle"><i class="fa-solid fa-moon"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="resPanel()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+        <div class="smoke-container">
+            <div class="smoke smoke1"></div>
+            <div class="smoke smoke2"></div>
+            <div class="smoke smoke3"></div>
+          </div>
+
+        <div id="editor"><pre>
+........................................................
+            **Online Python IDE**
+            Enter python code here.
+# Write Python 3 code in this online editor and run it.
+........................................................
+        </pre></div>
+
+        <!-- Hidden file input to upload Python files -->
+        <input type="file" id="fileInput" accept=".py" style="display:none;" onchange="loadFile(event)">
+
+        <!-- Save output area -->
+        <textarea id="output"></textarea>
+    </div>
+
+    <script src="data/js/script.js" type="text/javascript"></script>
+
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/python");
+
+        // Load Python file into the editor
+        function loadFile(event) {
+            var input = event.target;
+            var reader = new FileReader();
+            reader.onload = function () {
+                editor.setValue(reader.result, 1); // Load content into the editor
+            };
+            reader.readAsText(input.files[0]);
+        }
+
+        // Save the current code in the editor
+        function saveCode() {
+            var code = editor.getValue();
+            var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
+            var link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'your_code.py';
+            link.click();
+        }
+
+        // Download the current code in the editor
+        function downloadCode() {
+            saveCode();  // Calls saveCode to download the file
+        }
+
+        // Toggle between dark and light themes
+        function toggleTheme() {
+            var body = document.body;
+            var themeToggle = document.getElementById("themeToggle").children[0];
+
+            if (body.classList.contains("dark-theme")) {
+                body.classList.remove("dark-theme");
+                body.classList.add("light-theme");
+                themeToggle.classList.replace("fa-moon", "fa-sun");
+            } else {
+                body.classList.remove("light-theme");
+                body.classList.add("dark-theme");
+                themeToggle.classList.replace("fa-sun", "fa-moon");
+            }
+        }
+    </script>
+</body>
+
+</html>
