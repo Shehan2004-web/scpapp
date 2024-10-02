@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time Zone Converter Tutorial</title>
+    <link rel="stylesheet" href="/blogs/qr code/styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Time Zone Converter Web Tool Using HTML, CSS, and JavaScript</h1>
+        <p>A complete guide to building a Time Zone Converter Web Tool with step-by-step instructions.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <article>
+            <img src="https://easy.jobs/wp-content/uploads/2023/09/image-14.png.webp" alt="Time Zone Converter Tool" class="tutorial-image">
+
+            <h2>Introduction</h2>
+            <p>A Time Zone Converter is a handy tool that allows users to convert the current time between different time zones. In this tutorial, we will guide you through the steps of building a Time Zone Converter Web Tool using HTML, CSS, and JavaScript.</p>
+
+            <h2>Step 1: Set Up the HTML Structure</h2>
+            <p>We will first set up the basic HTML structure for the Time Zone Converter. This includes input fields for the user to select time zones and a button to calculate the converted time.</p>
+            <div class="code-box">
+                <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Time Zone Converter&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;label for="fromTime"&gt;Enter Time:&lt;/label&gt;
+        &lt;input type="time" id="fromTime"&gt;
+
+        &lt;label for="fromZone"&gt;From Time Zone:&lt;/label&gt;
+        &lt;select id="fromZone"&gt;
+            &lt;option value="UTC"&gt;UTC&lt;/option&gt;
+            &lt;option value="America/New_York"&gt;New York (EST)&lt;/option&gt;
+            &lt;option value="Asia/Colombo"&gt;Sri Lanka (IST)&lt;/option&gt;
+        &lt;/select&gt;
+
+        &lt;label for="toZone"&gt;To Time Zone:&lt;/label&gt;
+        &lt;select id="toZone"&gt;
+            &lt;option value="UTC"&gt;UTC&lt;/option&gt;
+            &lt;option value="America/New_York"&gt;New York (EST)&lt;/option&gt;
+            &lt;option value="Asia/Colombo"&gt;Sri Lanka (IST)&lt;/option&gt;
+        &lt;/select&gt;
+
+        &lt;button id="convertBtn"&gt;Convert Time&lt;/button&gt;
+        &lt;h2&gt;Converted Time: &lt;span id="result"&gt;&lt;/span&gt;&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+                <button class="copy-btn">Copy Code</button>
+            </div>
+
+            <h2>Step 2: Styling with CSS</h2>
+            <p>Now, let's style the Time Zone Converter using CSS:</p>
+            <div class="code-box">
+                <pre><code>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e85c0d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #be5316;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #333;
+}
+                </code></pre>
+                <button class="copy-btn">Copy Code</button>
+            </div>
+
+            <h2>Step 3: Adding JavaScript for Time Zone Conversion</h2>
+            <p>Next, let's add the JavaScript to perform the time zone conversion:</p>
+            <div class="code-box">
+                <pre><code>
+document.getElementById('convertBtn').addEventListener('click', function() {
+    const fromTime = document.getElementById('fromTime').value;
+    const fromZone = document.getElementById('fromZone').value;
+    const toZone = document.getElementById('toZone').value;
+
+    if (!fromTime) {
+        alert("Please enter a time.");
+        return;
+    }
+
+    const timeParts = fromTime.split(':');
+    const date = new Date();
+    date.setHours(timeParts[0], timeParts[1]);
+
+    const fromTimeFormatted = new Intl.DateTimeFormat('en-US', {
+        timeZone: fromZone,
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    }).format(date);
+
+    const toTimeFormatted = new Intl.DateTimeFormat('en-US', {
+        timeZone: toZone,
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    }).format(date);
+
+    document.getElementById('result').textContent = toTimeFormatted;
+});
+                </code></pre>
+                <button class="copy-btn">Copy Code</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script>
+    <script src="/blogs/qr code/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    background: #1e1e1e url('smoke-background.png') no-repeat center center/cover;
+    animation: smokeEffect 10s infinite linear;
+}
+
+/* Smoke Effect */
+@keyframes smokeEffect {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #c7253e;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Menu Icon for Mobile/Tablet */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #e85c0d;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(199, 37, 62, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    color: #f1f1f1;
+    font-size: 1.2rem;
+}
+
+/* Blog Posts Section */
+.blogs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.blog-card {
+    background-color: #333;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation: cardFadeIn 0.5s ease forwards;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-content {
+    padding: 1rem;
+}
+
+.blog-content h3 {
+    color: #e85c0d;
+    margin-bottom: 1rem;
+}
+
+.blog-content p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: #e85c0d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #ffffff;
+}
+
+/* Hover Animation on Blog Cards */
+.blog-card:hover img {
+    transform: scale(1.05);
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #ffffff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+
+/* Mobile View */
+@media only screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: #c7253e;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .blogs {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .blog-card {
+        width: 100%;
+    }
+}
+
+/* Tablet View */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .blogs {
+        gap: 1.5rem;
+    }
+
+    .blog-card {
+        width: 45%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #c7253e;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 1025px) {
+    .blogs {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .blog-card {
+        width: 300px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
