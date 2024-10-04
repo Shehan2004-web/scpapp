@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Checker - Test Your Website Responsiveness</title>
+    <meta name="description" content="Use our free Responsive Checker tool to test how your website appears on different screen sizes, including mobile, tablet, and desktop devices. Optimize your website for better user experience.">
+    <meta name="keywords" content="Responsive Website Checker, Check Website Responsiveness, Mobile-Friendly Test Tool, Desktop and Mobile Screen Size Viewer, URL Responsiveness Checker, Website Responsive Design Assessment, Responsive Design Testing Tool, Cross-Device Compatibility Checker">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/tools/smoke.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SCP_APPS.</div>
+    
+    
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Responsive Checker</a></li>
+        <li><a href="/about/index.html">About</a></li>
+        
+        <li><a href="/index.html#tools-section">ToolS</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </button>
+</nav>
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+
+<header>
+    <div class="container1">
+        <h1>Responsive Checker</h1>
+        <p>Check how your website appears on different screen sizes. Simply enter the URL of your website, select a device type, and see how it looks!</p>
+    </div>
+</header>
+
+    <div class="warp">
+    <div class="container">
+        <h1>Responsive Checker</h1>
+        <p>Enter a URL to check its responsiveness:</p>
+        <input type="text" id="url-input" placeholder="Enter website URL here">
+        <p>Select a screen size:</p>
+        <div class="screen-size-selector">
+            <div class="screen-icon" onclick="setScreenSize('desktop')">
+                <img src="https://img.icons8.com/ios/50/studio-display.png" alt="Desktop" title="Desktop">
+            </div>
+            <div class="screen-icon" onclick="setScreenSize('tablet')">
+                <img src="https://img.icons8.com/ios/50/ipad.png" alt="Tablet" title="Tablet">
+            </div>
+            <div class="screen-icon" onclick="setScreenSize('mobile')">
+                <img src="https://img.icons8.com/sf-regular/48/iphone-x.png" alt="Mobile" title="Mobile">
+            </div>
+        </div>
+        <div id="device-info"></div> <!-- Device info will be displayed here -->
+        <button onclick="loadWebsite()">Check Responsiveness</button>
+        <div class="responsive-frame-container">
+            <iframe id="responsive-frame" title="Responsive View"></iframe>
+        </div>
+    </div>
+</div>
+
+<br><br><br><br>
+          <!-- Footer Section -->
+          <footer>
+          <div class="container00">
+          <p>&copy; 2024 Created By SCP_APPS. All rights reserved.</p>
+          </div>
+          </footer>
+
+<!-- Script -->
+<script src="script.js"></script>
+<script>
+  window.embeddedChatbotConfig = {
+  chatbotId: "CP2dVgcp1BqAWx101hh4m",
+  domain: "www.chatbase.co"
+  }
+  </script>
+  <script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="CP2dVgcp1BqAWx101hh4m"
+  domain="www.chatbase.co"
+  defer>
+  </script>
+    <script src="script.js"></script>
+</body>
+</html>
