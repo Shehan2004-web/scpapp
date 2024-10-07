@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Description Generator Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/smoke.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+       <body style="background-color: black;">
+    
+      <nav>
+        <div class="logo">
+            <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
+        </div>
+        <div class="menu-icon">
+            <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
+        </div>
+    
+        <div class="nav-links">
+            <ul>
+                <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                <li class="dropdown">
+                    <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+                    <div class="dropdown-content">
+                        <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
+                        <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
+                        <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
+                        <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
+                        <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
+                        <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
+                        <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
+                        <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
+                        <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
+                    </div>
+                </li>
+                <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
+            </ul>
+        </div>
+    </nav>
+  
+     <!-- Header Section -->
+     <header>
+      <div class="container00">
+          <h1>YouTube Description Generator</h1>
+          <p>Create compelling YouTube descriptions quickly and effortlessly. This tool helps you generate optimized descriptions that enhance visibility and engagement for your videos. Perfect for creators looking to save time while improving their video's SEO and viewer appeal.</p>
+      </div>
+    </header> <br><br>
+  
+    <div class="smoke-container">
+      <div class="smoke smoke1"></div>
+      <div class="smoke smoke2"></div>
+      <div class="smoke smoke3"></div>
+    </div>
+    <div class="container">
+        <h1>YouTube Description Generator</h1>
+
+        <!-- About the Video Section -->
+        <div class="section">
+            <div class="section-content">
+                <h2>About the Video</h2>
+                <p>A detailed explanation of what the video is about, including important keywords.</p>
+                <textarea id="about-video" placeholder="Hi, thanks for watching our video about {your video}!
+In this video, we'll walk you through:
+- {Topic 1}
+- {Topic 2}
+- {Topic 3}"></textarea>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="about-video-toggle" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <!-- Timestamps Section -->
+        <div class="section">
+            <div class="section-content">
+                <h2>Timestamps</h2>
+                <p>A breakdown of the main sections of your video by time.</p>
+                <textarea id="timestamps" placeholder="00:00 First Topic Covered
+01:30 Second Topic Covered
+03:20 Third Topic Covered"></textarea>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="timestamps-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <!-- About the Channel Section -->
+        <div class="section">
+            <div class="section-content">
+                <h2>About the Channel</h2>
+                <p>Briefly explain the type of content you publish on your channel.</p>
+                <textarea id="about-channel" placeholder="Our channel is about {Topic}. We cover lots of cool stuff."></textarea>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="about-channel-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <!-- Our Website, Contact & Social Section -->
+        <div class="section">
+            <div class="section-content">
+                <h2>Our Website, Contact & Social</h2>
+                <p>Include your website link, social media, and contact information.</p>
+                <textarea id="contact-social" placeholder="Check out our website: https://www.scpapp.pro
+Follow us on Instagram: @scpapp
+Email us at: contact@scpapp.pro"></textarea>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="contact-social-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="preview-section">
+            <h2>Preview</h2>
+            <div id="description-preview"></div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <button class="generate-btn">Copy Description</button>
+            <button class="clear-btn">Clear</button>
+        </div>
+    </div>
+
+    <!-- Section for Describing Multiple Apps -->
+    <section id="apps-description">
+        <h2>Related Apps</h2>
+        <div class="app-list">
+          <a href="/tools/BMI Calculator/index.html" class="abc">
+            <div class="app-item">
+                <h3>BMI Calculator</h3>
+                <p style="color: black;">alculate your Body Mass
+                  Index.</p>
+            </div>
+          </a>
+          <a href="/tools/Calorie Calculator/index.html" class="abc">
+            <div class="app-item">
+                <h3>Calorie Calculator</h3>
+                <p style="color: black;"> Calculate your daily calorie
+                  needs.</p>
+            </div>
+          </a>
+            <!-- Add more apps as needed -->
+        </div>
+      </section>
+      <br><br><br>
+      <!-- Button to Navigate to Home Page -->
+      <section id="home-button">
+        <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+      </section>
+      </div>
+      </main>
+      
+             <!-- Footer Section -->
+             <footer>
+                <div class="footer-container">
+                    <div class="footer-section contact-info" id="Contact">
+                        <h4><i class="fas fa-info-circle"></i> Contact Information</h4>
+                        <p>
+                            <a href="tel:+94703245075">
+                                <i class="fas fa-phone-alt"></i> Phone: +9470 324 5075
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:chamikascp@gmail.com">
+                                <i class="fas fa-envelope"></i> Email: chamikascp@gmail.com
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://maps.app.goo.gl/3HpYgXj9bcLLBENG9" target="_blank">
+                                <i class="fas fa-map-marker-alt"></i> Monaragala, Ethimale
+                            </a>
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+                        <div class="social-icons">
+                            <a class="facebook" href="https://www.facebook.com/shehan.chamika.33671?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                            <a class="whatsapp" href="http://Wa.me//+94703245075"><i class="fab fa-whatsapp"></i></a>
+                            <a class="instagram" href="https://www.instagram.com/shehanscp?igsh=MThqejkzaDV3MTd5Zg=="><i class="fab fa-instagram"></i></a>
+                            <a class="tiktok" href="404/index.html"><i class="fab fa-tiktok"></i></a>
+                            <a class="youtube" href="404/index.html"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4><i class="fas fa-building"></i> Company Info</h4>
+                        <p><a href="/about/index.html">About Us</a></p>
+                        <p><a href="/contact/contact.html">Contact Us</a></p>
+                        <p><a href="/t&c/FAQ.html">FAQ page</a></p>
+                        <p><a href="/t&c/ppindex.html">Privacy Policy</a></p>
+                        <p><a href="/t&c/tcindex.html">Terms & Conditions</a></p>
+                        <p><a href="/t&c/diciml.html">Disclaimer</a></p>
+                    </div>
+                    <div class="footer-section">
+                        <h4><i class="fas fa-link"></i> Quick Links</h4>
+                        <p><a href="/index.html">Home</a></p>
+                        <p><a href="/index.html#tools-section">Tools</a></p>
+                        <p><a href="/index.html#User">Users Say</a></p>
+                        <p><a href="/index.html#combined-section">Thank You for Visiting!</a></p>
+                        <p><a href="/blogs/index.html">Blogs</a></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+                </div>
+            </footer>
+  <script src="/js/nav.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

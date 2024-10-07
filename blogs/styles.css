@@ -3,9 +3,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #1e1e1e;
+    background-color: #000000;
     color: #ffffff;
-    background: #1e1e1e url('smoke-background.png') no-repeat center center/cover;
+    background: #000000 url('smoke-background.png') no-repeat center center/cover;
     animation: smokeEffect 10s infinite linear;
 }
 
@@ -19,44 +19,7 @@ body {
     }
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #c7253e;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    align-items: center;
-}
 
-nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-/* Menu Icon for Mobile/Tablet */
-.menu-icon {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #ffffff;
-}
-
-nav .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-nav .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav .nav-links a:hover {
-    color: #e85c0d;
-}
 
 /* Hero Section */
 .hero {
@@ -139,14 +102,7 @@ nav .nav-links a:hover {
     transform: translateY(-10px);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #ffffff;
-    animation: fadeIn 2s ease-in-out;
-}
+
 
 /* Keyframes for Animations */
 @keyframes fadeIn {
@@ -173,22 +129,7 @@ footer {
 
 /* Mobile View */
 @media only screen and (max-width: 600px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 0.5rem;
-        background-color: #c7253e;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        left: 0;
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .menu-icon {
-        display: block;
-    }
+   
 
     .hero h1 {
         font-size: 2rem;
@@ -230,17 +171,7 @@ footer {
         display: block;
     }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #c7253e;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        left: 0;
-        padding: 1rem;
-        text-align: center;
-    }
+    
 }
 
 /* Desktop View */
@@ -254,7 +185,5 @@ footer {
         width: 300px;
     }
 
-    .menu-icon {
-        display: none;
-    }
+   
 }

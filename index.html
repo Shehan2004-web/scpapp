@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/nav.css">
+    
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-54LKRYY810"></script>
 <script>
@@ -25,60 +27,59 @@
             <img src="images/headinglogo.png" alt="SCPTOOLS Logo">
         </div>
         <div class="menu-icon">
-            <img src="images\menu.png" alt="Menu Icon">
+            <img src="images/menu.png" alt="Menu Icon" id="menu-icon">
         </div>
-
-     
+    
         <div class="nav-links">
             <ul>
-                
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                 <li class="dropdown">
-                    <a href="#tools-section" class="dropbtn">Tools</a>
+                    <a href="#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
                     <div class="dropdown-content">
-                        <a href="#converters"  class="dropbtn" >Converters</a>
-                        <a href="#productivity">Productivity Tools</a>
-                        <a href="#health">Health Tools</a>
-                        <a href="#ai">AI Tools</a>
-                        <a href="#utility">Utility Tools</a>
-                        <a href="#calculators">Calculators</a>
-                        <a href="#development">Development Tools</a>
-                        <a href="#media">Media Tools</a>
-                        <a href="#social-media">Social Media Tools</a>
-                        
+                        <a href="#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
+                        <a href="#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
+                        <a href="#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
+                        <a href="#ai"><i class="fas fa-robot"></i> AI Tools</a>
+                        <a href="#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
+                        <a href="#calculators"><i class="fas fa-calculator"></i> Calculators</a>
+                        <a href="#development"><i class="fas fa-code"></i> Development Tools</a>
+                        <a href="#media"><i class="fas fa-photo-video"></i> Media Tools</a>
+                        <a href="#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
                     </div>
                 </li>
-                <li><a href="about\index.html">About</a></li>
-                <li><a href="contact\contact.html">Contact</a></li>
-                <li><a href="blogs\index.html">Blogs</a></li>
-                <li><a href="#User">comment</a></li>
-                
+                <li><a href="about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="#User"><i class="fas fa-comment"></i> Comment</a></li>
             </ul>
         </div>
-
-        
     </nav>
     
-    <section class="hero">
+    
+    <!-- Hero Section -->
+    <section class="hero"> 
         <div class="content">
-            <h1>The Ultimate Solution for Streamlined Processes</h1> <br>
-            <p>Welcome to SCP_APPS – offering 100% free web tools to solve your everyday tasks effortlessly. Explore our wide range of utilities designed for productivity and convenience.</p>
-            <br><br>
-            <a href="#tools-section" class="btn">Get started</a>
+            <h1>The Ultimate Solution for Streamlined Processes</h1>
+            <p>Hello, SCP_APPS, here are apps that enable you to perform difficult and boring tasks, making tedious work less complicated. Enhance yourself through the use of 50+ free online tools without a need of registration and limitations. You can take your first steps right now!</p>
+            <a href="#tools-section" class="btn">
+                <span>Get started</span>
+                <i class="fas fa-arrow-right"></i> <!-- Font Awesome icon -->
+            </a>
         </div>
         <div class="hero-image">
             <img src="images/heroimg.png" alt="File Management Tools">
         </div>
-        <br><br>
-    </section>
-    <br><br>
-    <section class="free-tools-section">
-        <div class="section-content">
-          <h2>Free Tools, No Signup Needed!</h2>
-          <p>Get started with our free tools instantly. No hassle, no signups. Just click and go!</p>
-          <a href="#tools-section" class="cta-button">Get started</a>
-        </div>
-      </section>
+    </section> 
+
+<!-- Free Tools Section -->
+<section class="free-tools-section">
+    <div class="section-content fade-in-up">
+        <h2>Free Tools, No Signup Needed!</h2>
+        <p>Get started with our free tools instantly. No hassle, no signups. Just click and go!</p>
+        <a href="#tools-section" class="cta-button pulse">Get started</a>
+    </div>
+</section>
+
       
 <br><br>
     <section class="features-section">
@@ -217,6 +218,15 @@
                 <div class="tool-details">
                     <h3>Typing Speed Test</h3>
                     <p>Test and improve your typing speed.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\singlish\index.html" class="link">
+            <div class="tool-card productivity">
+                <i class="fas fa-pencil-alt tool-icon" title="Singlish to Sinhala Typing"></i>
+                <div class="tool-details">
+                    <h3>Singlish to Sinhala Typing</h3>
+                    <p>Convert Singlish effortlessly into Sinhala text quickly.</p>
                 </div>
             </div>
         </a>
@@ -422,6 +432,15 @@
                 </div>
             </div>
         </a>
+        <a href="tools\YouTube Money Calculator\index.html" class="link">
+            <div class="tool-card calculators">
+                <i class="fas fa-dollar-sign tool-icon" title="YouTube Money Calculator"></i>
+                <div class="tool-details">
+                    <h3>YouTube Money Calculator</h3>
+                    <p>Estimate potential YouTube earnings quickly and easily.</p>
+                </div>
+            </div>
+        </a>
         <a href="tools\python IDLE\index.html" class="link">
             <div class="tool-card development" id="development">
                 <i class="fab fa-python tool-icon"></i>
@@ -506,12 +525,32 @@
                 </div>
             </div>
         </a>
+        <a href="/tools/yecg/index.html" class="link">
+            <div class="tool-card development">
+                <i class="fab fa-youtube tool-icon" title="YouTube Embed Code Generator"></i>
+
+
+                <div class="tool-details">
+                    <h3>YouTube Embed Code Generator</h3>
+                    <p>Quickly generate YouTube embed code for websites.</p>
+                </div>
+            </div>
+        </a>
         <a href="tools\All In One Video Downloader\index.html" class="link">
             <div class="tool-card media" id="media">
                 <i class="fas fa-download tool-icon"></i>
                 <div class="tool-details">
                     <h3>All In One Video Downloader</h3>
                     <p>Download videos from various platforms.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\YouTube Trend\index.html" class="link">
+            <div class="tool-card media" id="media">
+                <i class="fas fa-chart-line tool-icon" title="YouTube Trend"></i>
+                <div class="tool-details">
+                    <h3>YouTube Trend</h3>
+                    <p>Discover the latest YouTube trends and insights.</p>
                 </div>
             </div>
         </a>
@@ -558,6 +597,18 @@
                 <div class="tool-details">
                     <h3>Social Media Hashtag Generator</h3>
                     <p>Generate the best hashtags for your posts.</p>
+                </div>
+            </div>
+        </a>
+        <a href="tools\YouTube Description\index.html" class="link">
+            <div class="tool-card social-media" id="social-media">
+               
+                <i class="fas fa-file-alt tool-icon" title="YouTube Description Generator"></i>
+                  
+                
+                <div class="tool-details">
+                    <h3>YouTube Description Generator</h3>
+                    <p>Easily create optimized YouTube descriptions for better engagement.</p>
                 </div>
             </div>
         </a>
@@ -655,7 +706,7 @@
             <p>
               Save time and enhance productivity by using all our tools in one place. No need to juggle between different apps—everything you need is here.
             </p>
-            <a href="#" class="cta-button">Explore Tools</a>
+            <a href="#tools-section" class="cta-button">Explore Tools</a>
           </div>
         </div>
       </section>
@@ -733,6 +784,21 @@
               </div>
             </div>
           </div>
+          <!-- Testimonial 6 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"SCP_Tools is a fantastic platform with a clean design and highly functional tools. Works smoothly on all devices. Highly recommend!"</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images\pepole6.jpg" alt="User 4">
+                <div class="author-info">
+                  <h3>Vihara Sadakalani</h3>
+                  <p>Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- Testimonial 5 -->
           <div class="carousel-item">
             <div class="testimonial-card">
@@ -779,89 +845,62 @@
       <p>We appreciate your interest in our tools. Stay tuned as we load the best experience for you!</p>
     </div>
   
-    <!-- Related Apps Section -->
-    <div class="related-apps">
-      <h2>useful Tools</h2>
-      <div class="app-cards">
-        <!-- App Card 1 -->
-        <div class="app-card">
-            <i class="fas fa-file-alt tool-icon" style="color: rgb(255, 213, 0);"></i>
-          <h3>Resume Maker</h3>
-          <p>Build professional resumes easily.</p>
-          <a href="tools\resum\index.html">Learn More</a>
-        </div>
-        <!-- App Card 2 -->
-        <div class="app-card">
-            <i class="fas fa-language tool-icon"></i>
-          <h3>Translator</h3>
-          <p>Translate text between multiple languages.</p>
-          <a href="tools/Translator/index.html">Learn More</a>
-        </div>
-        <!-- App Card 3 -->
-        <div class="app-card">
-            <i class="fas fa-key tool-icon" style="color: brown;"></i>
-          <h3>Password Generator</h3>
-          <p>Create strong and secure passwords.</p>
-          <a href="tools\Password Generator\index.html">Learn More</a>
-        </div>
-      </div>
-    </div>
+    
   </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section contact-info" id="Contact">
-                <h4>Contact Information</h4>
-                <p>
-                    <a href="tel:+94703245075">
-                        <img src="images/phone.png" alt="Phone Icon" class="contact-icon"> Phone: +9470 324 5075
-                    </a>
-                </p>
-                <p>
-                    <a href="mailto:chamikascp@gmail.com">
-                        <img src="images/email.png" alt="Email Icon" class="contact-icon"> Email: chamikascp@gmail.com
-                    </a>
-                </p>
-                <p>
-                    <a href="https://maps.app.goo.gl/3HpYgXj9bcLLBENG9" target="_blank">
-                        <img src="images/map.png" alt="Address Icon" class="contact-icon"> Monaragala, Ethimale
-                    </a>
-                </p>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-images">
-                    <a href="https://www.facebook.com/shehan.chamika.33671?mibextid=ZbWKwL"><img src="images/facebook.png" alt="Facebook"></a>
-                    <a href="http://Wa.me//+94703245075"><img src="images/whatsapp.png" alt="WhatsApp"></a>
-                    <a href="https://www.instagram.com/shehanscp?igsh=MThqejkzaDV3MTd5Zg=="><img src="images/instagram.png" alt="Instagram"></a>
-                    <a href="404\index.html"><img src="images/tik-tok.png" alt="TikTok"></a>
-                    <a href="404\index.html"><img src="images/youtube.png" alt="TikTok"></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Company Info</h4>
-                <p><a href="about\index.html">About Us</a></p>
-                <p><a href="contact\contact.html">Contact Us</a></p>
-                <p><a href="t&c\FAQ.html">FAQ page</a></p>
-                <p><a href="t&c\ppindex.html">Privacy Policy</a></p>
-                <p><a href="t&c\tcindex.html">Terms & Conditions</a></p>
-                <p><a href="t&c\diciml.html">Disclaimer</a></p>
-                
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="#">Home</a></p>
-                <p><a href="#tools-section">Tools</a></p>
-                <p><a href="#User">Users Say</a></p>
-                <p><a href="#combined-section">Thank You for Visiting!</a></p>
-                <p><a href="/blogs/index.html">Blogs</a></p>
-                
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section contact-info" id="Contact">
+            <h4><i class="fas fa-info-circle"></i> Contact Information</h4>
+            <p>
+                <a href="tel:+94703245075">
+                    <i class="fas fa-phone-alt"></i> Phone: +9470 324 5075
+                </a>
+            </p>
+            <p>
+                <a href="mailto:chamikascp@gmail.com">
+                    <i class="fas fa-envelope"></i> Email: chamikascp@gmail.com
+                </a>
+            </p>
+            <p>
+                <a href="https://maps.app.goo.gl/3HpYgXj9bcLLBENG9" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Monaragala, Ethimale
+                </a>
+            </p>
+        </div>
+        <div class="footer-section">
+            <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+            <div class="social-icons">
+                <a class="facebook" href="https://www.facebook.com/shehan.chamika.33671?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                <a class="whatsapp" href="http://Wa.me//+94703245075"><i class="fab fa-whatsapp"></i></a>
+                <a class="instagram" href="https://www.instagram.com/shehanscp?igsh=MThqejkzaDV3MTd5Zg=="><i class="fab fa-instagram"></i></a>
+                <a class="tiktok" href="404/index.html"><i class="fab fa-tiktok"></i></a>
+                <a class="youtube" href="404/index.html"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+        <div class="footer-section">
+            <h4><i class="fas fa-building"></i> Company Info</h4>
+            <p><a href="about/index.html">About Us</a></p>
+            <p><a href="contact/contact.html">Contact Us</a></p>
+            <p><a href="t&c/FAQ.html">FAQ page</a></p>
+            <p><a href="t&c/ppindex.html">Privacy Policy</a></p>
+            <p><a href="t&c/tcindex.html">Terms & Conditions</a></p>
+            <p><a href="t&c/diciml.html">Disclaimer</a></p>
         </div>
-    </footer>
+        <div class="footer-section">
+            <h4><i class="fas fa-link"></i> Quick Links</h4>
+            <p><a href="#">Home</a></p>
+            <p><a href="#tools-section">Tools</a></p>
+            <p><a href="#User">Users Say</a></p>
+            <p><a href="#combined-section">Thank You for Visiting!</a></p>
+            <p><a href="/blogs/index.html">Blogs</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+    </div>
+</footer>
+
     <script>
         window.embeddedChatbotConfig = {
         chatbotId: "CP2dVgcp1BqAWx101hh4m",
@@ -877,9 +916,7 @@
     
 
     <script>
-        document.querySelector('.menu-icon').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
+       
 
 // Filter Tools by Category
 function filterTools(category) {
@@ -1038,4 +1075,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </body>
 <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+    <script src="js/nav.js"></script>
 </html>

@@ -94,7 +94,7 @@ p#result {
 
 /* Header Section */
 header {
-    background-color: #3c3d374c;
+    background-color: #2521215b;
     color: white;
     padding: 40px 0;
     text-align: center;
@@ -214,13 +214,6 @@ main1 {
 }
 
 /* Footer Section */
-footer {
-    background-color: #33333362;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -252,99 +245,6 @@ footer {
     }
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #423F3E;
-}
-
-.logo {
-    color: white;
-    font-size: 1.5em;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    position: relative;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-.nav-links a.active,
-.nav-links a:hover {
-    color: #FF8C00; /* Highlight color */
-}
-
-.nav-links a.active::after,
-.nav-links a:hover::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: #FF8C00; /* Highlight color */
-    transition: width 0.3s;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        background-color: #423F3E;
-        position: absolute;
-        top: 60px;
-        left: -100%;
-        width: 100%;
-        transition: left 0.3s;
-    }
-
-    .navbar {
-        position: relative;
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-        text-align: center;
-    }
-}
-
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2em;
-}
-
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        left: -100%;
-    }
-}
 
 /* Smoke effect styles */
 .smoke-container {

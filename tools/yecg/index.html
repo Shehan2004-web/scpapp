@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Embed Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/smoke.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+       <body style="background-color: black;">
+    
+      <nav>
+        <div class="logo">
+            <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
+        </div>
+        <div class="menu-icon">
+            <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
+        </div>
+    
+        <div class="nav-links">
+            <ul>
+                <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                <li class="dropdown">
+                    <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+                    <div class="dropdown-content">
+                        <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
+                        <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
+                        <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
+                        <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
+                        <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
+                        <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
+                        <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
+                        <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
+                        <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
+                    </div>
+                </li>
+                <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
+            </ul>
+        </div>
+    </nav>
+  
+     <!-- Header Section -->
+     <header>
+      <div class="container00">
+          <h1>YouTube Embed Code Generator</h1>
+          <p>Easily create custom embed codes for any YouTube video. Just paste the video URL, adjust the size and settings, and generate a code to embed the video on your website, blog, or social media. Perfect for sharing videos effortlessly with full control over how they appear.</p>
+      </div>
+    </header> <br><br>
+  
+    <div class="smoke-container">
+      <div class="smoke smoke1"></div>
+      <div class="smoke smoke2"></div>
+      <div class="smoke smoke3"></div>
+    </div>
+
+    <div class="warp">
+    <div class="container">
+        <h1>YouTube Embed Code Generator</h1>
+        <form id="embedForm">
+            <label for="videoURL">Enter YouTube Video URL</label>
+            <input type="text" id="videoURL" placeholder="https://www.youtube.com/watch?v=example" required>
+
+            <label for="size">Size (default: 560x315)</label>
+            <div class="size-input">
+                <input type="number" id="width" placeholder="560">
+                <span>x</span>
+                <input type="number" id="height" placeholder="315">
+            </div>
+
+            <label for="startTime">Start Time</label>
+            <div class="time-input">
+                <input type="number" id="startMinute" placeholder="Minute(s)">
+                <input type="number" id="startSecond" placeholder="Second(s)">
+            </div>
+
+            <label for="endTime">End Time</label>
+            <div class="time-input">
+                <input type="number" id="endMinute" placeholder="Minute(s)">
+                <input type="number" id="endSecond" placeholder="Second(s)">
+            </div>
+
+            <div class="options">
+                <h2>Options</h2>
+                <label><input type="checkbox" id="loop"> Loop video</label>
+                <label><input type="checkbox" id="autoplay"> Auto play video</label>
+                <label><input type="checkbox" id="fullscreen"> Hide Full-screen button</label>
+                <label><input type="checkbox" id="controls"> Hide player controls</label>
+                <label><input type="checkbox" id="logo"> Hide YouTube logo</label>
+                <label><input type="checkbox" id="privacy"> Privacy enhanced</label>
+                <label><input type="checkbox" id="responsive" checked> Responsive (auto scale to available width)</label>
+            </div>
+
+            <div class="actions">
+                <button type="button" id="generate">Generate</button>
+                <button type="reset">Reset</button>
+            </div>
+            
+            <div class="output">
+                <label for="htmlCode">HTML embed code</label>
+                <textarea id="htmlCode" readonly></textarea>
+                <button type="button" id="copy">Copy HTML to clipboard</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <!-- Section for Describing Multiple Apps -->
+    <section id="apps-description">
+        <h2>Related Apps</h2>
+        <div class="app-list">
+          <a href="/tools/BMI Calculator/index.html" class="abc">
+            <div class="app-item">
+                <h3>BMI Calculator</h3>
+                <p style="color: black;">alculate your Body Mass
+                  Index.</p>
+            </div>
+          </a>
+          <a href="/tools/Calorie Calculator/index.html" class="abc">
+            <div class="app-item">
+                <h3>Calorie Calculator</h3>
+                <p style="color: black;"> Calculate your daily calorie
+                  needs.</p>
+            </div>
+          </a>
+            <!-- Add more apps as needed -->
+        </div>
+      </section>
+      <br><br><br>
+      <!-- Button to Navigate to Home Page -->
+      <section id="home-button">
+        <a href="/index.html#Calculator" class="button">Go to Home Page</a>
+      </section>
+      </div>
+      </main>
+      
+             <!-- Footer Section -->
+             <footer>
+                <div class="footer-container">
+                    <div class="footer-section contact-info" id="Contact">
+                        <h4><i class="fas fa-info-circle"></i> Contact Information</h4>
+                        <p>
+                            <a href="tel:+94703245075">
+                                <i class="fas fa-phone-alt"></i> Phone: +9470 324 5075
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:chamikascp@gmail.com">
+                                <i class="fas fa-envelope"></i> Email: chamikascp@gmail.com
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://maps.app.goo.gl/3HpYgXj9bcLLBENG9" target="_blank">
+                                <i class="fas fa-map-marker-alt"></i> Monaragala, Ethimale
+                            </a>
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+                        <div class="social-icons">
+                            <a class="facebook" href="https://www.facebook.com/shehan.chamika.33671?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                            <a class="whatsapp" href="http://Wa.me//+94703245075"><i class="fab fa-whatsapp"></i></a>
+                            <a class="instagram" href="https://www.instagram.com/shehanscp?igsh=MThqejkzaDV3MTd5Zg=="><i class="fab fa-instagram"></i></a>
+                            <a class="tiktok" href="404/index.html"><i class="fab fa-tiktok"></i></a>
+                            <a class="youtube" href="404/index.html"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4><i class="fas fa-building"></i> Company Info</h4>
+                        <p><a href="/about/index.html">About Us</a></p>
+                        <p><a href="/contact/contact.html">Contact Us</a></p>
+                        <p><a href="/t&c/FAQ.html">FAQ page</a></p>
+                        <p><a href="/t&c/ppindex.html">Privacy Policy</a></p>
+                        <p><a href="/t&c/tcindex.html">Terms & Conditions</a></p>
+                        <p><a href="/t&c/diciml.html">Disclaimer</a></p>
+                    </div>
+                    <div class="footer-section">
+                        <h4><i class="fas fa-link"></i> Quick Links</h4>
+                        <p><a href="/index.html">Home</a></p>
+                        <p><a href="/index.html#tools-section">Tools</a></p>
+                        <p><a href="/index.html#User">Users Say</a></p>
+                        <p><a href="/index.html#combined-section">Thank You for Visiting!</a></p>
+                        <p><a href="/blogs/index.html">Blogs</a></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+                </div>
+            </footer>
+  <script src="/js/nav.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

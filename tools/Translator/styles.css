@@ -9,15 +9,17 @@
 }
 
 body {
+
+  
+  min-height: 100vh;
+  color: #0000;
+}
+.warp{
   display: flex;
   justify-content: center;
   align-items: center;
   
-  padding-top: 60px;
-  min-height: 100vh;
-  color: #0000;
 }
-
 .container {
   max-width: 690px;
   width: 100%;

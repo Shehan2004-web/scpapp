@@ -21,18 +21,18 @@ h1 {
     margin-bottom: 10px;
 }
 
-nav {
+nav1 {
     margin-top: 10px;
 }
 
-nav a {
+nav1 a {
     color: #ffffff; /* White links */
     text-decoration: none;
     padding: 10px 15px;
     transition: background-color 0.3s ease; /* Transition for hover effect */
 }
 
-nav a:hover {
+nav1 a:hover {
     background-color: #e85c0d; /* Hover effect */
     border-radius: 5px;
 }

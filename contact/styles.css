@@ -11,11 +11,7 @@ body {
   color: #333;
 }
 
-header {
-  background: #423f3e37;
-  color: #fff;
-  padding: 1rem 0;
-}
+
 
 .container {
   max-width: 1200px;
@@ -26,21 +22,6 @@ header {
   align-items: center;
 }
 
-header h1 {
-  margin: 0;
-}
-
-nav a {
-  color: #fff;
-  margin-left: 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #e85c0d;
-}
 
 main {
   padding: 2rem 0;

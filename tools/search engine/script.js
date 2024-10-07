@@ -8,7 +8,7 @@ const formEl = document.querySelector("form");
 
 const API_KEY = "9in7EwFvA0FGRB7hdJWJz78lXyX4fzUyeGQxbLz98bg";
 let keywordSearch = null;
-let page = 1;
+let page = 2;
 
 async function searchImage() {
   keywordSearch = inputEl.value;
@@ -28,7 +28,7 @@ async function searchImage() {
       </div>`;
   });
 
-  if (page === 1) {
+  if (page === 2) {
     galleryContainer.innerHTML = htmlEl;
   } else {
     galleryContainer.innerHTML += htmlEl;
@@ -37,12 +37,12 @@ async function searchImage() {
 
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
-  page = 1;
+  page = 2;
   searchImage();
 });
 
 searchEl.addEventListener("click", () => {
-  page = 1;
+  page = 2;
   searchImage();
 });
 

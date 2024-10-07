@@ -1,0 +1,269 @@
+
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #423f3e6a;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 120px;
+    transition: transform 0.4s ease; /* Smooth transition for hover effect */
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 40px;
+    transition: transform 0.4s ease; /* Smooth transition for hover effect */
+}
+
+/* Navigation Links */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Creative Hover Effect */
+.nav-links ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e85c0d; /* Underline color */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-links ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1); /* Animated underline */
+}
+
+.nav-links ul li a:hover {
+    color: #e85c0d; /* Text color change on hover */
+    transform: scale(1.1); /* Slightly scale the link */
+}
+
+/* Zoom Effect on Hover for Logo and Icons */
+.logo img:hover {
+    transform: scale(1.1); /* Slightly zoom in logo */
+}
+
+/* Dropdown Menu for Tools */
+.nav-links ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #151515;
+    border-radius: 5px;
+    top: 100%; /* Positioning the dropdown directly below the Tools link */
+    left: 0;  /* Align with the Tools link */
+    min-width: 200px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease; /* Smooth dropdown */
+}
+
+/* Show Dropdown when Hovering over Tools or Dropdown Menu */
+.nav-links ul li:hover .dropdown-content,
+.nav-links ul li .dropdown-content:hover {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Keep it visible */
+}
+
+/* Dropdown Links Styling */
+.nav-links ul li .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.nav-links ul li .dropdown-content a:hover {
+    background-color: #c7253e;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #423f3eb5;
+        transition: 0.5s ease;
+        z-index: 999;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .nav-links ul li {
+        margin: 15px 0;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+}
+
+/* Hide menu when clicking outside on mobile */
+body.hide-menu .nav-links.active {
+    right: -100%; /* Hide when clicked outside */
+}
+
+/* Logo Animation: Bounce on Hover */
+.logo img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+
+/* foters */
+
+
+footer {
+    background-color: #1f1f1f92; /* Dark background */
+    color: #ffffff; /* Text color */
+    padding: 40px 20px; /* Increased padding for better spacing */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap sections on smaller screens */
+    justify-content: space-between; /* Space out sections */
+    
+}
+
+.footer-section {
+    flex: 1; /* Flex grow */
+    min-width: 220px; /* Minimum width for responsive design */
+    margin: 10px; /* Spacing between sections */
+    position: relative; /* For pseudo-elements */
+}
+
+.footer-section h4 {
+    border-bottom: 1px solid #e85c0d; /* Underline for headings */
+    padding-bottom: 10px;
+    margin-bottom: 15px; /* Space below heading */
+    text-align: center;
+}
+
+.footer-section p {
+    margin: 8px 0;
+    margin-left: 80px;
+}
+
+.footer-section a {
+    color: #e85c0d; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #fff; /* Change color on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex; /* Use flexbox for social icons */
+    gap: 15px; /* Space between icons */
+}
+
+.social-icons a {
+    color: #ffffff; /* Icon color */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+/* Specific hover colors for social media icons */
+.social-icons a.facebook:hover {
+    color: #2200fd; /* Blue for Facebook */
+}
+
+.social-icons a.whatsapp:hover {
+    color: #25d32e; /* Green for WhatsApp */
+}
+
+.social-icons a.instagram:hover {
+    color: #E1306C; /* Pink for Instagram */
+}
+
+.social-icons a.tiktok:hover {
+    color: #000000; /* Light blue for TikTok */
+}
+
+.social-icons a.youtube:hover {
+    color: #FF0000; /* Red for YouTube */
+}
+
+/* Style for the footer bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px; /* Font size for the copyright */
+}
+
+
+
+/* Existing CSS above this point */
+
+@media (max-width: 768px) {
+    .footer-section {
+        text-align: center; /* Center text in footer sections */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social media icons */
+    }
+    .footer-section p{
+        margin-left: 30px;
+    }
+}
+
+/* Ensure social icons are displayed inline and centered */
+.social-icons {
+    display: flex; /* Use flexbox for social icons */
+    gap: 15px; /* Space between icons */
+    justify-content: center; /* Center align icons */
+}

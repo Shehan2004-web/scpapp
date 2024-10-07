@@ -7,12 +7,17 @@
 }
 
 body {
-    background-color: #333333;
-    display: flex;
+    background-color: #030303;
+    
     flex-direction: column;
+    
+    min-height: 100vh;
+}
+
+.wrap{
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    display: flex;
 }
 
 /* Header Styles */

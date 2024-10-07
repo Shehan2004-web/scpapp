@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    
+    min-height: 100vh;
+}
+.warp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #e85c0d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #f0f0f0;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.size-input, .time-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.size-input input, .time-input input {
+    width: calc(50% - 5px);
+}
+
+.options h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #c7253e;
+}
+
+.options label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #c7253e;
+    color: #fff;
+    border-radius: 4px;
+}
+
+button[type="reset"] {
+    background-color: #555;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.output {
+    margin-top: 20px;
+}
+
+#htmlCode {
+    background-color: #222;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 4px;
+}
