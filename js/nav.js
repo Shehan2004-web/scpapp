@@ -13,3 +13,5 @@ document.addEventListener('click', function(event) {
         navLinks.classList.remove('active');
     }
 });
+
+

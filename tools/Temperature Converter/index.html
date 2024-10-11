@@ -100,23 +100,7 @@ container {
       color: inherit;
     }
 
-/* Header Section */
-header {
-    background-color: #2521215b;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
 
-header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
-    color: #ffbd39;
-}
-
-header p {
-    font-size: 1.2em;
-}
 
 /* Tool Content Section */
 #tool-content {
@@ -305,72 +289,12 @@ main {
     text-align: center;
 }
 
-.app-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.app-item {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.app-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.app-item h3 {
-    margin-bottom: 10px;
-    color: #007bff;
-}
-
-.app-item p {
-    margin: 0;
-}
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .app-list {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    .button {
-        font-size: 16px;
-        padding: 12px 24px;
-    }
-}
-
-@media (max-width: 400px) {
-    .button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-}
 
 
     </style>
-	<title>Temperature Converter</title>
+	<title>Free Online Temperature Converter - SCP_APPS</title>
+  <meta name="description" content="Convert temperatures instantly with our free online temperature converter. Easily switch between Celsius, Fahrenheit, and Kelvin. No sign-up required. Unlimited access!" />
+  
     <link rel="stylesheet" href="/tools/smoke.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-54LKRYY810"></script>
@@ -424,13 +348,16 @@ main {
   <div class="smoke smoke3"></div>
 </div>
 
+
+<header>
+    <div class="header-content">
+        <h1>Temperature Converter Tool</h1>
+        <p>Convert temperatures between different units effortlessly!</p>
+        <p>Make temperature conversions quick and easy!</p>
+    </div>
+</header>
 	<section>
-        <header>
-            <div class="container1">
-                <h1>Temperature Converter</h1>
-                <p>Effortlessly convert temperatures between Celsius, Fahrenheit, and Kelvin with our 100% free Temperature Converter. No login required—simply input your values and get instant results.</p>
-            </div>
-        </header>
+        
         <br><br><br>
         <div class="container">
             <h1>Temperature Converter</h1>
@@ -453,41 +380,94 @@ main {
         </div>
     
     </section>
-
-    <!-- Main Content Section -->
-    <main>
-        <div class="container">
-            
-
-            <!-- Section for Describing Multiple Apps -->
-            <section id="apps-description">
-  <h2 style="color: aliceblue;">Related Apps</h2>
-  <div class="app-list">
-    <a href="/tools/YouTube Thumbnail Downloader/index.html" class="abc">
-      <div class="app-item">
-          <h3>YouTube Thumbnail
-            Downloader</h3>
-          <p style="color: black;">Download high-quality
-            YouTube thumbnails.</p>
-      </div>
-    </a>
-    <a href="/tools/Image Editting Tool/index.html" class="abc">
-      <div class="app-item">
-          <h3>Image Editing Tool</h3>
-          <p style="color: black;"> Edit and enhance your images
-            online.</p>
-      </div>
-    </a>
-      <!-- Add more apps as needed -->
-  </div>
-</section>
-<br><br><br>
-<!-- Button to Navigate to Home Page -->
-<section id="home-button">
-  <a href="/index.html#Calculator" class="button">Go to Home Page</a>
-</section>
-</div>
-</main>
+    <section class="tool-description">
+        <div class="container1">
+            <h2>About the Temperature Converter Tool</h2>
+            <p>This tool allows you to easily convert temperatures between Celsius, Fahrenheit, and Kelvin. Whether you’re cooking, traveling, or studying, our Temperature Converter provides quick and accurate conversions to suit your needs.</p>
+    
+            <h3 style="color: #c7253e;">Key Features</h3>
+            <ul>
+                <li><strong>Multiple Units:</strong> Convert temperatures between Celsius, Fahrenheit, and Kelvin.</li>
+                <li><strong>User-Friendly Interface:</strong> Simple and intuitive design for easy conversions.</li>
+                <li><strong>Instant Results:</strong> Get immediate conversion results as you enter the values.</li>
+                <li><strong>100% Free:</strong> Use the tool without any fees or limitations.</li>
+            </ul>
+    
+            <h3 style="color: #c7253e;">How to Use the Temperature Converter Tool</h3>
+            <ul>
+                <li>Select the unit of the temperature you want to convert from.</li>
+                <li>Enter the temperature value in the input field.</li>
+                <li>Select the unit you want to convert to.</li>
+                <li>Click the "Convert" button to see the converted temperature.</li>
+                <li>Adjust the values as needed for further conversions!</li>
+            </ul>
+        </div>
+    </section>
+    <section class="related-and-share">
+        <div class="container1">
+          <h2>Related Tools</h2>
+          <div class="related-tools">
+            <div class="app-list">
+              <a href="/tools/Image Compressor/index.html " class="app-item">
+                <h4>Image Compressor Tool</h4>
+                <p>Easily compress your images.</p>
+              </a>
+              <a href="/tools/resum/index.html" class="app-item">
+                <h4>Resume/CV Builder Tool</h4>
+                <p>Find your daily calorie needs based on activity level.</p>
+              </a>
+              <a href="/tools/python IDLE/index.html" class="app-item">
+                <h4>Online Python IDE</h4>
+                <p>Write Python 3 code in this online editor and run it.</p>
+              </a>
+              <a href="/tools/Responsive Checker/index.html" class="app-item">
+                <h4>Responsive Checker Tool</h4>
+                <p>Test your website's responsiveness across different devices!</p>
+              </a>
+              <a href="/tools/HTML, CSS & JavaScript MinifierMaxifier/index.html" class="app-item">
+                <h4>Minifier and Maxifier Tool</h4>
+                <p>This tool helps you quickly minify or maxify your HTML, CSS, and JavaScript code.</p>
+              </a>
+            </div>
+          </div>
+      
+          <div class="share-tool">
+            <h3 style="color: aliceblue;">Share the Temperature Converter</h3>
+            <p style="color: aliceblue;">Share this tool with friends and family on social media.</p>
+            <div class="social-icons">
+              <a href="https://facebook.com/sharer/sharer.php?u=your-url" target="_blank" class="button"><i class="fab fa-facebook"></i> Share</a>
+              <a href="https://wa.me/?text=Check%20out%20this%20Date%20Calculator%20Tool!%20your-url" target="_blank" class="button"><i class="fab fa-whatsapp"></i> Share</a>
+              <a href="https://twitter.com/share?url=your-url&text=Check%20out%20this%20Date%20Calculator%20Tool!" target="_blank" class="button"><i class="fab fa-twitter"></i> Share</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="tutorial-section">
+        <div class="content">
+          <h2>How to Create Web Tools - Step by Step Tutorial</h2>
+          <p>Welcome to my blog! In this section, I will guide you step by step on how to create web tools with complete source code included. You will learn the process from start to finish, including responsive design and interactive features.</p>
+          <a href="/index.html" class="refined-btn">
+            <i class="fas fa-blog"></i>
+            <span><b>Go To Blogger</b></span>
+          </a>
+          
+      
+          
+          
+        </div>
+        <div class="image-container">
+          <img src="/images/blogo tiy.png" alt="Tutorial Image" class="tutorial-img">
+        </div>
+      </section>
+        
+      
+      
+      <section class="home-button">
+        <a href="/index.html#Calculator" class="button">
+          <i class="fas fa-home"></i> Back to Home Page
+        </a>
+      </section><br><br> <br><br>
 
           <!-- Footer Section -->
           <footer>

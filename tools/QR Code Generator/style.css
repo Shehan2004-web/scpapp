@@ -18,21 +18,6 @@ body {
     color: inherit;
   }
 
-/* Header Section */
-header {
-  background-color: #2521215b;
-  color: white;
-  padding: 40px 0;
-  text-align: center;
-}
-header h1 {
-  margin-bottom: 10px;
-  font-size: 2.5em;
-}
-
-header p {
-  font-size: 1.2em;
-}
 
 .wrapper {
   background-color: #ffffff;

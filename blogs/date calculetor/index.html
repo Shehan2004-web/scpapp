@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Calculator Tool Tutorial - SCP_APPS Blog</title>
+    <meta name="description" content="Learn how to create a Date Calculator web tool step-by-step using HTML, CSS, and JavaScript. Calculate date differences effortlessly with our guide!">
+    <link rel="stylesheet" href="/blogs/qr code/styles.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN for icons -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-54LKRYY810');
+      </script>
+      </head>
+      <body>
+      
+          <nav>
+              <div class="logo">
+                  <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
+              </div>
+              <div class="menu-icon">
+                  <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
+              </div>
+          
+              <div class="nav-links">
+                  <ul>
+                      <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                      <li class="dropdown">
+                          <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+                          <div class="dropdown-content">
+                              <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
+                              <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
+                              <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
+                              <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
+                              <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
+                              <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
+                              <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
+                              <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
+                              <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
+                          </div>
+                      </li>
+                      <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
+                      <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                      <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                      <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
+                  </ul>
+              </div>
+          </nav>
+    <main class="container">
+        <header>
+            <h1>Date Calculator Tool Tutorial</h1>
+            <p>Learn how to create your own Date Calculator tool using HTML, CSS, and JavaScript!</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search blog posts..." aria-label="Search blog posts">
+                <button type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </header>
+
+        <article class="blog-post">
+            <h2>About This Guide</h2>
+            <p>This blog post will walk you through the steps needed to create a Date Calculator web tool using simple web technologies: HTML, CSS, and JavaScript. A Date Calculator is useful for determining the difference in days, months, or years between two dates.</p>
+
+            <h2>Step-by-Step Guide to Creating a Date Calculator Tool</h2>
+            <p>Follow these steps to create your own Date Calculator:</p>
+
+            <h3>Step 1: Create an HTML File</h3>
+            <p>Start by creating an HTML file for your Date Calculator tool:</p>
+            <div class="code-box">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Date Calculator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Date Calculator&lt;/h1&gt;
+    &lt;label for="start-date"&gt;Start Date:&lt;/label&gt;
+    &lt;input type="date" id="start-date"&gt;
+
+    &lt;label for="end-date"&gt;End Date:&lt;/label&gt;
+    &lt;input type="date" id="end-date"&gt;
+
+    &lt;button id="calculate-btn"&gt;Calculate Difference&lt;/button&gt;
+
+    &lt;p id="result"&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+        const calculateButton = document.getElementById('calculate-btn');
+        const startDateInput = document.getElementById('start-date');
+        const endDateInput = document.getElementById('end-date');
+        const resultParagraph = document.getElementById('result');
+
+        calculateButton.addEventListener('click', () =&gt; {
+            const startDate = new Date(startDateInput.value);
+            const endDate = new Date(endDateInput.value);
+            const timeDifference = endDate - startDate;
+
+            const daysDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
+            resultParagraph.innerText = `Difference: ${daysDifference} day(s)`;
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
+
+            <h3>Step 2: Create Input Fields for Dates</h3>
+            <p>In the body section of your HTML, create input fields for users to enter the start and end dates:</p>
+            <div class="code-box">
+                <pre><code>&lt;label for="start-date"&gt;Start Date:&lt;/label&gt;
+&lt;input type="date" id="start-date"&gt;
+
+&lt;label for="end-date"&gt;End Date:&lt;/label&gt;
+&lt;input type="date" id="end-date"&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
+
+            <h3>Step 3: Add a Calculate Button</h3>
+            <p>Create a button that users can click to calculate the date difference:</p>
+            <div class="code-box">
+                <pre><code>&lt;button id="calculate-btn"&gt;Calculate Difference&lt;/button&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
+
+            <h3>Step 4: Implement JavaScript for Date Calculation</h3>
+            <p>Write the JavaScript code to handle the date difference calculation:</p>
+            <div class="code-box">
+                <pre><code>const calculateButton = document.getElementById('calculate-btn');
+const startDateInput = document.getElementById('start-date');
+const endDateInput = document.getElementById('end-date');
+const resultParagraph = document.getElementById('result');
+
+calculateButton.addEventListener('click', () =&gt; {
+    const startDate = new Date(startDateInput.value);
+    const endDate = new Date(endDateInput.value);
+    const timeDifference = endDate - startDate;
+
+    const daysDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
+    resultParagraph.innerText = `Difference: ${daysDifference} day(s)`;
+});</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
+
+            <h3>Final Result</h3>
+            <p>After implementing the above steps, you should have a fully functional Date Calculator tool that calculates the difference between two dates in days.</p>
+
+            <h3>Example of Using the Date Calculator Tool</h3>
+            <img src="https://onlinetools.com/images/time/illustrations/calculate-average-calendar-date.png" alt="Date Calculator Example" class="blog-image">
+
+            <h3>Share This Blog Post</h3>
+            <p>If you found this guide helpful, feel free to share it with others!</p>
+            <div class="share-buttons">
+                <button><i class="fab fa-facebook"></i> Share on Facebook</button>
+                <button><i class="fab fa-twitter"></i> Share on Twitter</button>
+                <button><i class="fab fa-linkedin"></i> Share on LinkedIn</button>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info" id="Contact">
+                <h4><i class="fas fa-info-circle"></i> Contact Information</h4>
+                <p>
+                    <a href="tel:+94703245075">
+                        <i class="fas fa-phone-alt"></i> Phone: +9470 324 5075
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:chamikascp@gmail.com">
+                        <i class="fas fa-envelope"></i> Email: chamikascp@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="https://maps.app.goo.gl/3HpYgXj9bcLLBENG9" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i> Monaragala, Ethimale
+                    </a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+                <div class="social-icons">
+                    <a class="facebook" href="https://www.facebook.com/shehan.chamika.33671?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                    <a class="whatsapp" href="http://Wa.me//+94703245075"><i class="fab fa-whatsapp"></i></a>
+                    <a class="instagram" href="https://www.instagram.com/shehanscp?igsh=MThqejkzaDV3MTd5Zg=="><i class="fab fa-instagram"></i></a>
+                    <a class="tiktok" href="404/index.html"><i class="fab fa-tiktok"></i></a>
+                    <a class="youtube" href="404/index.html"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-building"></i> Company Info</h4>
+                <p><a href="/about/index.html">About Us</a></p>
+                <p><a href="/contact/contact.html">Contact Us</a></p>
+                <p><a href="/t&c/FAQ.html">FAQ page</a></p>
+                <p><a href="/t&c/ppindex.html">Privacy Policy</a></p>
+                <p><a href="/t&c/tcindex.html">Terms & Conditions</a></p>
+                <p><a href="/t&c/diciml.html">Disclaimer</a></p>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-link"></i> Quick Links</h4>
+                <p><a href="/index.html">Home</a></p>
+                <p><a href="/index.html#tools-section">Tools</a></p>
+                <p><a href="/index.html#User">Users Say</a></p>
+                <p><a href="/index.html#combined-section">Thank You for Visiting!</a></p>
+                <p><a href="/blogs/index.html">Blogs</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/js/nav.js"></script>
+
+    <script>
+        function copyCode() {
+            const codeElements = document.querySelectorAll('.code-box code');
+            codeElements.forEach((codeElement) => {
+                const range = document.createRange();
+                range.selectNode(codeElement);
+                window.getSelection().removeAllRanges(); // Clear current selection
+                window.getSelection().addRange(range); // Select the code
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges(); // Clear selection after copying
+                alert('Code copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>

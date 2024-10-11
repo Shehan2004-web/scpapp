@@ -97,21 +97,7 @@ iframe {
       color: inherit;
     }
   
-  /* Header Section */
-  header {
-    background-color: #2521215b;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-  }
-  header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
-  }
   
-  header p {
-    font-size: 1.2em;
-  }
   
   .wrapper {
     background-color: #ffffff;
@@ -224,12 +210,7 @@ iframe {
     margin-bottom: 10px;
   }
   
-  footer {
-    background-color: #3333334b;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-  }
+ 
   
   #home-button {
     display: flex;

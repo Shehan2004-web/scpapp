@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online text to HTML Editor table,heder,link,nav - scp_app</title>
+    <meta name="description" content="Edit text to HTML online with built ui interface-in SEO title and meta description tags.">
+    <style>
+        body {
+            
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+           
+            height: 100vh;
+            
+        }
+        .warp{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #e85c0d;
+        }
+        select, textarea, button {
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        select {
+            background-color: #444;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        select:hover {
+            background-color: #555;
+        }
+        textarea {
+            height: 150px;
+            background-color: #444;
+            color: #fff;
+            resize: none;
+            transition: background-color 0.3s;
+        }
+        textarea:focus {
+            background-color: #555;
+            outline: none;
+        }
+        button {
+            background-color: #e85c0d;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #fa0606;
+        }
+        #output, #preview {
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 10px;
+            background-color: #333;
+            height: 150px;
+            margin-bottom: 10px;
+            overflow: auto;
+        }
+        .output-section, .preview-section {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-54LKRYY810');
+  </script>
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/smoke.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+       <body style="background-color: black;">
+    
+      <nav>
+        <div class="logo">
+            <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
+        </div>
+        <div class="menu-icon">
+            <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
+        </div>
+    
+        <div class="nav-links">
+            <ul>
+                <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                <li class="dropdown">
+                    <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+                    <div class="dropdown-content">
+                        <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
+                        <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
+                        <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
+                        <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
+                        <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
+                        <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
+                        <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
+                        <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
+                        <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
+                    </div>
+                </li>
+                <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
+            </ul>
+        </div>
+    </nav>
+  <div class="smoke-container">
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
+    <div class="smoke smoke3"></div>
+  </div>
+  <header>
+    <div class="header-content">
+        <h1>Online HTML Editor</h1>
+        <p>Edit and preview HTML code in real-time with an easy-to-use interface!</p>
+        <p>Create and test your HTML projects online seamlessly!</p>
+    </div>
+</header><br><br>
+    <dic class="warp">
+    <div class="container">
+        <h1>Text to HTML Converter</h1>
+        <select id="category" onchange="updatePlaceholder()">
+            <option value="">Select Category</option>
+            <option value="header">Header</option>
+            <option value="paragraph">Paragraph</option>
+            <option value="link">Link</option>
+            <option value="table">Table</option>
+            <option value="navigation">Navigation</option>
+            <option value="button">Button</option>
+            <option value="list">List</option>
+            <option value="form">Form</option>
+        </select>
+        <textarea id="input" placeholder="Enter your text here..."></textarea>
+        <button id="convertBtn" onclick="convertToHTML()" style="display: none;">Convert to HTML</button>
+        <button onclick="clearInput()">Clear Input</button>
+
+        <div class="output-section">
+            <h3>Output HTML Code:</h3>
+            <button onclick="copyOutput()">Copy Output</button>
+            <div id="output"></div>
+        </div>
+
+        <div class="preview-section">
+            <h3>Preview:</h3>
+            <div id="preview"></div>
+            <button onclick="downloadHTML()">Download Source Code</button>
+        </div>
+    </div>
+</dic>
+<section class="tool-description">
+    <div class="container1">
+        <h2>About the Online HTML Editor</h2>
+        <p>This online tool provides a powerful and user-friendly environment for editing and previewing HTML code in real-time. It’s designed for both beginners and advanced users to write, edit, and experiment with HTML code, offering instant feedback and visual previews. The tool comes with a clean UI that makes coding faster and more efficient.</p>
+
+        <h3 style="color: #c7253e;">Key Features</h3>
+        <ul>
+            <li><strong>Live Preview:</strong> See your HTML code come to life instantly with real-time updates.</li>
+            <li><strong>UI-Friendly Design:</strong> A clean and intuitive interface that’s easy to navigate.</li>
+            <li><strong>Built-in Editor:</strong> Write and edit your HTML code directly in the tool with syntax highlighting.</li>
+            <li><strong>Responsive Output:</strong> Test your HTML for various screen sizes to ensure a responsive design.</li>
+            <li><strong>100% Free:</strong> Use the editor without any fees or restrictions.</li>
+        </ul>
+
+        <h3 style="color: #c7253e;">How to Use the Online HTML Editor</h3>
+        <ul>
+            <li>Type or paste your HTML code into the editor panel.</li>
+            <li>Watch the live preview on the right as you make changes to the code.</li>
+            <li>Use the toolbar to add common HTML elements quickly.</li>
+            <li>Test your design for responsiveness by adjusting the preview panel size.</li>
+            <li>Copy or download your final code once you’re satisfied with the results.</li>
+        </ul>
+    </div>
+</section>
+<section class="related-and-share">
+    <div class="container1">
+      <h2>Related Tools</h2>
+      <div class="related-tools">
+        <div class="app-list">
+          <a href="/tools/Image Compressor/index.html " class="app-item">
+            <h4>Image Compressor Tool</h4>
+            <p>Easily compress your images.</p>
+          </a>
+          <a href="/tools/resum/index.html" class="app-item">
+            <h4>Resume/CV Builder Tool</h4>
+            <p>Find your daily calorie needs based on activity level.</p>
+          </a>
+          <a href="/tools/python IDLE/index.html" class="app-item">
+            <h4>Online Python IDE</h4>
+            <p>Write Python 3 code in this online editor and run it.</p>
+          </a>
+          <a href="/tools/Responsive Checker/index.html" class="app-item">
+            <h4>Responsive Checker Tool</h4>
+            <p>Test your website's responsiveness across different devices!</p>
+          </a>
+          <a href="/tools/HTML, CSS & JavaScript MinifierMaxifier/index.html" class="app-item">
+            <h4>Minifier and Maxifier Tool</h4>
+            <p>This tool helps you quickly minify or maxify your HTML, CSS, and JavaScript code.</p>
+          </a>
+        </div>
+      </div>
+  
+      <div class="share-tool">
+        <h3 style="color: aliceblue;">Share the Online HTML Editor with UI Interface</h3>
+        <p style="color: aliceblue;">Share this tool with friends and family on social media.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/sharer/sharer.php?u=your-url" target="_blank" class="button"><i class="fab fa-facebook"></i> Share</a>
+          <a href="https://wa.me/?text=Check%20out%20this%20Date%20Calculator%20Tool!%20your-url" target="_blank" class="button"><i class="fab fa-whatsapp"></i> Share</a>
+          <a href="https://twitter.com/share?url=your-url&text=Check%20out%20this%20Date%20Calculator%20Tool!" target="_blank" class="button"><i class="fab fa-twitter"></i> Share</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="tutorial-section">
+    <div class="content">
+      <h2>How to Create Web Tools - Step by Step Tutorial</h2>
+      <p>Welcome to my blog! In this section, I will guide you step by step on how to create web tools with complete source code included. You will learn the process from start to finish, including responsive design and interactive features.</p>
+      <a href="/index.html" class="refined-btn">
+        <i class="fas fa-blog"></i>
+        <span><b>Go To Blogger</b></span>
+      </a>
+      
+  
+      
+      
+    </div>
+    <div class="image-container">
+      <img src="/images/blogo tiy.png" alt="Tutorial Image" class="tutorial-img">
+    </div>
+  </section>
+    
+  
+  
+  <section class="home-button">
+    <a href="/index.html#Calculator" class="button">
+      <i class="fas fa-home"></i> Back to Home Page
+    </a>
+  </section><br><br> <br><br>
+   <!-- Footer Section -->
+   <footer>
+    <div class="footer-container">
+        <div class="footer-section contact-info" id="Contact">
+            <h4><i class="fas fa-info-circle"></i> Contact Information</h4>
+            <p>
+                <a href="tel:+94703245075">
+                    <i class="fas fa-phone-alt"></i> Phone: +9470 324 5075
+                </a>
+            </p>
+            <p>
+                <a href="mailto:chamikascp@gmail.com">
+                    <i class="fas fa-envelope"></i> Email: chamikascp@gmail.com
+                </a>
+            </p>
+            <p>
+                <a href="https://maps.app.goo.gl/3HpYgXj9bcLLBENG9" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Monaragala, Ethimale
+                </a>
+            </p>
+        </div>
+        <div class="footer-section">
+            <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+            <div class="social-icons">
+                <a class="facebook" href="https://www.facebook.com/shehan.chamika.33671?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                <a class="whatsapp" href="http://Wa.me//+94703245075"><i class="fab fa-whatsapp"></i></a>
+                <a class="instagram" href="https://www.instagram.com/shehanscp?igsh=MThqejkzaDV3MTd5Zg=="><i class="fab fa-instagram"></i></a>
+                <a class="tiktok" href="404/index.html"><i class="fab fa-tiktok"></i></a>
+                <a class="youtube" href="404/index.html"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4><i class="fas fa-building"></i> Company Info</h4>
+            <p><a href="/about/index.html">About Us</a></p>
+            <p><a href="/contact/contact.html">Contact Us</a></p>
+            <p><a href="/t&c/FAQ.html">FAQ page</a></p>
+            <p><a href="/t&c/ppindex.html">Privacy Policy</a></p>
+            <p><a href="/t&c/tcindex.html">Terms & Conditions</a></p>
+            <p><a href="/t&c/diciml.html">Disclaimer</a></p>
+        </div>
+        <div class="footer-section">
+            <h4><i class="fas fa-link"></i> Quick Links</h4>
+            <p><a href="/index.html">Home</a></p>
+            <p><a href="/index.html#tools-section">Tools</a></p>
+            <p><a href="/index.html#User">Users Say</a></p>
+            <p><a href="/index.html#combined-section">Thank You for Visiting!</a></p>
+            <p><a href="/blogs/index.html">Blogs</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+    </div>
+</footer>
+<script src="/js/nav.js"></script>
+<script src="script.js"></script>
+    <script>
+        function updatePlaceholder() {
+            const category = document.getElementById("category").value;
+            const textarea = document.getElementById("input");
+            const convertBtn = document.getElementById("convertBtn");
+
+            switch (category) {
+                case "header":
+                    textarea.placeholder = "Enter Header Text...";
+                    break;
+                case "paragraph":
+                    textarea.placeholder = "Enter Paragraph Text...";
+                    break;
+                case "link":
+                    textarea.placeholder = "Enter Link Text and URL (e.g., Google https://www.google.com)";
+                    break;
+                case "table":
+                    textarea.placeholder = "Enter Table Rows (e.g., Column1 | Column2 | Column3, each row on a new line)";
+                    break;
+                case "navigation":
+                    textarea.placeholder = "Enter Navigation Items (e.g., Home | About | Services)";
+                    break;
+                case "button":
+                    textarea.placeholder = "Enter Button Text and URL (e.g., Click Me https://www.example.com)";
+                    break;
+                case "list":
+                    textarea.placeholder = "Enter List Items (one per line)";
+                    break;
+                case "form":
+                    textarea.placeholder = "Enter Form Elements (e.g., Name: <input type='text'>)";
+                    break;
+                default:
+                    textarea.placeholder = "Enter your text here...";
+                    convertBtn.style.display = "none";
+                    return;
+            }
+
+            convertBtn.style.display = "block"; // Show the convert button when a category is selected
+        }
+
+        function convertToHTML() {
+            let inputText = document.getElementById("input").value;
+            let category = document.getElementById("category").value;
+
+            // Initialize HTML output
+            let htmlOutput = inputText;
+
+            // Adding HTML based on selected category
+            switch (category) {
+                case "header":
+                    htmlOutput = `<h1>${inputText}</h1>`;
+                    break;
+                case "paragraph":
+                    htmlOutput = `<p>${inputText}</p>`;
+                    break;
+                case "link":
+                    const linkParts = inputText.split(' ');
+                    htmlOutput = `<a href="${linkParts[1]}" target="_blank">${linkParts[0]}</a>`;
+                    break;
+                case "table":
+                    const rows = inputText.split('\n');
+                    htmlOutput = '<table border="1"><tbody>';
+                    rows.forEach(row => {
+                        htmlOutput += '<tr>' + row.split('|').map(cell => '<td>' + cell.trim() + '</td>').join('') + '</tr>';
+                    });
+                    htmlOutput += '</tbody></table>';
+                    break;
+                case "navigation":
+                    const navItems = inputText.split('|').map(item => `<li><a href="#">${item.trim()}</a></li>`).join('');
+                    htmlOutput = `<ul>${navItems}</ul>`;
+                    break;
+                case "button":
+                    const buttonParts = inputText.split(' ');
+                    htmlOutput = `<a href="${buttonParts[1]}" class="btn">${buttonParts[0]}</a>`;
+                    break;
+                case "list":
+                    const listItems = inputText.split('\n').map(item => `<li>${item.trim()}</li>`).join('');
+                    htmlOutput = `<ul>${listItems}</ul>`;
+                    break;
+                case "form":
+                    htmlOutput = `<form>${inputText}</form>`;
+                    break;
+                default:
+                    htmlOutput = `<p>${inputText}</p>`;
+                    break;
+            }
+
+            // Display the output and preview
+            document.getElementById("output").innerText = htmlOutput;
+            document.getElementById("preview").innerHTML = htmlOutput;
+        }
+
+        function clearInput() {
+            document.getElementById("input").value = '';
+            document.getElementById("output").innerText = '';
+            document.getElementById("preview").innerHTML = '';
+            document.getElementById("category").selectedIndex = 0; // Reset dropdown
+            document.getElementById("convertBtn").style.display = "none"; // Hide convert button
+            updatePlaceholder(); // Reset placeholder
+        }
+
+        function copyOutput() {
+            let outputText = document.getElementById("output").innerText;
+            navigator.clipboard.writeText(outputText).then(() => {
+                alert("Output copied to clipboard!");
+            });
+        }
+
+        function downloadHTML() {
+            let outputText = document.getElementById("output").innerText;
+            let blob = new Blob([outputText], { type: "text/html" });
+            let url = URL.createObjectURL(blob);
+            let a = document.createElement("a");
+            a.href = url;
+            a.download = "output.html";
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+
+</body>
+</html>

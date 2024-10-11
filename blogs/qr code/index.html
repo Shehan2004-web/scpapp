@@ -3,201 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>QR Code Generator Tutorial</title>
+    <title>How to Generate a QR Code - SCP_APPS Blog</title>
+    <meta name="description" content="Learn how to create a QR code step-by-step using HTML, CSS, and JavaScript. Generate your own QR codes effortlessly with our guide!">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="/css/nav.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="/js/nav.js"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-54LKRYY810"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN for icons -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-54LKRYY810');
+      </script>
+      </head>
+      <body>
+      
+          <nav>
+              <div class="logo">
+                  <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
+              </div>
+              <div class="menu-icon">
+                  <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
+              </div>
+          
+              <div class="nav-links">
+                  <ul>
+                      <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                      <li class="dropdown">
+                          <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+                          <div class="dropdown-content">
+                              <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
+                              <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
+                              <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
+                              <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
+                              <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
+                              <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
+                              <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
+                              <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
+                              <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
+                          </div>
+                      </li>
+                      <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
+                      <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                      <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                      <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
+                  </ul>
+              </div>
+          </nav>
+    <main class="container">
+        <header>
+            <h1>How to Generate a QR Code</h1>
+            <p>Learn how to create your own QR code using HTML, CSS, and JavaScript!</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search blog posts..." aria-label="Search blog posts">
+                <button type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </header>
 
-  gtag('config', 'G-54LKRYY810');
-</script>
-</head>
-<body>
-    <nav>
-        <div class="logo">
-            <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
-        </div>
-        <div class="menu-icon">
-            <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
-        </div>
-    
-        <div class="nav-links">
-            <ul>
-                <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
-                <li class="dropdown">
-                    <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
-                    <div class="dropdown-content">
-                        <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
-                        <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
-                        <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
-                        <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
-                        <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
-                        <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
-                        <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
-                        <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
-                        <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
-                    </div>
-                </li>
-                <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
-                <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
-            </ul>
-        </div>
-    </nav>
+        <article class="blog-post">
+            <h2>About This Guide</h2>
+            <p>This blog post will walk you through the steps needed to generate a QR code using simple web technologies: HTML, CSS, and JavaScript. QR codes are versatile and can store various types of information, such as URLs, contact information, and plain text. By following this guide, you'll be able to create a functional QR code generator!</p>
 
-    <!-- Header Section -->
-    <header>
-        <h1>QR Code Generator Using HTML, CSS, and JavaScript</h1>
-        <p>A complete guide to building a QR Code Generator with step-by-step instructions.</p>
-    </header>
+            <h2>Step-by-Step Guide to Creating a QR Code</h2>
+            <p>Follow these steps to create your own QR code generator:</p>
 
-    <div class="warp">
-    <!-- Main Content Section -->
-    <main>
-        <article>
-            <img src="https://plus.unsplash.com/premium_photo-1661371243525-d02768a7feee?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="QR Code Generator" class="tutorial-image">
-
-
-            <h2>Introduction</h2>
-            <p>QR Codes are widely used for quick and easy access to websites, apps, and more. In this tutorial, we'll learn how to create a simple QR Code Generator using HTML, CSS, and JavaScript.</p>
-
-            <h2>Step 1: Set Up HTML Structure</h2>
-            <p>First, we need to set up the basic HTML structure for the QR Code Generator. Here's the code:</p>
+            <h3>Step 1: Create an HTML File</h3>
+            <p>Start by creating an HTML file for your QR code generator:</p>
             <div class="code-box">
-                <pre><code>
-&lt;!DOCTYPE html&gt;
+                <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;title&gt;QR Code Generator&lt;/title&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;div class="container"&gt;
-        &lt;h1&gt;QR Code Generator&lt;/h1&gt;
-        &lt;input type="text" id="qrText" placeholder="Enter text or URL" /&gt;
-        &lt;button id="generateBtn"&gt;Generate QR Code&lt;/button&gt;
-        &lt;div id="qrCode"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;h1&gt;Generate a QR Code&lt;/h1&gt;
+    &lt;input type="text" id="qr-input" placeholder="Enter text or URL"&gt;
+    &lt;button id="generate-qr"&gt;Generate QR Code&lt;/button&gt;
+    &lt;div id="qr-code"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        $("#generate-qr").click(function() {
+            var text = $("#qr-input").val();
+            $("#qr-code").empty().qrcode(text);
+        });
+    &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-                </code></pre>
-                <button class="copy-btn" data-clipboard-target="#step1-code">Copy Code</button>
+&lt;/html&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
             </div>
 
-            <h2>Step 2: Styling with CSS</h2>
-            <p>Next, we'll style the page with CSS to give it a clean look. Here's the CSS code:</p>
+            <h3>Step 2: Include jQuery and QR Code Library</h3>
+            <p>In the head section of your HTML, include jQuery and the QR Code generation library:</p>
             <div class="code-box">
-                <pre><code>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    text-align: center;
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-input {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #e85c0d;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-#qrCode {
-    margin-top: 20px;
-}
-                </code></pre>
-                <button class="copy-btn" data-clipboard-target="#step2-code">Copy Code</button>
+                <pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"&gt;&lt;/script&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
             </div>
 
-            <h2>Step 3: Implementing JavaScript</h2>
-            <p>Finally, we add JavaScript to handle QR code generation. Use the <code>qrious</code> library to generate QR codes:</p>
+            <h3>Step 3: Create an Input Field and Button</h3>
+            <p>In the body section, create an input field and a button for generating the QR code:</p>
             <div class="code-box">
-                <pre><code>
-&lt;script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"&gt;&lt;/script&gt;
+                <pre><code>&lt;input type="text" id="qr-input" placeholder="Enter text or URL"&gt;
+&lt;button id="generate-qr"&gt;Generate QR Code&lt;/button&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
 
-document.getElementById('generateBtn').addEventListener('click', function() {
-    const qrText = document.getElementById('qrText').value;
+            <h3>Step 4: Add a Div to Display the QR Code</h3>
+            <p>Add a div to your HTML where the generated QR code will be displayed:</p>
+            <div class="code-box">
+                <pre><code>&lt;div id="qr-code"&gt;&lt;/div&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
 
-    if (qrText.trim() === "") {
-        alert("Please enter some text or URL to generate QR code");
-        return;
-    }
-
-    const qrCode = new QRious({
-        element: document.getElementById('qrCode'),
-        size: 200,
-        value: qrText
+            <h3>Step 5: Write the JavaScript Code</h3>
+            <p>Write the JavaScript code to handle the QR code generation when the button is clicked:</p>
+            <div class="code-box">
+                <pre><code>&lt;script&gt;
+    $("#generate-qr").click(function() {
+        var text = $("#qr-input").val();
+        $("#qr-code").empty().qrcode(text);
     });
-});
-                </code></pre>
-                <button class="copy-btn" data-clipboard-target="#step3-code">Copy Code</button>
+&lt;/script&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
             </div>
 
-            <h2>Step 4: Testing and Downloading QR Code</h2>
-            <p>You can further enhance the project by adding a download button:</p>
-            <div class="code-box">
-                <pre><code>
-&lt;button id="downloadBtn"&gt;Download QR Code&lt;/button&gt;
+            <h3>Final Result</h3>
+            <p>After implementing the above steps, you should see a QR code generated based on the text or URL entered in the input field.</p>
 
-document.getElementById('downloadBtn').addEventListener('click', function() {
-    const qrCodeCanvas = document.querySelector('#qrCode canvas');
-    const qrCodeImage = qrCodeCanvas.toDataURL('image/png');
+            <h3>Example of a Generated QR Code</h3>
+            <img src="https://cdn.prod.website-files.com/617ac0d059899a69fd8216ec/62cbba9ee8198444f7c55de5_What%20size%20should%20a%20QR%20code%20be_.svg" alt="Generated QR Code" class="blog-image">
 
-    const link = document.createElement('a');
-    link.href = qrCodeImage;
-    link.download = 'qr-code.png';
-    link.click();
-});
-                </code></pre>
-                <button class="copy-btn" data-clipboard-target="#step4-code">Copy Code</button>
+            <h3>Share This Blog Post</h3>
+            <p>If you found this guide helpful, feel free to share it with others!</p>
+            <div class="share-buttons">
+                <button><i class="fab fa-facebook"></i> Share on Facebook</button>
+                <button><i class="fab fa-twitter"></i> Share on Twitter</button>
+                <button><i class="fab fa-linkedin"></i> Share on LinkedIn</button>
             </div>
         </article>
     </main>
-</div>
-    <!-- Footer Section -->
     <footer>
         <div class="footer-container">
             <div class="footer-section contact-info" id="Contact">
@@ -250,8 +199,21 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
             <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
         </div>
     </footer>
+    <script src="/js/nav.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        function copyCode() {
+            const codeElements = document.querySelectorAll('.code-box code');
+            codeElements.forEach((codeElement) => {
+                const range = document.createRange();
+                range.selectNode(codeElement);
+                window.getSelection().removeAllRanges(); // Clear current selection
+                window.getSelection().addRange(range); // Select the code
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges(); // Clear selection after copying
+                alert('Code copied to clipboard!');
+            });
+        }
+    </script>
 </body>
 </html>

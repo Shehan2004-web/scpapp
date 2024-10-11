@@ -3,167 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Text to Speech Web Tool Tutorial</title>
+    <title>Text to Speech Web Tool Tutorial - SCP_APPS Blog</title>
+    <meta name="description" content="Learn how to create a Text to Speech web tool step-by-step using HTML, CSS, and JavaScript. Generate speech from text effortlessly with our guide!">
     <link rel="stylesheet" href="/blogs/qr code/styles.css">
     <link rel="stylesheet" href="/css/nav.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="/js/nav.js"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-54LKRYY810"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN for icons -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-54LKRYY810');
+      </script>
+      </head>
+      <body>
+      
+          <nav>
+              <div class="logo">
+                  <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
+              </div>
+              <div class="menu-icon">
+                  <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
+              </div>
+          
+              <div class="nav-links">
+                  <ul>
+                      <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                      <li class="dropdown">
+                          <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+                          <div class="dropdown-content">
+                              <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
+                              <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
+                              <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
+                              <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
+                              <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
+                              <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
+                              <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
+                              <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
+                              <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
+                          </div>
+                      </li>
+                      <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
+                      <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                      <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                      <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
+                  </ul>
+              </div>
+          </nav>
+    <main class="container">
+        <header>
+            <h1>Text to Speech Web Tool Tutorial</h1>
+            <p>Learn how to create your own Text to Speech tool using HTML, CSS, and JavaScript!</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search blog posts..." aria-label="Search blog posts">
+                <button type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </header>
 
-  gtag('config', 'G-54LKRYY810');
-</script>
-</head>
-<body>
-    <nav>
-        <div class="logo">
-            <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
-        </div>
-        <div class="menu-icon">
-            <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
-        </div>
-    
-        <div class="nav-links">
-            <ul>
-                <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
-                <li class="dropdown">
-                    <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
-                    <div class="dropdown-content">
-                        <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
-                        <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
-                        <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
-                        <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
-                        <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
-                        <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
-                        <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
-                        <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
-                        <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
-                    </div>
-                </li>
-                <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
-                <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
-            </ul>
-        </div>
-    </nav>
+        <article class="blog-post">
+            <h2>About This Guide</h2>
+            <p>This blog post will walk you through the steps needed to create a Text to Speech web tool using simple web technologies: HTML, CSS, and JavaScript. Text to Speech tools are useful for various applications, from accessibility features to reading out text content. By following this guide, you'll be able to create a functional Text to Speech generator!</p>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Text to Speech Web Tool Using HTML, CSS, and JavaScript</h1>
-        <p>A complete guide to building a Text to Speech Web Tool with step-by-step instructions.</p>
-    </header>
+            <h2>Step-by-Step Guide to Creating a Text to Speech Tool</h2>
+            <p>Follow these steps to create your own Text to Speech generator:</p>
 
-    <!-- Main Content Section -->
-    <main>
-        <article>
-            <img src="https://dhfczbzvtn6lt.cloudfront.net/wp-content/uploads/2020/11/Tutorial_text_Speech1.jpg" alt="Text to Speech Tool" class="tutorial-image">
-
-            <h2>Introduction</h2>
-            <p>Text to Speech (TTS) tools are used to convert written text into spoken words. In this tutorial, we will guide you through the steps of building a TTS Web Tool using HTML, CSS, and JavaScript.</p>
-
-            <h2>Step 1: Set Up HTML Structure</h2>
-            <p>First, we need to set up the basic HTML structure for the Text to Speech tool. Here's the code:</p>
+            <h3>Step 1: Create an HTML File</h3>
+            <p>Start by creating an HTML file for your Text to Speech tool:</p>
             <div class="code-box">
-                <pre><code>
-&lt;!DOCTYPE html&gt;
+                <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;title&gt;Text to Speech Tool&lt;/title&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;div class="container"&gt;
-        &lt;h1&gt;Text to Speech Tool&lt;/h1&gt;
-        &lt;textarea id="textInput" placeholder="Enter your text here"&gt;&lt;/textarea&gt;
-        &lt;button id="speakBtn"&gt;Speak&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;h1&gt;Text to Speech Generator&lt;/h1&gt;
+    &lt;textarea id="text-input" rows="5" placeholder="Enter text here"&gt;&lt;/textarea&gt;
+    &lt;button id="speak-btn"&gt;Speak&lt;/button&gt;
+
+    &lt;script&gt;
+        const speakButton = document.getElementById('speak-btn');
+        const textInput = document.getElementById('text-input');
+
+        speakButton.addEventListener('click', () =&gt; {
+            const utterance = new SpeechSynthesisUtterance(textInput.value);
+            speechSynthesis.speak(utterance);
+        });
+    &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-                </code></pre>
-                <button class="copy-btn">Copy Code</button>
+&lt;/html&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
             </div>
 
-            <h2>Step 2: Styling with CSS</h2>
-            <p>Now, let's style the Text to Speech tool with CSS:</p>
+            <h3>Step 2: Create a Textarea for Input</h3>
+            <p>In the body section of your HTML, create a textarea for users to enter text:</p>
             <div class="code-box">
-                <pre><code>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    text-align: center;
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #e85c0d;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 100%;
-}
-                </code></pre>
-                <button class="copy-btn">Copy Code</button>
+                <pre><code>&lt;textarea id="text-input" rows="5" placeholder="Enter text here"&gt;&lt;/textarea&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
             </div>
 
-            <h2>Step 3: Adding JavaScript Functionality</h2>
-            <p>Next, let's add the JavaScript to handle the text-to-speech functionality:</p>
+            <h3>Step 3: Add a Button to Trigger Speech</h3>
+            <p>Create a button that users can click to convert the text to speech:</p>
             <div class="code-box">
-                <pre><code>
-document.getElementById('speakBtn').addEventListener('click', function() {
-    const textInput = document.getElementById('textInput').value;
+                <pre><code>&lt;button id="speak-btn"&gt;Speak&lt;/button&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
 
-    if (textInput.trim() === "") {
-        alert("Please enter some text.");
-        return;
-    }
+            <h3>Step 4: Implement JavaScript for Speech Synthesis</h3>
+            <p>Write the JavaScript code to handle the speech synthesis:</p>
+            <div class="code-box">
+                <pre><code>const speakButton = document.getElementById('speak-btn');
+const textInput = document.getElementById('text-input');
 
-    const speech = new SpeechSynthesisUtterance(textInput);
-    window.speechSynthesis.speak(speech);
-});
-                </code></pre>
-                <button class="copy-btn">Copy Code</button>
+speakButton.addEventListener('click', () =&gt; {
+    const utterance = new SpeechSynthesisUtterance(textInput.value);
+    speechSynthesis.speak(utterance);
+});</code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
+
+            <h3>Final Result</h3>
+            <p>After implementing the above steps, you should have a fully functional Text to Speech tool that reads aloud the text entered in the textarea.</p>
+
+            <h3>Example of Using the Text to Speech Tool</h3>
+            <img src="https://i.ytimg.com/vi/cvZrppquLQg/maxresdefault.jpg" alt="Text to Speech Example" class="blog-image">
+
+            <h3>Share This Blog Post</h3>
+            <p>If you found this guide helpful, feel free to share it with others!</p>
+            <div class="share-buttons">
+                <button><i class="fab fa-facebook"></i> Share on Facebook</button>
+                <button><i class="fab fa-twitter"></i> Share on Twitter</button>
+                <button><i class="fab fa-linkedin"></i> Share on LinkedIn</button>
             </div>
         </article>
     </main>
-
-    <!-- Footer Section -->
     <footer>
         <div class="footer-container">
             <div class="footer-section contact-info" id="Contact">
@@ -216,8 +191,21 @@ document.getElementById('speakBtn').addEventListener('click', function() {
             <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
         </div>
     </footer>
+    <script src="/js/nav.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script>
-    <script src="/blogs/qr code/script.js"></script>
+    <script>
+        function copyCode() {
+            const codeElements = document.querySelectorAll('.code-box code');
+            codeElements.forEach((codeElement) => {
+                const range = document.createRange();
+                range.selectNode(codeElement);
+                window.getSelection().removeAllRanges(); // Clear current selection
+                window.getSelection().addRange(range); // Select the code
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges(); // Clear selection after copying
+                alert('Code copied to clipboard!');
+            });
+        }
+    </script>
 </body>
 </html>

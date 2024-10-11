@@ -119,6 +119,7 @@ nav {
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
+        
     }
 
     .nav-links {
@@ -127,7 +128,7 @@ nav {
         right: -100%;
         width: 250px;
         height: 100vh;
-        background-color: #423f3eb5;
+        background-color: #423f3e;
         transition: 0.5s ease;
         z-index: 999;
     }
@@ -267,3 +268,384 @@ footer {
     gap: 15px; /* Space between icons */
     justify-content: center; /* Center align icons */
 }
+
+
+/* single page styles */
+
+
+  /* Related tools and share section styling */
+  .related-and-share {
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(12px); /* Enhanced glassmorphism */
+    background: rgba(255, 255, 255, 0.008); /* Semi-transparent */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    animation: fadeIn 1s ease-in-out;
+    text-align: center; /* Center content */
+  }
+  
+  .related-and-share h2 {
+    color: #c7253e; /* Bright header color */
+    margin-bottom: 20px; /* Space below header */
+  }
+  
+  .related-tools {
+    margin-top: 10px;
+  }
+  
+  /* Related tools item styling */
+  .app-list {
+    display: flex;
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between items */
+  }
+  
+  .app-item {
+    background-color: rgba(255, 255, 255, 0.107); /* Semi-transparent */
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(5px); /* Glassmorphism */
+    text-decoration: none;
+    color: #e85c0d; /* Light text */
+    width: 200px; /* Fixed width for uniformity */
+  }
+  
+  .app-item h4 {
+    margin: 0;
+    color: #c7253e; /* Bright color */
+  }
+  
+  .app-item p {
+    margin: 10px 0 0; /* Margin adjustments */
+    color: #e85c0d;
+  }
+  
+  .app-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+  }
+  
+  /* Header content styling */
+.header-content {
+    text-align: center;
+    background-color:  rgba(255, 255, 255, 0.041); ; /* Gradient background */
+    padding: 50px 20px; /* More padding for spacious look */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .header-content h1 {
+    color: #c7253e; /* Bright header color */
+    font-size: 2.8em; /* Larger font size for emphasis */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .header-content p {
+    font-size: 1.2em; /* Maintain font size */
+    color: #e85c0d; /* White text */
+  }
+  
+  /* Tool description section styling */
+  .tool-description {
+    background-color:  rgba(255, 255, 255, 0.008);  /* Slightly transparent */
+    padding: 30px; /* Increased padding for spaciousness */
+    margin-top: 40px;
+    border-radius: 12px; /* Rounded corners */
+    backdrop-filter: blur(8px); /* Glassmorphism effect */
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  .tool-description h2 {
+    color: #c7253e; /* Bright color for headers */
+    margin-bottom: 15px; /* Space below header */
+    text-align: center;
+  }
+  
+  .tool-description p, .tool-description ul {
+    color: #e85c0d; /* White text for content */
+  }
+  
+  /* Button styles */
+  .button {
+    background: linear-gradient(45deg, #e85c0d, #c7253e); /* Bright button color */
+    color: black; /* Dark text for contrast */
+    padding: 12px 20px; /* Spacious padding */
+    border-radius: 30px; /* Fully rounded */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    text-decoration: none; /* Remove underline for links */
+    
+  }
+  
+  .button:hover {
+    background-color: #ff9933; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+    box-shadow: 0 4px 15px rgba(232, 92, 13, 0.75);
+  }
+  
+  /* Home button section */
+.home-button {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .home-button .button {
+    background: linear-gradient(45deg, #e85c0d, #c7253e); /* Bright button color */
+    color: black; /* Dark text for contrast */
+    padding: 12px 24px; /* Spacious padding */
+    border-radius: 30px; /* Fully rounded */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    text-decoration: none; /* Remove underline for links */
+    font-size: 1.1em; /* Slightly larger font size */
+    display: inline-flex; /* Align icon and text */
+    align-items: center; /* Center items vertically */
+    
+  }
+  
+  .home-button .button i {
+    margin-right: 8px; /* Space between icon and text */
+    transition: transform 0.3s; /* Smooth icon transition */
+  }
+  
+  .home-button .button:hover {
+    background: linear-gradient(45deg, #e85c0d, #c7253e); /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+    box-shadow: 0 4px 15px rgba(232, 92, 13, 0.75); /* Shadow effect */
+  }
+  
+  .home-button .button:hover i {
+    transform: translateX(2px); /* Move icon slightly on hover */
+  }
+  
+  /* Share tool section social icons */
+.share-tool .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+  }
+  
+  .share-tool .social-icons a {
+    padding: 12px 18px; /* Updated padding for a balanced button */
+    background: linear-gradient(45deg, #e85c0d, #c7253e); /* Bright button color */
+    color: black; /* Dark text for contrast */
+    border-radius: 50px; /* Rounded corners */
+    text-decoration: none; /* Remove underline for links */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    font-size: 1em; /* Uniform font size */
+    display: flex; /* Align icon and text */
+    align-items: center; /* Center items vertically */
+     /* Initial shadow for depth */
+  }
+  
+  .share-tool .social-icons a i {
+    margin-right: 8px; /* Space between icon and text */
+    transition: transform 0.3s; /* Smooth icon transition */
+  }
+  
+  .share-tool .social-icons a:hover {
+    background-color: #ff9933; /* Darker on hover */
+    transform: translateY(-2px); /* Move button up slightly */
+    box-shadow: 0 4px 15px rgba(232, 92, 13, 0.75); /* Enhanced shadow */
+  }
+  
+  .share-tool .social-icons a:hover i {
+    transform: rotate(360deg); /* Rotate icon on hover for added effect */
+  }
+  
+  
+  /* Animations */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0); /* No movement */
+    }
+    40% {
+      transform: translateY(-5px); /* Move up */
+    }
+    60% {
+      transform: translateY(-2px); /* Slightly move up */
+    }
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0); /* No movement */
+    }
+    25% {
+      transform: translateX(-2px); /* Move left */
+    }
+    50% {
+      transform: translateX(2px); /* Move right */
+    }
+    75% {
+      transform: translateX(-2px); /* Move left */
+    }
+  }
+  
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-list {
+      flex-direction: column; /* Stack items on smaller screens */
+      align-items: center; /* Center items */
+    }
+  
+    .app-item {
+      width: auto; /* Adjust width for smaller screens */
+      max-width: 90%; /* Limit width on smaller screens */
+    }
+  
+    .header-content h1 {
+      font-size: 2em; /* Adjust header size */
+    }
+    
+    .header-content p, .tool-description p {
+      font-size: 1em; /* Adjust font size */
+    }
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .share-tool .social-icons {
+      flex-direction: column; /* Stack buttons on smaller screens */
+      gap: 8px; /* Space between stacked buttons */
+      align-items: center;
+      
+    }
+  
+    .share-tool .social-icons a {
+      width: 100%; /* Full width for buttons on small screens */
+      max-width: 100px; /* Limit max width */
+      text-align: center; /* Center text on small screens */
+      padding: 10px 0; /* Adjust padding for better touch targets */
+      border-radius: 70px;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .share-tool .social-icons a {
+      font-size: 0.8em; /* Slightly smaller font size on very small screens */
+    }
+  }
+
+
+
+
+
+
+  .tutorial-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #00000000;
+    color: #e85c0d;
+    transition: background-color 0.5s ease;
+  }
+  
+  .content {
+    max-width: 50%;
+  }
+  
+  .content h2 {
+    font-size: 2em;
+    color: #c7253e;
+  }
+  
+  .content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  .refined-btn {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(45deg, #e85c0d, #c7253e);
+    border-radius: 30px;
+    padding: 12px 30px;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(232, 92, 13, 0.75);
+    position: relative;
+    transition: all 0.3s ease;
+    gap: 10px;
+  }
+  
+  .refined-btn i {
+    font-size: 24px; /* Increase the icon size */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .refined-btn span {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .refined-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #e85c0d, #c7253e);
+    filter: blur(10px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    border-radius: 30px;
+  }
+  
+  .refined-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(232, 92, 13, 0.9);
+  }
+  
+  .refined-btn:hover:before {
+    opacity: 1;
+  }
+  
+  .refined-btn:hover span {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .refined-btn:hover i {
+    transform: scale(1.3); /* Scale the icon on hover */
+    color: #fff; /* Change icon color on hover */
+  }
+        
+  
+  .image-container {
+    max-width: 45%;
+  }
+  
+  .tutorial-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  
+  .tutorial-img:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .tutorial-section {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .content, .image-container {
+      max-width: 100%;
+    }
+  }
+  

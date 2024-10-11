@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online text to HTML Editor table,heder,link,nav - scp_app</title>
+    <meta name="description" content="Edit text to HTML online with built ui interface-in SEO title and meta description tags.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e85c0d; /* Text color */
+            
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .toolbar {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .toolbar button {
+            background-color: #e85c0d; /* Button color */
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            width: 40px; /* Fixed width for buttons */
+            height: 40px; /* Fixed height for buttons */
+        }
+        .toolbar button:hover {
+            background-color: #c7253e; /* Hover color */
+        }
+        .editor {
+            width: 100%;
+            height: 300px;
+            background-color: #272727;
+            color: #fff;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            overflow: auto;
+            resize: none;
+        }
+        #livePreview {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #272727;
+            border-radius: 4px;
+            overflow: auto;
+        }
+        #output {
+            margin-top: 20px;
+            background-color: #272727;
+            padding: 10px;
+            border-radius: 4px;
+            overflow: auto;
+        }
+        #output pre {
+            white-space: pre-wrap; /* Allow wrapping */
+        }
+        .size-select {
+            margin-left: 5px;
+            padding: 5px;
+            border-radius: 4px;
+            background-color: #e85c0d; /* Size select color */
+            color: white;
+            border: none;
+        }
+    </style>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-54LKRYY810');
+      </script>
+      <link rel="stylesheet" href="/css/nav.css">
+      <link rel="stylesheet" href="/css/smoke.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        </head>
+           <body style="background-color: black;">
+        
+          <nav>
+            <div class="logo">
+                <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
+            </div>
+            <div class="menu-icon">
+                <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
+            </div>
+        
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="dropdown">
+                        <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+                        <div class="dropdown-content">
+                            <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
+                            <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
+                            <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
+                            <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
+                            <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
+                            <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
+                            <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
+                            <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
+                            <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
+                        </div>
+                    </li>
+                    <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                    <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
+                </ul>
+            </div>
+        </nav>
+      <div class="smoke-container">
+        <div class="smoke smoke1"></div>
+        <div class="smoke smoke2"></div>
+        <div class="smoke smoke3"></div>
+      </div>
+      <header>
+        <div class="header-content">
+            <h1>Online HTML Editor</h1>
+            <p>Edit and preview HTML code in real-time with an easy-to-use interface!</p>
+            <p>Create and test your HTML projects online seamlessly!</p>
+        </div>
+    </header><br><br>
+    <div class="container">
+        <h1 style="text-align: center;">Online HTML Editor with UI Interface</h1>
+
+        <div class="toolbar">
+            <button onclick="document.execCommand('bold');"><i class="fas fa-bold"></i></button>
+            <button onclick="document.execCommand('italic');"><i class="fas fa-italic"></i></button>
+            <button onclick="document.execCommand('underline');"><i class="fas fa-underline"></i></button>
+            <button onclick="document.execCommand('insertUnorderedList');"><i class="fas fa-list-ul"></i></button>
+            <button onclick="document.execCommand('insertOrderedList');"><i class="fas fa-list-ol"></i></button>
+            <button onclick="document.execCommand('createLink', false, prompt('Enter URL:', 'http://'));">
+                <i class="fas fa-link"></i>
+            </button>
+            <button onclick="document.execCommand('insertHTML', false, '<br>');"><i class="fas fa-asterisk"></i></button>
+            <button onclick="document.execCommand('insertHTML', false, '<p></p>');"><i class="fas fa-paragraph"></i></button>
+            <button onclick="document.execCommand('emphasize');"><i class="fas fa-italic"></i></button>
+            <button onclick="document.execCommand('superscript');"><i class="fas fa-superscript"></i></button>
+            <button onclick="document.execCommand('subscript');"><i class="fas fa-subscript"></i></button>
+            <button onclick="insertTable();"><i class="fas fa-table"></i></button>
+            <button onclick="document.execCommand('foreColor', false, prompt('Enter text color (hex, e.g., #FF0000):', '#000000'));">
+                <i class="fas fa-paint-brush"></i>
+            </button>
+            <button onclick="document.execCommand('backColor', false, prompt('Enter background color (hex, e.g., #FF0000):', '#FFFFFF'));">
+                <i class="fas fa-fill-drip"></i>
+            </button>
+            <button onclick="document.execCommand('justifyLeft');"><i class="fas fa-align-left"></i></button>
+            <button onclick="document.execCommand('justifyCenter');"><i class="fas fa-align-center"></i></button>
+            <button onclick="document.execCommand('justifyRight');"><i class="fas fa-align-right"></i></button>
+            <button onclick="document.execCommand('justifyFull');"><i class="fas fa-align-justify"></i></button>
+            <button onclick="document.execCommand('formatBlock', false, 'blockquote');"><i class="fas fa-quote-right"></i></button>
+            <button onclick="insertImage();"><i class="fas fa-image"></i></button>
+            <button onclick="document.execCommand('insertHorizontalRule');"><i class="fas fa-minus"></i></button>
+            <button onclick="document.execCommand('removeFormat');"><i class="fas fa-eraser"></i></button>
+            <select class="size-select" onchange="document.execCommand('fontSize', false, this.value);">
+                <option value="">Size</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select id="headingSelector" onchange="document.execCommand('formatBlock', false, this.value);">
+                <option value="">Normal</option>
+                <option value="h1">H1</option>
+                <option value="h2">H2</option>
+                <option value="h3">H3</option>
+            </select>
+        </div>
+
+        <div class="editor" contenteditable="true" oninput="updatePreview();"></div>
+
+        <h2>Live Preview:</h2>
+        <div id="livePreview"></div>
+
+        <h2>Generated HTML Code:</h2>
+        <div id="output"></div>
+        
+        <button id="generate" style="margin-top: 20px;">Generate HTML Code</button>
+        <button id="download" style="margin-top: 20px;">Download HTML Code</button>
+    </div>
+    <section class="tool-description">
+        <div class="container1">
+            <h2>About the Online HTML Editor</h2>
+            <p>This online tool provides a powerful and user-friendly environment for editing and previewing HTML code in real-time. It’s designed for both beginners and advanced users to write, edit, and experiment with HTML code, offering instant feedback and visual previews. The tool comes with a clean UI that makes coding faster and more efficient.</p>
+    
+            <h3 style="color: #c7253e;">Key Features</h3>
+            <ul>
+                <li><strong>Live Preview:</strong> See your HTML code come to life instantly with real-time updates.</li>
+                <li><strong>UI-Friendly Design:</strong> A clean and intuitive interface that’s easy to navigate.</li>
+                <li><strong>Built-in Editor:</strong> Write and edit your HTML code directly in the tool with syntax highlighting.</li>
+                <li><strong>Responsive Output:</strong> Test your HTML for various screen sizes to ensure a responsive design.</li>
+                <li><strong>100% Free:</strong> Use the editor without any fees or restrictions.</li>
+            </ul>
+    
+            <h3 style="color: #c7253e;">How to Use the Online HTML Editor</h3>
+            <ul>
+                <li>Type or paste your HTML code into the editor panel.</li>
+                <li>Watch the live preview on the right as you make changes to the code.</li>
+                <li>Use the toolbar to add common HTML elements quickly.</li>
+                <li>Test your design for responsiveness by adjusting the preview panel size.</li>
+                <li>Copy or download your final code once you’re satisfied with the results.</li>
+            </ul>
+        </div>
+    </section>
+    <section class="related-and-share">
+        <div class="container1">
+          <h2>Related Tools</h2>
+          <div class="related-tools">
+            <div class="app-list">
+              <a href="/tools/Image Compressor/index.html " class="app-item">
+                <h4>Image Compressor Tool</h4>
+                <p>Easily compress your images.</p>
+              </a>
+              <a href="/tools/resum/index.html" class="app-item">
+                <h4>Resume/CV Builder Tool</h4>
+                <p>Find your daily calorie needs based on activity level.</p>
+              </a>
+              <a href="/tools/python IDLE/index.html" class="app-item">
+                <h4>Online Python IDE</h4>
+                <p>Write Python 3 code in this online editor and run it.</p>
+              </a>
+              <a href="/tools/Responsive Checker/index.html" class="app-item">
+                <h4>Responsive Checker Tool</h4>
+                <p>Test your website's responsiveness across different devices!</p>
+              </a>
+              <a href="/tools/HTML, CSS & JavaScript MinifierMaxifier/index.html" class="app-item">
+                <h4>Minifier and Maxifier Tool</h4>
+                <p>This tool helps you quickly minify or maxify your HTML, CSS, and JavaScript code.</p>
+              </a>
+            </div>
+          </div>
+      
+          <div class="share-tool">
+            <h3 style="color: aliceblue;">Share the Online HTML Editor with UI Interface</h3>
+            <p style="color: aliceblue;">Share this tool with friends and family on social media.</p>
+            <div class="social-icons">
+              <a href="https://facebook.com/sharer/sharer.php?u=your-url" target="_blank" class="button"><i class="fab fa-facebook"></i> Share</a>
+              <a href="https://wa.me/?text=Check%20out%20this%20Date%20Calculator%20Tool!%20your-url" target="_blank" class="button"><i class="fab fa-whatsapp"></i> Share</a>
+              <a href="https://twitter.com/share?url=your-url&text=Check%20out%20this%20Date%20Calculator%20Tool!" target="_blank" class="button"><i class="fab fa-twitter"></i> Share</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="tutorial-section">
+        <div class="content">
+          <h2>How to Create Web Tools - Step by Step Tutorial</h2>
+          <p>Welcome to my blog! In this section, I will guide you step by step on how to create web tools with complete source code included. You will learn the process from start to finish, including responsive design and interactive features.</p>
+          <a href="/index.html" class="refined-btn">
+            <i class="fas fa-blog"></i>
+            <span><b>Go To Blogger</b></span>
+          </a>
+          
+      
+          
+          
+        </div>
+        <div class="image-container">
+          <img src="/images/blogo tiy.png" alt="Tutorial Image" class="tutorial-img">
+        </div>
+      </section>
+        
+      
+      
+      <section class="home-button">
+        <a href="/index.html#Calculator" class="button">
+          <i class="fas fa-home"></i> Back to Home Page
+        </a>
+      </section><br><br> <br><br>
+       <!-- Footer Section -->
+       <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info" id="Contact">
+                <h4><i class="fas fa-info-circle"></i> Contact Information</h4>
+                <p>
+                    <a href="tel:+94703245075">
+                        <i class="fas fa-phone-alt"></i> Phone: +9470 324 5075
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:chamikascp@gmail.com">
+                        <i class="fas fa-envelope"></i> Email: chamikascp@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="https://maps.app.goo.gl/3HpYgXj9bcLLBENG9" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i> Monaragala, Ethimale
+                    </a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+                <div class="social-icons">
+                    <a class="facebook" href="https://www.facebook.com/shehan.chamika.33671?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                    <a class="whatsapp" href="http://Wa.me//+94703245075"><i class="fab fa-whatsapp"></i></a>
+                    <a class="instagram" href="https://www.instagram.com/shehanscp?igsh=MThqejkzaDV3MTd5Zg=="><i class="fab fa-instagram"></i></a>
+                    <a class="tiktok" href="404/index.html"><i class="fab fa-tiktok"></i></a>
+                    <a class="youtube" href="404/index.html"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-building"></i> Company Info</h4>
+                <p><a href="/about/index.html">About Us</a></p>
+                <p><a href="/contact/contact.html">Contact Us</a></p>
+                <p><a href="/t&c/FAQ.html">FAQ page</a></p>
+                <p><a href="/t&c/ppindex.html">Privacy Policy</a></p>
+                <p><a href="/t&c/tcindex.html">Terms & Conditions</a></p>
+                <p><a href="/t&c/diciml.html">Disclaimer</a></p>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-link"></i> Quick Links</h4>
+                <p><a href="/index.html">Home</a></p>
+                <p><a href="/index.html#tools-section">Tools</a></p>
+                <p><a href="/index.html#User">Users Say</a></p>
+                <p><a href="/index.html#combined-section">Thank You for Visiting!</a></p>
+                <p><a href="/blogs/index.html">Blogs</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="/js/nav.js"></script>
+<script src="script.js"></script>
+    <script>
+        function updatePreview() {
+            const editorContent = document.querySelector('.editor').innerHTML;
+            document.getElementById('livePreview').innerHTML = editorContent;
+        }
+
+        function insertTable() {
+            const rows = prompt("Enter number of rows:", "2");
+            const cols = prompt("Enter number of columns:", "2");
+            if (rows && cols) {
+                let tableHTML = '<table style="width:100%; border-collapse: collapse;">';
+                for (let i = 0; i < rows; i++) {
+                    tableHTML += '<tr>';
+                    for (let j = 0; j < cols; j++) {
+                        tableHTML += '<td style="border: 1px solid #000; padding: 8px;">Cell</td>';
+                    }
+                    tableHTML += '</tr>';
+                }
+                tableHTML += '</table>';
+                document.execCommand('insertHTML', false, tableHTML);
+            }
+        }
+
+        function insertImage() {
+            const url = prompt("Enter image URL:", "http://");
+            if (url) {
+                document.execCommand('insertImage', false, url);
+            }
+        }
+
+        document.getElementById('generate').addEventListener('click', function() {
+            const editorContent = document.querySelector('.editor').innerHTML;
+            document.getElementById('output').innerHTML = '<pre>' + escapeHtml(editorContent) + '</pre>';
+        });
+
+        document.getElementById('download').addEventListener('click', function() {
+            const editorContent = document.querySelector('.editor').innerHTML;
+            const blob = new Blob([editorContent], { type: "text/html" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'output.html';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        function escapeHtml(html) {
+            return html.replace(/&/g, "&amp;")
+                        .replace(/</g, "&lt;")
+                        .replace(/>/g, "&gt;")
+                        .replace(/"/g, "&quot;")
+                        .replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>
