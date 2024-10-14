@@ -66,3 +66,26 @@ button:hover {
     color: #fff; /* Text color for preview */
 }
 }
+
+/* Ensure that tables have visible borders */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders collapse for cleaner look */
+    margin: 20px 0;
+    background-color: #333; /* Dark background for the table */
+}
+
+th, td {
+    border: 1px solid #e85c0d; /* Add border to table cells */
+    padding: 10px;
+    text-align: left;
+    color: #fff; /* Text color for table cells */
+}
+
+th {
+    background-color: #c7253e; /* Different background for table headers */
+}
+
+td {
+    background-color: #444; /* Dark background for table rows */
+}

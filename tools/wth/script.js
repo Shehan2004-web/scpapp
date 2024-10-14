@@ -6,18 +6,46 @@ document.getElementById('upload-btn').addEventListener('click', function() {
         const reader = new FileReader();
         reader.onload = function(event) {
             const arrayBuffer = event.target.result;
-            mammoth.convertToHtml({arrayBuffer: arrayBuffer})
-                .then(function(result) {
-                    const output = document.getElementById('output');
-                    const livePreview = document.getElementById('live-preview');
-                    const htmlContent = generateHtml(result.value);
-                    output.value = htmlContent; // Display the generated HTML code
-                    livePreview.innerHTML = htmlContent; // Show live preview
-                })
-                .catch(function(err) {
-                    console.error(err);
-                    alert('Error extracting content from the file.');
-                });
+
+            // Use Mammoth.js to convert .docx file to HTML
+            mammoth.convertToHtml({
+                arrayBuffer: arrayBuffer,
+                styleMap: [
+                    "p[style-name='Heading 1'] => h1:fresh",
+                    "p[style-name='Heading 2'] => h2:fresh",
+                    "p[style-name='Heading 3'] => h3:fresh",
+                    "p[style-name='Heading 4'] => h4:fresh",
+                    "p[style-name='Normal'] => p:fresh",
+                    "p[style-name='Table'] => table:fresh",
+                    "strong => strong",
+                    "em => em",
+                    "u => u",
+                    "sup => sup",
+                    "sub => sub",
+                    "ul => ul",
+                    "ol => ol",
+                    "li => li",
+                    "a => a"
+                ] // Map Word styles to proper HTML tags
+            })
+            .then(function(result) {
+                const output = document.getElementById('output');
+                const livePreview = document.getElementById('live-preview');
+
+                // Use the generated HTML from Mammoth.js directly
+                const htmlContent = result.value; 
+                output.value = htmlContent;  // Display HTML in the output textarea
+                livePreview.innerHTML = htmlContent;  // Show live preview
+
+                // Log warnings if there are any issues during conversion
+                if (result.messages.length > 0) {
+                    console.warn(result.messages);
+                }
+            })
+            .catch(function(err) {
+                console.error(err);
+                alert('Error extracting content from the file.');
+            });
         };
 
         reader.readAsArrayBuffer(file);
@@ -25,81 +53,6 @@ document.getElementById('upload-btn').addEventListener('click', function() {
         alert('Please select a file first.');
     }
 });
-
-// Function to generate HTML code from the extracted content
-function generateHtml(content) {
-    // Create a temporary DOM element to parse the HTML
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = content;
-
-    // Extract specific elements and generate HTML code
-    const links = tempDiv.querySelectorAll('a');
-    const tables = tempDiv.querySelectorAll('table');
-    const lists = tempDiv.querySelectorAll('ul, ol');
-
-    let htmlOutput = "";
-
-    // Handle links
-    links.forEach(link => {
-        htmlOutput += `<a href="${link.href}">${link.textContent}</a>\n`;
-    });
-
-    // Handle tables
-    tables.forEach(table => {
-        htmlOutput += '<table>\n';
-        table.querySelectorAll('tr').forEach(row => {
-            htmlOutput += '  <tr>\n';
-            row.querySelectorAll('td, th').forEach(cell => {
-                const tag = cell.tagName === 'TH' ? 'th' : 'td';
-                htmlOutput += `    <${tag}>${cell.innerHTML}</${tag}>\n`;
-            });
-            htmlOutput += '  </tr>\n';
-        });
-        htmlOutput += '</table>\n';
-    });
-
-    // Handle lists
-    lists.forEach(list => {
-        const tag = list.tagName === 'UL' ? 'ul' : 'ol';
-        htmlOutput += `<${tag}>\n`;
-        list.querySelectorAll('li').forEach(item => {
-            htmlOutput += `  <li>${item.innerHTML}</li>\n`;
-        });
-        htmlOutput += `</${tag}>\n`;
-    });
-
-    // Extract bold, italic, underline, superscript, subscript, and emphasized text
-    const bolds = tempDiv.querySelectorAll('b, strong');
-    bolds.forEach(bold => {
-        htmlOutput += `<b>${bold.textContent}</b>\n`;
-    });
-
-    const italics = tempDiv.querySelectorAll('i, em');
-    italics.forEach(italic => {
-        htmlOutput += `<i>${italic.textContent}</i>\n`;
-    });
-
-    const underlines = tempDiv.querySelectorAll('u');
-    underlines.forEach(underline => {
-        htmlOutput += `<u>${underline.textContent}</u>\n`;
-    });
-
-    const superscripts = tempDiv.querySelectorAll('sup');
-    superscripts.forEach(sup => {
-        htmlOutput += `<sup>${sup.textContent}</sup>\n`;
-    });
-
-    const subscripts = tempDiv.querySelectorAll('sub');
-    subscripts.forEach(sub => {
-        htmlOutput += `<sub>${sub.textContent}</sub>\n`;
-    });
-
-    // Add alignment and input examples if necessary (for demo purposes)
-    htmlOutput += `<div style="text-align:center;">Centered text</div>\n`;
-    htmlOutput += `<input type="text" placeholder="Sample Input" />\n`;
-
-    return htmlOutput;
-}
 
 // Clear button functionality
 document.getElementById('clear-btn').addEventListener('click', function() {
@@ -131,11 +84,48 @@ document.getElementById('download-btn').addEventListener('click', function() {
         return;
     }
 
-    const blob = new Blob([output], { type: 'text/html' });
+    // Add table border styles directly into the downloaded HTML file
+    const styledHtml = `
+    <html>
+      <head>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #333;
+          }
+          th, td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: left;
+            color: #000000;
+          }
+          th {
+            background-color: #444;
+          }
+          td {
+            background-color: #ffffff;
+          }
+        </style>
+      </head>
+      <body>
+        ${output}
+      </body>
+    </html>
+    `;
+
+    // Convert the styled HTML into a Blob and trigger the download
+    const blob = new Blob([styledHtml], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'generated_code.html'; // Set the file name
+    a.download = 'converted_output_with_table_borders.html'; // Set the file name
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
