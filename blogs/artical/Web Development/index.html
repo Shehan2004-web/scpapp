@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete beginner's guide to web development. Learn HTML, CSS, JavaScript, and modern frameworks. Step-by-step tutorials and best practices for 2024.">
+    <meta name="keywords" content="web development, HTML, CSS, JavaScript, React, Angular, web development tools, coding tutorials, programming guide">
+    <meta name="author" content="scpapp.pro">
+    <title>Beginner's Guide to Web Development 2024: Complete Tutorial | SCPAPP</title>
+    
+    <style>
+        /* Dark Theme Colors and Variables */
+        :root {
+            --primary-color: #3b82f6;          /* Bright blue accent */
+            --secondary-color: #e85c0d;        /* Lighter blue */
+            --bg-dark: #000000;                /* Main dark background */
+            --bg-darker: #121418;              /* Darker sections */
+            --bg-card: #1d1e1f96;                /* Card background */
+            --text-primary: #e5e7eb;           /* Main text */
+            --text-secondary: #c7253e;         /* Secondary text */
+            --text-accent: #e85c0d;            /* Accent text */
+            --border-color: #464950;           /* Border color */
+            --hover-color: #c7253e;            /* Hover state */
+            --code-bg: #1a1e2e;                /* Code block background */
+            --success-color: #10b981;          /* Success green */
+            --warning-color: #f59e0b;          /* Warning yellow */
+            --error-color: #ef4444;            /* Error red */
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.75;
+            color: var(--text-primary);
+            background: var(--bg-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        .article-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-card) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            color: var(--text-accent);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .toc h2 {
+            color: var(--text-accent);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--text-accent);
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--text-accent);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        /* Code Blocks */
+        .code-block {
+            background: var(--code-bg);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .code-title {
+            background: var(--bg-darker);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            font-size: 0.875rem;
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+        }
+
+        /* Tips and Notes */
+        .tip-box {
+            background: var(--bg-darker);
+            border-left: 4px solid var(--success-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        .warning-box {
+            background: var(--bg-darker);
+            border-left: 4px solid var(--warning-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        /* Resource Links */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .resource-card {
+            background: var(--bg-darker);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .resource-card h4 {
+            color: var(--text-accent);
+            margin: 0 0 1rem;
+        }
+
+        /* Progress Indicators */
+        .progress-section {
+            background: var(--bg-darker);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-color);
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 2rem 1rem;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<link rel="icon" type="images/jpg" href="/images/LOGO.jpg">
+<link rel="stylesheet" href="/tools/smoke.css">
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<nav>
+<div class="logo">
+    <img src="/images/headinglogo.png" alt="SCPTOOLS Logo">
+</div>
+<div class="menu-icon">
+    <img src="/images/menu.png" alt="Menu Icon" id="menu-icon">
+</div>
+
+<div class="nav-links">
+    <ul>
+        <li><a href="/index.html#home"><i class="fas fa-home"></i> Home</a></li>
+        <li class="dropdown">
+            <a href="/index.html#tools-section" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+            <div class="dropdown-content">
+                <a href="/index.html#converters"><i class="fas fa-exchange-alt"></i> Converters</a>
+                <a href="/index.html#productivity"><i class="fas fa-tasks"></i> Productivity Tools</a>
+                <a href="/index.html#health"><i class="fas fa-heartbeat"></i> Health Tools</a>
+                <a href="/index.html#ai"><i class="fas fa-robot"></i> AI Tools</a>
+                <a href="/index.html#utility"><i class="fas fa-cogs"></i> Utility Tools</a>
+                <a href="/index.html#calculators"><i class="fas fa-calculator"></i> Calculators</a>
+                <a href="/index.html#development"><i class="fas fa-code"></i> Development Tools</a>
+                <a href="/index.html#media"><i class="fas fa-photo-video"></i> Media Tools</a>
+                <a href="/index.html#social-media"><i class="fas fa-hashtag"></i> Social Media Tools</a>
+            </div>
+        </li>
+        <li><a href="/tools/ai zone/index.html"><i class="fas fa-microchip"></i> AI Zone</a></li>
+        <li><a href="/about/index.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="/contact/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="/blogs/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+        <li><a href="/index.html#User"><i class="fas fa-comment"></i> Comment</a></li>
+    </ul>
+</div>
+</nav>
+
+
+<div class="smoke-container">
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</div>
+    <div class="article-container">
+        <section class="hero-section">
+            <h1>Beginner's Guide to Web Development</h1>
+            <p class="hero-subtitle">Master HTML, CSS, JavaScript, and modern frameworks. Your complete roadmap to becoming a web developer in 2024.</p>
+        </section>
+
+        
+
+        <section id="introduction" class="content-section">
+            <h2>Introduction to Web Development</h2>
+            <p>Web development is the process of building and maintaining websites and web applications. It encompasses everything from simple static web pages to complex web applications, e-commerce systems, and social network services.</p>
+            
+            <div class="tip-box">
+                <h3>Why Learn Web Development?</h3>
+                <ul>
+                    <li>High demand in job market</li>
+                    <li>Flexible career options</li>
+                    <li>Creative and rewarding work</li>
+                    <li>Continuous learning opportunities</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="html" class="content-section">
+            <h2>HTML: Building Blocks of the Web</h2>
+            <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It defines the structure and content of your web pages.</p>
+
+            <div class="code-block">
+                <div class="code-title">Basic HTML Structure</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+
+            <div class="tip-box">
+                <h3>HTML Best Practices</h3>
+                <ul>
+                    <li>Use semantic HTML elements</li>
+                    <li>Ensure proper indentation</li>
+                    <li>Include alt attributes for images</li>
+                    <li>Validate your HTML code</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="css" class="content-section">
+            <h2>CSS: Styling Your Website</h2>
+            <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It controls the visual presentation of HTML elements.</p>
+
+            <div class="code-block">
+                <div class="code-title">CSS Example</div>
+                <pre>
+/* Basic CSS Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #60a5fa;
+}</pre>
+            </div>
+        </section>
+
+        <section id="javascript" class="content-section">
+            <h2>JavaScript: Adding Interactivity</h2>
+            <p>JavaScript is a programming language that enables interactive web pages. It's essential for creating dynamic user experiences.</p>
+
+            <div class="code-block">
+                <div class="code-title">JavaScript Example</div>
+                <pre>
+// Simple Interactive Button
+const button = document.querySelector('.button');
+button.addEventListener('click', () => {
+    alert('Hello, World!');
+});</pre>
+            </div>
+        </section>
+
+        <section id="frameworks" class="content-section">
+            <h2>Modern Frameworks and Libraries</h2>
+            <p>Modern web development often involves frameworks and libraries that make development faster and more efficient.</p>
+
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4>React</h4>
+                    <p>A JavaScript library for building user interfaces</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Angular</h4>
+                    <p>A platform for building web applications</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Vue.js</h4>
+                    <p>The Progressive JavaScript Framework</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="content-section">
+            <h2>Essential Development Tools</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4>VS Code</h4>
+                    <p>Popular code editor with extensive features</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Git</h4>
+                    <p>Version control system for tracking changes</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Chrome DevTools</h4>
+                    <p>Built-in developer tools for debugging</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="content-section">
+            <h2>Additional Resources</h2>
+            <div class="tip-box">
+                <h3>Recommended Learning Paths</h3>
+                <ul>
+                    <li>MDN Web Docs</li>
+                    <li>freeCodeCamp</li>
+                    <li>Codecademy</li>
+                    <li>W3Schools</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+     <!-- Footer Section -->
+   <footer>
+    <div class="footer-container">
+        <div class="footer-section contact-info" id="Contact">
+            <h4><i class="fas fa-info-circle"></i> Contact Information</h4>
+            <p>
+                <a href="tel:+94703245075">
+                    <i class="fas fa-phone-alt"></i> Phone: +9470 324 5075
+                </a>
+            </p>
+            <p>
+                <a href="mailto:chamikascp@gmail.com">
+                    <i class="fas fa-envelope"></i> Email: chamikascp@gmail.com
+                </a>
+            </p>
+            <p>
+                <a href="https://maps.app.goo.gl/3HpYgXj9bcLLBENG9" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Monaragala, Ethimale
+                </a>
+            </p>
+        </div>
+        <div class="footer-section">
+            <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+            <div class="social-icons">
+                <a class="facebook" href="https://www.facebook.com/shehan.chamika.33671?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                <a class="whatsapp" href="http://Wa.me//+94703245075"><i class="fab fa-whatsapp"></i></a>
+                <a class="instagram" href="https://www.instagram.com/shehanscp?igsh=MThqejkzaDV3MTd5Zg=="><i class="fab fa-instagram"></i></a>
+                <a class="tiktok" href="https://www.tiktok.com/@scp_apps?_r=1&_d=e8616c4hm9iagj&sec_uid=MS4wLjABAAAAy3QMJ6H65ONcsInZ6kEvZCWzrQkcBL0pn0Hn_UXVn-2iUpf_2BdXY076FY85t344&share_author_id=7424760317844849672&sharer_language=en&source=h5_t&u_code=egib628c0bacld&timestamp=1729578223&user_id=7424760317844849672&sec_user_id=MS4wLjABAAAAy3QMJ6H65ONcsInZ6kEvZCWzrQkcBL0pn0Hn_UXVn-2iUpf_2BdXY076FY85t344&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7418262791683262216&share_link_id=eee4e3c5-f272-4786-9a92-b5ae8dc7e904&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1"><i class="fab fa-tiktok"></i></a>
+                <a class="youtube" href="http://www.youtube.com/@SCP_APPS"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4><i class="fas fa-building"></i> Company Info</h4>
+            <p><a href="/about/index.html">About Us</a></p>
+            <p><a href="/contact/contact.html">Contact Us</a></p>
+            <p><a href="/t&c/FAQ.html">FAQ page</a></p>
+            <p><a href="/t&c/ppindex.html">Privacy Policy</a></p>
+            <p><a href="/t&c/tcindex.html">Terms & Conditions</a></p>
+            <p><a href="/t&c/diciml.html">Disclaimer</a></p>
+        </div>
+        <div class="footer-section">
+            <h4><i class="fas fa-link"></i> Quick Links</h4>
+            <p><a href="/index.html">Home</a></p>
+            <p><a href="/index.html#tools-section">Tools</a></p>
+            <p><a href="/index.html#User">Users Say</a></p>
+            <p><a href="/index.html#combined-section">Thank You for Visiting!</a></p>
+            <p><a href="/blogs/index.html">Blogs</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Created By ©ɦąℳ i.. All rights reserved.</p>
+    </div>
+</footer>
+<script src="/js/nav.js"></script>
+  <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "CP2dVgcp1BqAWx101hh4m",
+    domain: "www.chatbase.co"
+    }
+    </script>
+</body>
+</html>
