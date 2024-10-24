@@ -74,7 +74,7 @@
 </url>
 <url>
   <loc>https://www.scpapp.pro/t&amp;c/ppindex.html</loc>
-  <lastmod>2024-10-24T04:2559+00:00</lastmod>
+  <lastmod>2024-10-24T04:25:59+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.80</priority>
 </url>
@@ -140,6 +140,30 @@
 </url>
 <url>
   <loc>https://www.scpapp.pro/blogs/artical/Tools%20Guide/index.html</loc>
+  <lastmod>2024-10-24T04:25:59+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.scpapp.pro/blogs/artical/productivity/index.html</loc>
+  <lastmod>2024-10-24T04:25:59+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.scpapp.pro/blogs/artical/Cybersecurity/index.html</loc>
+  <lastmod>2024-10-24T04:25:59+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.scpapp.pro/blogs/artical/ai/index.html</loc>
+  <lastmod>2024-10-24T04:25:59+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.scpapp.pro/blogs/artical/SEO/index.html</loc>
   <lastmod>2024-10-24T04:25:59+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.64</priority>
