@@ -59,11 +59,21 @@
           </nav>
     <main class="container">
         <header>
-            <h1>Welcome to the Blog</h1>
-            <p>Explore our insights on creating web tools using HTML, CSS, and JavaScript.</p>
-            <p>Technology and Innovation: Driving the Future of Digital Solutions</p>
-            
+            <h1>Welcome to SCP_APPS Blog</h1>
+            <p>Explore Web Development Tutorials, Tools & Technology Updates</p>
+            <p>Stay Connected with Latest Tech Trends & Innovations</p>
         </header>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search blogs...">
+                <button>
+                    <i class="fas fa-search"></i>
+                    Search
+                </button>
+            </div>
+        </div>
+
+        
 
         <section class="blog-posts">
             <article class="blog-post">
@@ -158,6 +168,13 @@
                 <p>Google AdSense යනු Google සමාගම විසින් හඳුන්වා දෙන ලද වෙබ් අඩවි හිමියන්ට ආදායම් උපයා ගැනීමේ ක්‍රමයකි. මෙහිදී ඔබේ වෙබ් අඩවියේ දැන්වීම් පෙන්වීම මගින් ආදායම් උපයා ගත හැකිය.</p>
                 <a href="/blogs/artical/adsence/index.html" class="read-more">Read More</a>
             </article>
+            <article class="blog-post">
+                <h2>Complete Guide to Google AdSense: Monetize Your Website Effectively</h2>
+                <p class="date">2024 ඔක්තෝබර් 02</p>
+                <img src="https://www.creativeitinstitute.com/images/course/course_1663052296.jpg" alt="Description of image 2">
+                <p>Google AdSense is a free, simple way to earn money by displaying targeted ads on your website. It's one of the most popular advertising platforms that allows website owners to monetize their content by showing relevant ads to their visitors.</p>
+                <a href="/blogs/artical/adsens english/index.html" class="read-more">Read More</a>
+            </article>
 
             <!-- Add more blog posts as needed -->
         </section>
@@ -231,38 +248,119 @@
         </div>
     </footer>
     <script>
-        // Get the search input and blog posts
-const searchInput = document.querySelector('.search-bar input');
-const blogPosts = document.querySelectorAll('.blog-post');
+      // Enhanced image loading and interaction functionality
+document.addEventListener('DOMContentLoaded', () => {
+    // Fix image loading
+    const images = document.querySelectorAll('.blog-post img');
+    images.forEach(img => {
+        // Store original src
+        const originalSrc = img.src;
+        
+        // Set up error handling
+        img.onerror = function() {
+            this.src = '/images/placeholder.jpg'; // Replace with your placeholder image
+            this.onerror = null; // Prevent infinite loop
+        };
 
-// Add an event listener to the search button
-document.querySelector('.search-bar button').addEventListener('click', function() {
-    const query = searchInput.value.toLowerCase(); // Get the search query and convert it to lowercase
-
-    blogPosts.forEach(post => {
-        const title = post.querySelector('h2').textContent.toLowerCase(); // Get the blog post title
-
-        // Check if the title includes the search query
-        if (title.includes(query)) {
-            post.style.display = 'block'; // Show matching posts
-        } else {
-            post.style.display = 'none'; // Hide non-matching posts
+        // Reload image if it failed initially
+        if (!img.complete || img.naturalHeight === 0) {
+            img.src = originalSrc;
         }
+    });
+
+    // Initialize search functionality
+    initializeSearch();
+
+    // Add date icons
+    const dateElements = document.querySelectorAll('.date');
+    dateElements.forEach(dateEl => {
+        const originalText = dateEl.textContent;
+        dateEl.innerHTML = `<i class="fas fa-calendar-alt"></i>${originalText}`;
+    });
+
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 });
 
-// Optional: Add search functionality when pressing 'Enter'
-searchInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        document.querySelector('.search-bar button').click(); // Trigger search button click
+// Enhanced search functionality
+function initializeSearch() {
+    const searchInput = document.querySelector('.search-bar input');
+    const searchButton = document.querySelector('.search-bar button');
+    const blogPosts = document.querySelectorAll('.blog-post');
+
+    function performSearch() {
+        const query = searchInput.value.toLowerCase().trim();
+        let hasResults = false;
+
+        blogPosts.forEach(post => {
+            const title = post.querySelector('h2').textContent.toLowerCase();
+            const content = post.querySelector('p').textContent.toLowerCase();
+            const date = post.querySelector('.date').textContent.toLowerCase();
+            
+            if (title.includes(query) || content.includes(query) || date.includes(query)) {
+                post.style.display = 'block';
+                post.style.animation = 'fadeIn 0.5s ease-out';
+                hasResults = true;
+            } else {
+                post.style.display = 'none';
+            }
+        });
+
+        // Handle no results state
+        handleNoResults(hasResults, query);
     }
-});
 
-    </script>
-    <script >
-        const menuIcon = document.getElementById('menu-icon');
-const navLinks = document.querySelector('.nav-links');
+    function handleNoResults(hasResults, query) {
+        let emptyState = document.querySelector('.empty-state');
+        
+        if (!hasResults && query !== '') {
+            if (!emptyState) {
+                emptyState = document.createElement('div');
+                emptyState.className = 'empty-state';
+                emptyState.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: var(--text-secondary);">
+                        <i class="fas fa-search" style="font-size: 48px; margin-bottom: 20px; color: var(--primary-color);"></i>
+                        <h3 style="color: var(--text-color);">No results found</h3>
+                        <p>Try different keywords or check spelling</p>
+                    </div>
+                `;
+                document.querySelector('.blog-posts').appendChild(emptyState);
+                emptyState.style.animation = 'fadeIn 0.5s ease-out';
+            }
+        } else if (emptyState) {
+            emptyState.remove();
+        }
+    }
 
+    // Search event listeners
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+    searchInput.addEventListener('input', debounce(performSearch, 300));
+}
+
+// Utility function for debouncing
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
 // Toggle the nav menu for mobile
 menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('active');
